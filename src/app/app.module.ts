@@ -6,10 +6,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SharedModule} from './shared/shared.module';
 import {AppRoutingModule} from './app-routing.module';
 import {RimborsiModule} from './rimborsi/rimborsi.module';
+import { SidebarLinkComponent } from './sidebar/sidebar-link/sidebar-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SidebarLinkComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -17,7 +19,7 @@ import {RimborsiModule} from './rimborsi/rimborsi.module';
     BrowserAnimationsModule,
     RimborsiModule,
     SharedModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

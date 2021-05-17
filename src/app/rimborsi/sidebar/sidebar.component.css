@@ -49,12 +49,8 @@
   color: #283033;
 }
 
-.side-nav-item.selected {
-  background: #fff;
-}
-
 .side-nav-item.selected .side-nav-item-text {
-  color: #283033;
+  text-decoration: underline;
 }
 
 .side-nav-item-text {

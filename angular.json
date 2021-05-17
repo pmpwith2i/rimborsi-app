@@ -125,6 +125,6 @@
   },
   "defaultProject": "rimborsi-rer",
   "cli": {
-    "analytics": "b8e1ac43-8497-4c6f-8119-7c42be688da0"
+    "analytics": false
   }
 }

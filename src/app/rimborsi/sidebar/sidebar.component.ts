@@ -8,7 +8,6 @@ import {LOGO_PATH} from '../../../environments/environment';
 })
 export class SidebarComponent implements OnInit {
   readonly logoPath: string = LOGO_PATH;
-
   constructor() {
   }
 
