@@ -66,8 +66,8 @@
 
 
 .navbar-user-info-circle {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 30px;
   margin: 10px;
   background-color: #fff;
@@ -78,7 +78,7 @@
   color: #283033;
   border: 1px solid #9797972b;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .navbar-user-info-name, .navbar-user-info-role {

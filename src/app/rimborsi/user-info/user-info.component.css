@@ -1,6 +1,7 @@
 .user-info-panel {
   padding: 3rem;
   border-radius: 10px;
+  align-items:center;
 }
 
 .user-info-circle-big {
@@ -16,10 +17,12 @@
   color: white;
   border: 1px solid #9797972b;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 3rem;
 }
 
 .user-info-page-left {
   border-right: 1px solid #28303326;
-  padding: 5rem;
+  padding: 2rem;
+  padding-top: 4rem;
+  padding-bottom:4 rem;
 }

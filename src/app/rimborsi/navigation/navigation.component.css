@@ -8,3 +8,8 @@
 .navbar-brand {
   color: #283033 !important;
 }
+
+.navbar-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
