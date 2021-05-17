@@ -1,0 +1,25 @@
+.user-info-panel {
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.user-info-circle-big {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+  margin: 10px;
+  background-color: #283033;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 1px solid #9797972b;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.user-info-page-left {
+  border-right: 1px solid #28303326;
+  padding: 5rem;
+}

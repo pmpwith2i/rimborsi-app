@@ -1,0 +1,43 @@
+<div class="side-nav-container d-flex align-items-start flex-column">
+  <div class="side-nav-top">
+    <img
+      [src]="logoPath"
+      id="logo-rer"
+      alt="Logo emilia-romagna"/>
+  </div>
+  <div class="side-nav-center">
+    <ul class="side-nav-list">
+      <li routerLink="dashboard" routerLinkActive="selected" class="side-nav-item">
+        <app-icon></app-icon>
+        <h5 class="side-nav-item-text">Dashboard</h5>
+      </li>
+      <li routerLink="user-info" routerLinkActive="selected" class="side-nav-item">
+        <app-icon></app-icon>
+        <h5 class="side-nav-item-text">I miei dati</h5>
+      </li>
+      <li routerLink="deleghe" routerLinkActive="selected" class="side-nav-item">
+        <app-icon></app-icon>
+        <h5 class="side-nav-item-text">Deleghe</h5>
+      </li>
+      <li class="side-nav-item">
+        <app-icon></app-icon>
+        <h5 class="side-nav-item-text">Richieste</h5>
+      </li>
+      <li class="side-nav-item">
+        <app-icon></app-icon>
+        <h5 class="side-nav-item-text">Notifiche</h5>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="mt-auto navbar-user-info d-flex align-items-center">
+    <div class="navbar-user-info-circle standard-shadow p-2">
+      <span>FP</span>
+    </div>
+    <div class="d-flex flex-column">
+      <h4 class="text-bold navbar-user-info-name">Federico Pomponii</h4>
+      <h6 class="navbar-user-info-role ">Utente amministratore</h6>
+    </div>
+  </div>
+</div>

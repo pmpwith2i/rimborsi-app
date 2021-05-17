@@ -1,0 +1,59 @@
+<div class="edit-delega-form col-xs-12">
+  <form [formGroup]="profileForm" class="row g-3" (ngSubmit)="onSubmit()">
+
+    <div class="col-md-12 col-sm-12">
+      <label for="inputName" class="form-label">Nome</label>
+      <input type="text" formControlName="firstName" class="form-control" id="inputName">
+    </div>
+
+    <div class="col-md-12 col-sm-12">
+      <label for="inputSecondName" class="form-label">Cognome</label>
+      <input type="text" formControlName="secondName" class="form-control" id="inputSecondName">
+    </div>
+
+    <div formGroupName="address" class="row g-3">
+      <div class="col-12 col-sm-12">
+        <label for="inputStreet" class="form-label">Indirizzo</label>
+        <input type="text" class="form-control" formControlName="street" id="inputStreet"
+               placeholder="Via Centrale N. ...">
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <label for="inputCity" class="form-label">Città</label>
+        <input type="text" class="form-control" formControlName="city" id="inputCity">
+      </div>
+      <div class=" col-sm-12">
+        <label for="inputState" class="form-label">Provincia</label>
+        <select id="inputState" formControlName="state" class="form-select">
+          <option selected>Scegli una provincia...</option>
+          <option *ngFor="let provincia of province" [value]="provincia">{{provincia}}</option>
+        </select>
+      </div>
+
+      <div class="col-sm-12">
+        <label for="inputZip" class="form-label">CAP</label>
+        <input type="number" formControlName="zipCode" class="form-control" id="inputZip">
+      </div>
+    </div>
+
+    <div class=" col-sm-12">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="inputEmail">
+    </div>
+
+    <div class=" col-sm-12">
+      <label for="inputPec" class="form-label">PEC</label>
+      <input type="email" formControlName="pec" class="form-control" id="inputPec">
+    </div>
+
+    <div class=" col-sm-12">
+      <label for="inputCF" class="form-label">CF</label>
+      <input type="text" formControlName="fiscalCode" class="form-control" id="inputCF">
+    </div>
+
+    <div class="col-12 col-sm-12">
+      <button type="submit" [disabled]="!profileForm.valid" class="btn btn-primary mr-auto ml-auto d-block">Salva
+        modifiche
+      </button>
+    </div>
+  </form>
+</div>

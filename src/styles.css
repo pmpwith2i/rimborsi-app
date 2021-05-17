@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import 'text-styles.css';
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  /*font-family: 'Rubik', sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: .03rem;
+  color: #323232;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+app-icon {
+  display: flex;
+}
+
+
+.form-control {
+  border: 1px solid #dee7ea !important;
+  border-radius: .4rem !important;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.app-row {
+  margin: 0;
+  padding: 0;
+  background-color: #eff2f48a;
+}
+
+.app-container {
+  position: relative;
+}
+
+.side-nav-item.selected app-icon .mat-icon {
+  color: #283033 !important;
+}
+
+.side-nav-item app-icon .mat-icon {
+  color: white;
+}
+
+.standard-shadow {
+  -webkit-box-shadow: 0px 0px 12px -8px rgb(189, 189, 189);
+  box-shadow: 0px 0px 12px -8px rgb(189, 189, 189);
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.pad-sm {
+  padding: 0.5rem;
+}
+
+.overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  background: #00000091;
+  z-index:2;
+  height: 100vh;
+  width: 100vw;
+}

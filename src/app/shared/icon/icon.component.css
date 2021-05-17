@@ -1,0 +1,19 @@
+.white-icon {
+  color: white;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.white-icon svg {
+  fill: white;
+}
+
+.icon-std {
+  color: #4b5257;
+}
+
+.icon-clk:hover {
+  color:black;
+}
+
+.icon-clk {
+  cursor: pointer;
+}

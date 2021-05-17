@@ -1,0 +1,76 @@
+<div class="deleghe-panel">
+  <h1 class="text-title-dark">Deleghe</h1>
+  <div class="deleghe-table-container standard-shadow">
+    <table class="table">
+      <thead class="cst-data-table-thead">
+      <tr>
+        <th scope="col">CF/Partita IVA
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col">Tipo Datore
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col">Tipo delega
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col">Tipo delega
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col">Nome
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col">Data inizio
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col">Data fine
+          <div class="filter-thead-table d-flex align-items-center">
+            <mat-icon class="p-absolute m-2 thead-table-filter-icon">search</mat-icon>
+            <input class="form-control thead-input-filter"/>
+          </div>
+        </th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>Otto</td>
+        <td class="cst-data-table-action d-flex">
+          <app-icon isCliccable="true" (click)="openDelegaDetail()" iconName="open_in_new"></app-icon>
+          <app-icon isCliccable="true" (click)="openDelegaDetail()" iconName="delete_outline"></app-icon>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="overlay"></div>
+<div class="deleghe-edit-section standard-shadow">
+  <div class="deleghe-edit-top">
+    <mat-icon class="deleghe-edit-close-icon">close</mat-icon>
+  </div>
+  <app-edit-delega></app-edit-delega>
+</div>

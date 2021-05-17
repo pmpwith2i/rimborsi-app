@@ -1,0 +1,10 @@
+.navbar {
+  background-color: #fff;
+  padding: 1rem;
+  padding-left: 3rem;
+  border-bottom: 1px solid #28303326;
+}
+
+.navbar-brand {
+  color: #283033 !important;
+}
