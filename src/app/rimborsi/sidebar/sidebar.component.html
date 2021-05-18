@@ -7,37 +7,24 @@
   </div>
   <div class="side-nav-center">
     <ul class="side-nav-list">
-      <li routerLink="dashboard" routerLinkActive="selected" class="side-nav-item">
-        <app-icon></app-icon>
-        <h5 class="side-nav-item-text">Dashboard</h5>
-      </li>
-      <li routerLink="user-info" routerLinkActive="selected" class="side-nav-item">
-        <app-icon iconName="person" [isOutlined]="true" ></app-icon>
-        <h5 class="side-nav-item-text">I miei dati</h5>
-      </li>
-      <li routerLink="deleghe" routerLinkActive="selected" class="side-nav-item">
-        <app-icon></app-icon>
-        <h5 class="side-nav-item-text">Deleghe</h5>
-      </li>
-      <li class="side-nav-item">
-        <app-icon></app-icon>
-        <h5 class="side-nav-item-text">Richieste</h5>
-      </li>
-      <li class="side-nav-item">
-        <app-icon></app-icon>
-        <h5 class="side-nav-item-text">Notifiche</h5>
-      </li>
+      <app-sidebar-item *ngFor="let r of sidebarRoutes"
+                        [linkName]="r.linkName"
+                        [iconName]="r.iconName"
+                        [itemLink]="r.itemLink"
+                        (click)="selectLink()">
+      </app-sidebar-item>
     </ul>
 
   </div>
 
-  <div class="mt-auto navbar-user-info d-flex align-items-center">
+  <div class="mt-auto navbar-user-info d-flex flex-row align-items-center">
     <div class="navbar-user-info-circle standard-shadow p-2">
       <span>FP</span>
     </div>
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column mr-auto">
       <h4 class="text-bold navbar-user-info-name">Federico Pomponii</h4>
       <h6 class="navbar-user-info-role ">Utente amministratore</h6>
     </div>
+    <app-icon iconName="logout"></app-icon>
   </div>
 </div>

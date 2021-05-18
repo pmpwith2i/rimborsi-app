@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center calendar-widget-container">
-  <mat-icon class="icon-std">today</mat-icon>
+  <app-icon iconName="today" [isOutlined]="true"></app-icon>
   <div class="calendar-day">
-    <span class="text-m">14 Maggio, 2021</span>
+    <span class="text-m">{{dayOfWeek}}, {{date}}</span>
   </div>
 </div>

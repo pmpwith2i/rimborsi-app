@@ -1,7 +1,8 @@
 .user-info-panel {
   padding: 3rem;
   border-radius: 10px;
-  align-items:center;
+  align-items: center;
+  background: white;
 }
 
 .user-info-circle-big {
@@ -21,8 +22,9 @@
 }
 
 .user-info-page-left {
-  border-right: 1px solid #28303326;
   padding: 2rem;
-  padding-top: 4rem;
-  padding-bottom:4 rem;
+}
+
+.user-info-page-right {
+  border-left: 1px solid #28303326;
 }

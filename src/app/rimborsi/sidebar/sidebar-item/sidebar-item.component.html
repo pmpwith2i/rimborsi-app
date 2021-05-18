@@ -1,0 +1,4 @@
+<li [routerLink]="itemLink" #rla="routerLinkActive" routerLinkActive="selected" class="side-nav-item">
+    <app-icon [iconName]="iconName" [isOutlined]="!rla.isActive"></app-icon>
+    <h5 class="side-nav-item-text">{{linkName}}</h5>
+</li>

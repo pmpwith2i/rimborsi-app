@@ -1,16 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
-/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import 'text-styles.css';
+@import 'responsive-sm.scss';
+
 
 html, body {
   height: 100%;
   font-size: 100%;
   /*font-family: 'Rubik', sans-serif;*/
   /*font-family: 'Open Sans', sans-serif;*/
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: .03rem;
   color: #323232;
   overflow-x: hidden;
@@ -27,7 +29,7 @@ app-icon {
 
 .form-control {
   border: 1px solid #dee7ea !important;
-  border-radius: .4rem !important;
+  border-radius: .2rem !important;
 }
 
 .form-label {
@@ -54,8 +56,8 @@ app-icon {
 
 .standard-shadow {
   -webkit-appearance: none;
-  -webkit-box-shadow: 0px 0px 12px -8px rgb(69,69,69);
-  box-shadow: 0px 0px 12px -8px rgb(69,69,69);
+  -webkit-box-shadow: 0px 0px 12px -8px rgb(69, 69, 69);
+  box-shadow: 0px 0px 12px -8px rgb(69, 69, 69);
 }
 
 .mr-auto {
@@ -78,6 +80,10 @@ app-icon {
   display: block;
 }
 
+.d-none {
+  display: none;
+}
+
 .p-absolute {
   position: absolute;
 }
@@ -88,10 +94,10 @@ app-icon {
 
 .overlay {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   background: #00000091;
-  z-index:2;
+  z-index: 2;
   height: 100vh;
   width: 100vw;
 }

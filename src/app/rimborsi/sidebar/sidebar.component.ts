@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {LOGO_PATH} from '../../../environments/environment';
+import {SidebarRoute} from '../../shared/model/route';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,10 +9,20 @@ import {LOGO_PATH} from '../../../environments/environment';
 })
 export class SidebarComponent implements OnInit {
   readonly logoPath: string = LOGO_PATH;
+  public sidebarRoutes: SidebarRoute[] = [];
+
+  @Output() linkSelected = new EventEmitter<any>();
+
   constructor() {
   }
 
   ngOnInit(): void {
+    this.sidebarRoutes.push(new SidebarRoute({itemLink: 'dashboard', linkName: 'Dashboard', iconName: 'home'}));
+    this.sidebarRoutes.push(new SidebarRoute({itemLink: 'user-info', linkName: 'I miei dati', iconName: 'person'}));
+    this.sidebarRoutes.push(new SidebarRoute({itemLink: 'deleghe', linkName: 'Deleghe', iconName: 'description'}));
   }
 
+  selectLink(): void {
+    this.linkSelected.emit(true);
+  }
 }

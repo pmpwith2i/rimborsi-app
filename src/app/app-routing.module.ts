@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'rimborsi', pathMatch: 'full' }
+  { path: '', redirectTo: 'rimborsi/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

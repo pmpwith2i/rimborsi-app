@@ -1,0 +1,50 @@
+<div class="cst-data-table-filters-section">
+  <div class="d-flex d-flex-row">
+    <div class="cst-data-table-filter-search d-flex align-items-center">
+      <mat-icon class="p-absolute thead-table-filter-icon">search</mat-icon>
+      <input class="form-control thead-input-filter"
+             placeholder="Cerca tra i dati..."
+             [formControl]="searchFormControl"
+      />
+    </div>
+    <app-cst-button
+      text="Filtri"
+      btnClass="btn-primary"
+      [iconName]="expandFilters ? 'expand_less' : 'expand_more'" (click)="toggleFilter()"></app-cst-button>
+    <app-cst-button text="Pulisci" btnClass="btn-primary"></app-cst-button>
+  </div>
+  <div class="cst-filter-list d-flex d-flex-row align-items-center" *ngIf="expandFilters">
+    <ng-container *ngFor="let filter of filters">
+      <app-cst-filter (modelChangeEvent)="aFilterChanged($event)" [filter]="filter"></app-cst-filter>
+    </ng-container>
+  </div>
+</div>
+<div class="md-show cst-data-table-small-screen">
+  <app-cst-card-data-table [dataSource]="dataSource" [columns]="columns"></app-cst-card-data-table>
+</div>
+<table class="table cst-data-table md-hide">
+  <thead class="cst-data-table-thead">
+  <tr>
+    <th scope="col" *ngFor="let col of columns">
+      {{col.name}}
+    </th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of dataSource;let i = index">
+    <td *ngFor="let col of columns">
+      <span [style.backgroundColor]="col.backgroundFunction ? col.backgroundFunction(item) : 'transparent'"
+            [class.cst-data-chips]="col.colType=='chips'">
+        {{col.propType == 'date' ? (item[col.propName] | date) : item[col.propName] }}
+      </span>
+    </td>
+    <td>
+      <div class="cst-data-table-actions d-flex d-flex-row">
+        <app-icon iconName="delete" [isCliccable]="true" [isOutlined]="true"></app-icon>
+        <app-icon iconName="open_in_new" [isCliccable]="true" [isOutlined]="true"></app-icon>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

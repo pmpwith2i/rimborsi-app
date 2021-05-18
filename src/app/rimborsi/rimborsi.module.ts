@@ -6,10 +6,11 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {RimborsiRoutingModule} from './rimborsi-routing.module';
 import {MatIconModule} from '@angular/material/icon';
+import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 
 
 @NgModule({
-  declarations: [RimborsiComponent, SidebarComponent, NavigationComponent],
+  declarations: [RimborsiComponent, SidebarComponent, NavigationComponent, SidebarItemComponent],
   imports: [
     CommonModule,
     SharedModule,

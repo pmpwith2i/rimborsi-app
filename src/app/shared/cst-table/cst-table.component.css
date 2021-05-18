@@ -1,0 +1,51 @@
+.cst-data-table-filters-section {
+  padding-bottom: 2rem;
+}
+
+.cst-data-table-filter-search {
+  width: 100%;
+}
+
+.cst-filter-list {
+  margin-top:1rem;
+}
+
+.cst-filter-expand {
+  margin-left: 1rem;
+  background: rgb(240, 240, 240);
+  border-radius: .2rem;
+  padding: 0 1rem 0 1rem;
+  border: 1px solid rgb(214, 214, 214);
+  cursor: pointer;
+}
+
+.cst-data-table-thead tr th {
+  box-shadow: 0px 10px 11px -8px rgba(218, 218, 218, 0.20);
+  -webkit-box-shadow: 0px 10px 11px -8px rgba(218, 218, 218, 0.20);
+  border-bottom: 1px solid #cfcfcf91 !important;
+  font-size: .8rem;
+  min-width: 7rem;
+}
+
+.cst-data-table tr td {
+  font-size: .8rem;
+}
+
+.filter-thead-table {
+  width: auto;
+}
+
+.thead-input-filter {
+  padding-left: 40px;
+}
+
+.thead-table-filter-icon {
+  color: #d0d0d0;
+  margin-left: .5rem;
+}
+
+.cst-data-chips {
+  padding: .25rem;
+  border-radius: 1rem;
+  font-size: .6rem;
+}

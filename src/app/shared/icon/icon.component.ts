@@ -7,8 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./icon.component.css']
 })
 export class IconComponent implements OnInit {
-  @Input() inClass: String;
-  @Input() iconName: String;
+  @Input() inClass: string;
+  @Input() iconName: string;
   @Input() isCliccable: boolean;
   @Input() isOutlined: boolean;
   constructor() {

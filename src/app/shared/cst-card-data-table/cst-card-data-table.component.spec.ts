@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarLinkComponent } from './sidebar-link.component';
+import { CstCardDataTableComponent } from './cst-card-data-table.component';
 
-describe('SidebarLinkComponent', () => {
-  let component: SidebarLinkComponent;
-  let fixture: ComponentFixture<SidebarLinkComponent>;
+describe('CstCardDataTableComponent', () => {
+  let component: CstCardDataTableComponent;
+  let fixture: ComponentFixture<CstCardDataTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarLinkComponent ]
+      declarations: [ CstCardDataTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarLinkComponent);
+    fixture = TestBed.createComponent(CstCardDataTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

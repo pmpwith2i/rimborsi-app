@@ -1,58 +1,16 @@
 <div class="deleghe-panel">
-  <h1 class="text-title-dark">Deleghe</h1>
+  <div class="d-flex d-flex-row align-items-center">
+    <h1 class="text-title-dark mr-auto">Deleghe</h1>
+    <div class="btn-container-new">
+      <app-cst-button btnClass="btn-success" text="Nuova delega" iconName="add"></app-cst-button>
+    </div>
+  </div>
   <div class="deleghe-table-container standard-shadow">
-    <table class="table">
-      <thead class="cst-data-table-thead">
-      <tr>
-        <th scope="col">CF/Partita IVA
-          <div class="filter-thead-table d-flex align-items-center">
-            <mat-icon class="p-absolute thead-table-filter-icon">search</mat-icon>
-            <input class="form-control thead-input-filter"/>
-          </div>
-        </th>
-        <th scope="col">Tipo Datore
-        </th>
-        <th scope="col">Tipo delega
-        </th>
-        <th scope="col">Altro campo
-        </th>
-        <th scope="col">Nome
-          <div class="filter-thead-table d-flex align-items-center">
-            <mat-icon class="p-absolute thead-table-filter-icon">search</mat-icon>
-            <input class="form-control thead-input-filter"/>
-          </div>
-        </th>
-        <th scope="col">Data inizio
-          <div class="filter-thead-table d-flex align-items-center">
-            <mat-icon class="p-absolute thead-table-filter-icon">search</mat-icon>
-            <input class="form-control thead-input-filter"/>
-          </div>
-        </th>
-        <th scope="col">Data fine
-          <div class="filter-thead-table d-flex align-items-center">
-            <mat-icon class="p-absolute thead-table-filter-icon">search</mat-icon>
-            <input class="form-control thead-input-filter"/>
-          </div>
-        </th>
-        <th scope="col"></th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Otto</td>
-        <td class="cst-data-table-action d-flex">
-          <app-icon isCliccable="true" (click)="openDelegaDetail()" iconName="open_in_new"></app-icon>
-          <app-icon isCliccable="true" (click)="openDelegaDetail()" iconName="delete_outline"></app-icon>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <app-cst-table [filters]="dataSourceFilters"
+                   (filterEvent)="filterEvent($event)"
+                   [search]="datasourceSearch"
+                   [columns]="dataSourceColumns"
+                   [dataSource]="dataSource"></app-cst-table>
   </div>
 </div>
 <!-- <div class="overlay"></div>

@@ -1,0 +1,28 @@
+.cst-data-table-filter-badge {
+  margin-right: 1rem;
+  border-radius: .2rem;
+  border: 1px solid rgb(238, 238, 238);
+  font-size: .6rem;
+  padding-right: .5rem;
+}
+
+.cst-filter-badge-left {
+  color: rgb(128, 128, 128);
+  border-right: 1px solid rgb(242, 242, 242);
+  padding: .5rem;
+  border-top-right-radius: .2rem;
+  border-bottom-right-radius: .2rem;
+  margin-right: .4rem;
+  white-space: nowrap;
+}
+
+.cst-filter-badge-right {
+  margin-bottom: 0 !important;
+  font-size: .8rem;
+  border: 0px;
+}
+
+.cst-filter-badge-date-field {
+  width:1px;
+  opacity: 0;
+}

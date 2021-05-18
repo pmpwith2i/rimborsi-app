@@ -17,7 +17,7 @@ export class ApiEndpointsService {
   // URL
   private createUrl(
     action: string,
-    isMockAPI: boolean = false
+    isMockAPI: boolean = true
   ): string {
     const urlBuilder: UrlBuilder = new UrlBuilder(
       isMockAPI ? this.constants.API_MOCK_ENDPOINT :
@@ -62,5 +62,7 @@ export class ApiEndpointsService {
     return urlBuilder.toString();
   }
 
-  /* #endregion */
+  public getDelegheEndPoint(): string {
+    return this.createUrl('deleghe');
+  }
 }

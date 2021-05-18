@@ -1,0 +1,27 @@
+<div class="cst-data-table-filter-badge d-flex d-flex-row align-items-center">
+  <div class="cst-filter-badge-left d-flex d-flex-row align-items-center">
+    <app-icon [iconName]="filter.iconName" [isOutlined]="true"></app-icon>
+    <span>{{filter.name}}</span>
+  </div>
+  <ng-container *ngIf="filter.type=='select'">
+    <select (ngModelChange)="onModelChange($event)" class="cst-filter-badge-right form-select form-select-lg mb-3"
+            [(ngModel)]="filter.value" aria-label=".form-select-lg example">
+      <option [value]="null" selected>Tutti</option>
+      <option *ngFor="let v of filter.params" [ngValue]="v">{{v}}</option>
+    </select>
+  </ng-container>
+  <ng-container *ngIf="filter.type=='date'">
+    <div class="d-flex align-items-center">
+      {{filter.value | date}}
+      <mat-form-field class="cst-filter-badge-date-field">
+        <input matInput [matDatepicker]="picker" [formControl]="formControlFilter">
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-icon (click)="picker.open()" matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </div>
+  </ng-container>
+</div>

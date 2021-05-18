@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-calendar',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarComponent implements OnInit {
 
-  constructor() { }
+  date: string;
+  dayOfWeek: string;
+  days = ['Domenica', 'Lunedi', 'Martedi', 'Mercoledi', 'Giovedi', 'Venerdi', 'Sabato'];
+
+
+  private optionsLocale = {year: 'numeric', month: 'long', day: 'numeric'};
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.date = new Date().toLocaleDateString('it-IT', this.optionsLocale);
+    this.dayOfWeek = this.days[new Date().getDay()];
   }
 
 }

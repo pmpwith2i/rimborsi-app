@@ -31,6 +31,5 @@ export class UserInfoComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.profileForm.value);
   }
 }

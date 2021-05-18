@@ -1,0 +1,26 @@
+
+.side-nav-item {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top:10px;
+  padding-left:10px;
+  padding-bottom:10px;
+}
+
+.side-nav-item.selected {
+  border-left:1px solid white;
+}
+
+.side-nav-item:hover {
+  text-decoration: underline;
+}
+
+.side-nav-item-text {
+  padding: 5px;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0;
+}
