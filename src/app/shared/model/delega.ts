@@ -1,4 +1,5 @@
 export class Delega {
+  id: number;
   fiscalCode: string;
   tipoDatore: string;
   tipoDelega: string;
@@ -7,6 +8,7 @@ export class Delega {
   dataFine: Date;
 
   constructor(anObj: any) {
+    this.id = anObj.id;
     this.fiscalCode = anObj.fiscalCode;
     this.tipoDatore = anObj.tipoDatore;
     this.tipoDelega = anObj.tipoDelega;

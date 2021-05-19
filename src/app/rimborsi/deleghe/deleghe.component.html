@@ -1,4 +1,4 @@
-<div class="deleghe-panel">
+<div class="standard-panel">
   <div class="d-flex d-flex-row align-items-center">
     <h1 class="text-title-dark mr-auto">Deleghe</h1>
     <div class="btn-container-new">
@@ -9,14 +9,8 @@
     <app-cst-table [filters]="dataSourceFilters"
                    (filterEvent)="filterEvent($event)"
                    [search]="datasourceSearch"
+                   (showItemEvent)="showItem($event)"
                    [columns]="dataSourceColumns"
                    [dataSource]="dataSource"></app-cst-table>
   </div>
 </div>
-<!-- <div class="overlay"></div>
-<div class="deleghe-edit-section standard-shadow">
-  <div class="deleghe-edit-top">
-    <mat-icon class="deleghe-edit-close-icon">close</mat-icon>
-  </div>
-  <app-edit-delega></app-edit-delega>
-</div> -->

@@ -54,4 +54,8 @@ export class DelegheComponent implements OnInit {
     console.log(this.dataSourceFilters);
     this.getDeleghe(this.dataSourceFilters, this.datasourceSearch);
   }
+
+  showItem(anId: number): void {
+    this.router.navigate(['rimborsi/deleghe/edit', anId]);
+  }
 }

@@ -1,0 +1,84 @@
+<div class="standard-panel">
+  <h1 class="text-title-dark">Modifica Delega</h1>
+  <form class="g-3" [formGroup]="delegaFormControl">
+    <div class="delega-detail-panel row">
+      <div class="d-flex flex-column col-xl-4">
+        <div formGroupName="infoTipologia" class="delega-detail-1-left natural-shadow standard-card-panel">
+          <div class="col-sm-12">
+            <label for="inputTipoDatore" class="form-label">Tipo Datore</label>
+            <select id="inputTipoDatore" formControlName="tipoDatore" class="form-select">
+              <option selected>Scegli un tipo di datore...</option>
+            </select>
+          </div>
+          <div class="col-sm-12">
+            <label for="inputTipoDelega" class="form-label">Tipo Delega</label>
+            <select id="inputTipoDelega" formControlName="tipoDelega" class="form-select">
+              <option selected>Scegli un tipo di delega...</option>
+            </select>
+          </div>
+        </div>
+        <div formGroupName="infoLegale" class="delega-detail-1-left natural-shadow standard-card-panel">
+          <div class="col-sm-12">
+            <label for="inputNomeLegale" class="form-label">Nome</label>
+            <input type="text" formControlName="nome" class="form-control" id="inputNomeLegale">
+          </div>
+          <div class="col-sm-12">
+            <label for="inputCognomeLegale" class="form-label">Cognome</label>
+            <input type="text" formControlName="cognome" class="form-control" id="inputCognomeLegale">
+          </div>
+          <div class="col-sm-12">
+            <label for="inputFiscalCodeLegale" class="form-label">Codice Fiscale</label>
+            <input type="text" formControlName="fiscalCode" class="form-control" id="inputFiscalCodeLegale">
+          </div>
+          <div class="col-sm-12">
+            <label for="inputMailLegale" class="form-label">Mail/Pec</label>
+            <input type="email" formControlName="email" class="form-control" id="inputMailLegale">
+          </div>
+        </div>
+      </div>
+      <div class="delega-detail-right col-xl-8 standard-card-panel standard-shadow" >
+        <div formGroupName="infoDelega" class="row g-3">
+          <div class="col-sm-12">
+            <label for="inputNomeDelega" class="form-label">Nome o ragione sociale</label>
+            <input type="text" formControlName="nome" class="form-control" id="inputNomeDelega">
+          </div>
+          <div class="col-sm-6">
+            <label for="inputFiscalCodeDelega" class="form-label">Codice Fiscale</label>
+            <input type="text" formControlName="fiscalCode" class="form-control" id="inputFiscalCodeDelega">
+          </div>
+          <div class="col-sm-6">
+            <label for="inputVatDelega" class="form-label">Partita IVA</label>
+            <input type="text" formControlName="vat" class="form-control" id="inputVatDelega">
+          </div>
+          <div class="col-sm-12">
+            <label for="inputIbanDelega" class="form-label">IBAN</label>
+            <input type="text" formControlName="vat" class="form-control" id="inputIbanDelega">
+          </div>
+        </div>
+
+        <div formGroupName="address" class="row g-3">
+          <div class="col-sm-10">
+            <label for="inputStreet" class="form-label">Indirizzo</label>
+            <input type="text" class="form-control" formControlName="street" id="inputStreet"
+                   placeholder="Via Centrale N. ...">
+          </div>
+
+          <div class="col-sm-2">
+            <label for="inputZip" class="form-label">CAP</label>
+            <input type="number" formControlName="zipCode" class="form-control" id="inputZip">
+          </div>
+          <div class="col-sm-6">
+            <label for="inputCity" class="form-label">Città</label>
+            <input type="text" class="form-control" formControlName="city" id="inputCity">
+          </div>
+          <div class="col-sm-6">
+            <label for="inputState" class="form-label">Provincia</label>
+            <select id="inputState" formControlName="state" class="form-select">
+              <option selected>Scegli una provincia...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

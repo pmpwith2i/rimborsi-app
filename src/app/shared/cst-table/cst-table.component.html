@@ -11,7 +11,7 @@
       text="Filtri"
       btnClass="btn-primary"
       [iconName]="expandFilters ? 'expand_less' : 'expand_more'" (click)="toggleFilter()"></app-cst-button>
-    <app-cst-button text="Pulisci" btnClass="btn-primary"></app-cst-button>
+    <app-cst-button (click)="clearFilter()" text="Pulisci" btnClass="btn-primary"></app-cst-button>
   </div>
   <div class="cst-filter-list d-flex d-flex-row align-items-center" *ngIf="expandFilters">
     <ng-container *ngFor="let filter of filters">
@@ -42,7 +42,7 @@
     <td>
       <div class="cst-data-table-actions d-flex d-flex-row">
         <app-icon iconName="delete" [isCliccable]="true" [isOutlined]="true"></app-icon>
-        <app-icon iconName="open_in_new" [isCliccable]="true" [isOutlined]="true"></app-icon>
+        <app-icon iconName="open_in_new" (click)="clickShow(item.id)" [isCliccable]="true" [isOutlined]="true"></app-icon>
       </div>
     </td>
   </tr>

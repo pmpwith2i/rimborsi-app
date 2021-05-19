@@ -21,6 +21,9 @@ export const routes: Routes = [
         },
         {
           path: 'deleghe/:id', loadChildren: () => import('./delega-detail/delega-detail.module').then(m => m.DelegaDetailModule)
+        },
+        {
+          path: 'deleghe/edit/:id', loadChildren: () => import('./delega-edit/delega-edit.module').then(m => m.DelegaEditModule)
         }]
     }
   ]

@@ -11,7 +11,7 @@ import {FormControl} from '@angular/forms';
 })
 export class CstTableComponent implements OnInit {
 
-  @Output() showItemEvent = new EventEmitter<any>();
+  @Output() showItemEvent = new EventEmitter<number>();
   @Output() deleteItemEvent = new EventEmitter<number>();
   @Output() filterEvent = new EventEmitter<any>();
 
@@ -25,8 +25,6 @@ export class CstTableComponent implements OnInit {
 
   expandFilters: boolean = true;
 
-  filterList: CstFilter[] = [];
-
   constructor() {
   }
 
@@ -34,25 +32,12 @@ export class CstTableComponent implements OnInit {
     this.searchFormControl.valueChanges.subscribe((newVal) => this.filterEvent.emit(newVal));
   }
 
-  functionClickShow(anIndex: number): void {
-
+  clickShow(anId: number): void {
+    this.showItemEvent.emit(anId);
   }
 
   functionClickDelete(anIndex: number): void {
 
-  }
-
-  outputFilter(aPropName: string, filterType: string, aValue: string): void {
-    const aFilter = new CstFilter({propName: aPropName, type: filterType, value: aValue});
-
-    const anIndex = this.filterList.indexOf(this.filterList.find(el => el.propName == aFilter.propName));
-    if (0 <= anIndex) {
-      this.filterList[anIndex] = aFilter;
-    } else {
-      this.filterList.push(aFilter);
-    }
-
-    this.filterEvent.next(this.filterList);
   }
 
   toggleFilter(): void {
@@ -60,6 +45,16 @@ export class CstTableComponent implements OnInit {
   }
 
   aFilterChanged(newVal: any): void {
+    this.emitFilterEvent();
+  }
+
+  clearFilter(): void {
+    this.searchFormControl.setValue('');
+    this.filters.forEach(el => el.value = null);
+    this.emitFilterEvent();
+  }
+
+  private emitFilterEvent(): void{
     this.filterEvent.emit(this.searchFormControl.value);
   }
 }
