@@ -1,11 +1,11 @@
 <div class="app-container">
   <div class="row app-row">
-    <div class="col-xs-12  col-xl-3 side-nav standard-shadow"
+    <div class="col-xs-12  col-xl-3 col-xxl-2 side-nav standard-shadow" [style.height.px]="myInnerHeight"
          *ngIf="navbarOpen">
       <app-sidebar (linkSelected)="toggleNavBar()"></app-sidebar>
     </div>
     <div class="overlay xl-hide" *ngIf="navbarOpen" (click)="toggleNavBar()"></div>
-    <div class="col-xl-9 col-xs-12 right-rimborsi">
+    <div class="col-xl-9 col-xs-12 col-xxl-10 right-rimborsi">
       <app-navigation (eventMenuClicked)="toggleNavBar()"></app-navigation>
       <div class="rimborsi-container">
         <router-outlet></router-outlet>

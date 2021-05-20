@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CstCol} from '../cst-table/classes/cst-col';
 
 @Component({
@@ -11,10 +11,19 @@ export class CstCardDataTableComponent implements OnInit {
   @Input() dataSource: any[];
   @Input() columns: CstCol[];
 
+  @Output() showItemEvent = new EventEmitter<any>();
+  @Output() deleteItemEvent = new EventEmitter<any>();
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
+  showFunction(anId: any): void{
+    this.showItemEvent.emit(anId);
+  }
+
+  deleteFunction(anId: any):void {
+    this.deleteItemEvent.emit(anId);
+  }
 }

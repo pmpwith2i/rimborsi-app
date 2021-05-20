@@ -10,8 +10,8 @@
 
     </div>
     <div class="d-flex align-items-center">
-      <app-icon inClass="cst-data-card-icon" iconName="edit" [isCliccable]="true" [isOutlined]="true"></app-icon>
-      <app-icon inClass="cst-data-card-icon" iconName="open_in_new" [isCliccable]="true" [isOutlined]="true"></app-icon>
+      <app-icon inClass="cst-data-card-icon" iconName="edit" (click)="showFunction(1)" [isCliccable]="true" [isOutlined]="true"></app-icon>
+      <app-icon inClass="cst-data-card-icon" iconName="open_in_new" (click)="deleteFunction(1)" [isCliccable]="true" [isOutlined]="true"></app-icon>
     </div>
   </div>
   <div class="d-flex align-items-center cst-card-data-date">

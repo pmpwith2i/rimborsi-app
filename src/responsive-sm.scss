@@ -4,19 +4,19 @@
   }
 
   .side-nav {
-    width: 80vw !important;
+    width: 70vw  !important;
   }
 }
 
 @media (min-width: 512px) {
+  .side-nav {
+    width: 40vw !important;
+  }
 }
 
 @media (max-width: 768px) {
   .sm-hide {
     display: none;
-  }
-  .side-nav {
-    width: 50vw;
   }
 }
 
@@ -37,13 +37,13 @@
   .md-show {
     display: none;
   }
+
+  .side-nav {
+    width: 30vw;
+  }
 }
 
 @media (max-width: 1199px) {
-  .side-nav {
-    position: fixed !important;
-    width: 40vw;
-  }
 
   .standard-panel {
     padding: 0 !important;
@@ -74,5 +74,23 @@
 @media (min-width: 1200px) {
   .xl-hide {
     display: none;
+  }
+
+  .side-nav {
+    width: inherit !important;
+    position: sticky !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  html,body {
+    font-size:110% !important;
+  }
+}
+
+
+@media (min-width: 1800px) {
+  html,body {
+    font-size:120% !important;
   }
 }

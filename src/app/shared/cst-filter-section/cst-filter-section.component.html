@@ -1,0 +1,21 @@
+<div class="cst-data-table-filters-section">
+  <div class="d-flex d-flex-row">
+    <div class="cst-data-table-filter-search d-flex align-items-center">
+      <mat-icon class="p-absolute thead-table-filter-icon">search</mat-icon>
+      <input class="form-control thead-input-filter"
+             placeholder="Cerca tra i dati..."
+             [formControl]="searchFormControl"
+      />
+    </div>
+    <app-cst-button
+      text="Filtri"
+      btnClass="btn-primary"
+      [iconName]="expandFilters ? 'expand_less' : 'expand_more'" (click)="toggleFilter()"></app-cst-button>
+    <app-cst-button (click)="clearFilter()" text="Pulisci" btnClass="btn-primary"></app-cst-button>
+  </div>
+  <div class="cst-filter-list d-flex d-flex-row align-items-center" *ngIf="expandFilters">
+    <ng-container *ngFor="let filter of filters">
+      <app-cst-filter (modelChangeEvent)="aFilterChanged($event)" [filter]="filter"></app-cst-filter>
+    </ng-container>
+  </div>
+</div>

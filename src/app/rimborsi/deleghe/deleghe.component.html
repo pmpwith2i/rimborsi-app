@@ -6,11 +6,16 @@
     </div>
   </div>
   <div class="deleghe-table-container standard-shadow">
-    <app-cst-table [filters]="dataSourceFilters"
-                   (filterEvent)="filterEvent($event)"
-                   [search]="datasourceSearch"
-                   (showItemEvent)="showItem($event)"
-                   [columns]="dataSourceColumns"
-                   [dataSource]="dataSource"></app-cst-table>
+    <app-cst-filter-section [filters]="dataSourceFilters"
+                            [search]="datasourceSearch"
+                            (filterEvent)="filterEvent($event)"></app-cst-filter-section>
+    <div class="md-show cst-data-table-small-screen">
+      <app-cst-card-data-table class="md-show" [dataSource]="dataSource" [columns]="dataSourceColumns"></app-cst-card-data-table>
+    </div>
+    <app-cst-table
+      class="md-hide"
+      (showItemEvent)="showItem($event)"
+      [columns]="dataSourceColumns"
+      [dataSource]="dataSource"></app-cst-table>
   </div>
 </div>

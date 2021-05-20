@@ -9,6 +9,8 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 export class RimborsiComponent implements OnInit {
   navbarOpen = true;
 
+  myInnerHeight = window.innerHeight;
+
   constructor(private breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
       Breakpoints.XSmall,

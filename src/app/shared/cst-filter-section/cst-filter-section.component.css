@@ -1,0 +1,34 @@
+.cst-data-table-filters-section {
+  padding-bottom: 2rem;
+}
+
+.cst-data-table-filter-search {
+  width: 100%;
+}
+
+.cst-filter-list {
+  margin-top: 1rem;
+}
+
+.cst-filter-expand {
+  margin-left: 1rem;
+  background: rgb(240, 240, 240);
+  border-radius: .2rem;
+  padding: 0 1rem 0 1rem;
+  border: 1px solid rgb(214, 214, 214);
+  cursor: pointer;
+}
+
+.filter-thead-table {
+  width: auto;
+}
+
+.thead-input-filter {
+  padding-left: 40px;
+}
+
+.thead-table-filter-icon {
+  color: #d0d0d0;
+  margin-left: .5rem;
+}
+

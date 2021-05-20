@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditDelegaComponent } from './edit-delega.component';
+import { CstFilterSectionComponent } from './cst-filter-section.component';
 
-describe('EditDelegaComponent', () => {
-  let component: EditDelegaComponent;
-  let fixture: ComponentFixture<EditDelegaComponent>;
+describe('CstFilterSectionComponent', () => {
+  let component: CstFilterSectionComponent;
+  let fixture: ComponentFixture<CstFilterSectionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditDelegaComponent ]
+      declarations: [ CstFilterSectionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditDelegaComponent);
+    fixture = TestBed.createComponent(CstFilterSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
