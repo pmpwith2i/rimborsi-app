@@ -5,7 +5,7 @@
       <app-sidebar (linkSelected)="toggleNavBar()"></app-sidebar>
     </div>
     <div class="overlay xl-hide" *ngIf="navbarOpen" (click)="toggleNavBar()"></div>
-    <div class="col-xl-9 col-xs-12 col-xxl-10 right-rimborsi">
+    <div class="col-xs-12 col-xl-9 col-xxl-10 right-rimborsi">
       <app-navigation (eventMenuClicked)="toggleNavBar()"></app-navigation>
       <div class="rimborsi-container">
         <router-outlet></router-outlet>

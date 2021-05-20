@@ -9,14 +9,16 @@
 }
 
 @media (min-width: 512px) {
-  .side-nav {
-    width: 40vw !important;
-  }
 }
 
 @media (max-width: 768px) {
   .sm-hide {
     display: none;
+  }
+
+
+  .side-nav {
+    width: 40vw !important;
   }
 }
 
@@ -38,12 +40,13 @@
     display: none;
   }
 
-  .side-nav {
-    width: 30vw;
-  }
 }
 
 @media (max-width: 1199px) {
+
+  .side-nav {
+    width: 30vw !important;
+  }
 
   .standard-panel {
     padding: 0 !important;
@@ -77,7 +80,6 @@
   }
 
   .side-nav {
-    width: inherit !important;
     position: sticky !important;
   }
 }
