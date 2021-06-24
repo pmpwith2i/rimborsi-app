@@ -1,7 +1,7 @@
 import {CstFilter} from './cst-filter';
 import {Delega} from '../../model/delega';
 
-export function filterItem(filterList: CstFilter[], searchStr: string, el: Delega): boolean {
+export function filterItem(filterList: CstFilter[], searchStr: string, el: any): boolean {
   let find = true;
 
   if (null != filterList) {

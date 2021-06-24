@@ -1,0 +1,70 @@
+<div class="standard-panel">
+  <div class="d-flex d-flex-row align-items-center">
+    <div class="mr-auto">
+      <h1 class="text-title-darko">Nuova richiesta da attestato</h1>
+      <h4>Aggiungi una nuova richiesta da un attestato presente</h4>
+    </div>
+  </div>
+
+  <div class="row standard-section-margin">
+    <div class="col-xl-4">
+      <div class="standard-card-panel natural-shadow">
+        <div class="standard-card-panel-title">
+          Dati Utente
+        </div>
+        <div class=" standard-card-panel-body">
+          <div class="col-sm-12">
+            <label for="inputUtenteRichiesta" class="form-label">Richiesta per conto di</label>
+            <select id="inputUtenteRichiesta" class="form-select">
+              <option selected>Scegli un tipo utente...</option>
+              <option value="Mario Rossi">Mario Rossi</option>
+              <option value="Sergio Viola">Sergio Viola</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="standard-card-panel natural-shadow">
+        <div class="standard-card-panel-title d-flex align-items-center">
+          <div class="mr-auto">
+            Codici Attestato
+          </div>
+          <div class="standard-card-panel-title-action">
+            <app-cst-button btnClass="btn-success" [isSmall]="true" text="Aggiungi codice" iconName="add"></app-cst-button>
+          </div>
+        </div>
+        <div class="standard-card-panel-body">
+          <ul class="codici-attestato-list">
+            <li class="codice-attestato-item d-flex">
+              <span class="codice-attestato-text mr-auto">ANCJHLIU</span>
+              <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
+                        [isCliccable]="true"></app-icon>
+            </li>
+            <li class="codice-attestato-item d-flex">
+              <span class="codice-attestato-text mr-auto">ANCJHLIU</span>
+              <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
+                        [isCliccable]="true"></app-icon>
+            </li>
+            <li class="codice-attestato-item d-flex">
+              <span class="codice-attestato-text mr-auto">ANCJHLIU</span>
+              <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
+                        [isCliccable]="true"></app-icon>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8">
+      <div class="standard-card-panel natural-shadow">
+        <div class="standard-card-panel-title">
+          Giornate Disponibili (Selezionate : <b>{{getCountSelectedDays()}}</b>)
+        </div>
+        <div class="standard-card-panel-body">
+          <app-giornate-list [giornate]="giornate"></app-giornate-list>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="d-flex justify-content-center">
+      <app-cst-button btnClass="btn-success" text="Prosegui" iconName="check"></app-cst-button>
+    </div>
+</div>

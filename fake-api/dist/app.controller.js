@@ -16,16 +16,43 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
-    getHello() {
+    getDeleghe() {
         return this.appService.getDeleghe();
+    }
+    getRichieste() {
+        return this.appService.getRichieste();
+    }
+    getStorico() {
+        return this.appService.getStorico();
+    }
+    getNotifiche() {
+        return this.appService.getNotifiche();
     }
 };
 __decorate([
     common_1.Get('deleghe'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], AppController.prototype, "getHello", null);
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getDeleghe", null);
+__decorate([
+    common_1.Get('richieste'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getRichieste", null);
+__decorate([
+    common_1.Get('storico'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getStorico", null);
+__decorate([
+    common_1.Get('notifiche'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getNotifiche", null);
 AppController = __decorate([
     common_1.Controller(),
     __metadata("design:paramtypes", [app_service_1.AppService])

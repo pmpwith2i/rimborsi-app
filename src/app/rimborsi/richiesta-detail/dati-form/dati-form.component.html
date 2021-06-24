@@ -1,0 +1,109 @@
+<form class="g-3" [formGroup]="richiestaFormControl">
+  <div formGroupName="datiFinanziari">
+    <div class="row align-items-end row-dati-finanziari">
+      <div class="col-md-4 col-9">
+        <label for="inputGiornate" class="form-label">Numero giornate</label>
+        <input type="number" formControlName="giornate" class="form-control" id="inputGiornate">
+      </div>
+    </div>
+    <div class="row align-items-end row-dati-finanziari">
+      <div class="col-md-4 col-9">
+        <label for="inputGiorniStipendio" class="form-label">Stipendio Lordo Giorni</label>
+        <input type="number" formControlName="giorniStipendio" class="form-control" id="inputGiorniStipendio">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputLordoStipendio" class="form-label">Euro</label>
+        <input type="number" formControlName="lordoStipendio" class="form-control" id="inputLordoStipendio">
+      </div>
+
+      <div class="col-md-4 col-9">
+        <label for="inputRateo13Ore" class="form-label">Rateo 13/a Ore</label>
+        <input type="number" formControlName="rateoTredicesimaOre" class="form-control" id="inputRateo13Ore">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputRateo13Euro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoTredicesimaEuro" class="form-control"
+               id="inputRateo13Euro">
+      </div>
+    </div>
+    <div class="row align-items-end row-dati-finanziari">
+      <div class="col-md-4 col-9">
+        <label for="inputRateo14Ore" class="form-label">Rateo 14/a Ore</label>
+        <input type="number" formControlName="rateoQuattordicesimaOre" class="form-control"
+               id="inputRateo14Ore">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputRateo14Euro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoQuattordicesimaEuro" class="form-control"
+               id="inputRateo14Euro">
+      </div>
+      <div class="col-md-4 col-9">
+        <label for="inputRateoAltreOre" class="form-label">Rateo Altre Mensilità Ore</label>
+        <input type="number" formControlName="rateoAltreMensilitaOre" class="form-control"
+               id="inputRateoAltreOre">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputRateoAltreEuro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoAltreMensilitaEuro" class="form-control"
+               id="inputRateoAltreEuro">
+      </div>
+    </div>
+    <div class="row align-items-end row-dati-finanziari">
+      <div class="col-md-4 col-9">
+        <label for="inputRateoPermessiOre" class="form-label">Rateo Permessi Retribuiti Ore</label>
+        <input type="number" formControlName="rateoPermessiOre" class="form-control"
+               id="inputRateoPermessiOre">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputRateoPermessiEuro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoPermessiEuro" class="form-control"
+               id="inputRateoPermessiEuro">
+      </div>
+      <div class="col-md-4 col-9">
+        <label for="inputRateoFerieOre" class="form-label">Rateo Ferie Ore</label>
+        <input type="number" formControlName="rateoFerieOre" class="form-control"
+               id="inputRateoFerieOre">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputRateoFerieEuro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoFerieEuro" class="form-control"
+               id="inputRateoFerieEuro">
+      </div>
+    </div>
+    <div class="row align-items-end row-dati-finanziari">
+      <div class="col-md-4 col-9">
+        <label for="inputrateoExFestivitaEuro" class="form-label">Rateo Ex Festività Ore</label>
+        <input type="number" formControlName="rateoExFestivitaOre" class="form-control"
+               id="inputrateoExFestivitaOre">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputrateoExFestivitaEuro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoExFestivitaEuro" class="form-control"
+               id="inputrateoExFestivitaEuro">
+      </div>
+      <div class="col-md-4 col-9">
+        <label for="inputrateoExFestivita2Euro" class="form-label">Rateo Ex Festività 2/6 e 4/11 Ore</label>
+        <input type="number" formControlName="rateoExFestivita2Ore" class="form-control"
+               id="inputrateoExFestivita2Ore">
+      </div>
+      <div class="col-3 col-md-2">
+        <label for="inputrateoExFestivita2Euro" class="form-label">Euro</label>
+        <input type="number" formControlName="rateoExFestivita2Euro" class="form-control"
+               id="inputrateoExFestivita2Euro">
+      </div>
+    </div>
+    <div class="row align-items-end row-dati-finanziari">
+      <div class="col-sm-6 col-12">
+        <label for="inputIban" class="form-label">IBAN</label>
+        <input type="text" formControlName="iban" class="form-control"
+               id="inputIban">
+      </div>
+      <div class="col-sm-6 col-12">
+        <label for="inputModalitaRimborso" class="form-label">Modalità Rimborso</label>
+        <select id="inputModalitaRimborso" formControlName="modalitaRimborso" class="form-select">
+          <option selected>Scegli una modalità...</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,22 @@
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-list-element {
+  padding-left: .5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid #ececec;
+}
+
+.history-list-data {
+  font-size: .8rem;
+}
+
+.history-list-motivo {
+  font-size: .6rem;
+  color: rgb(0, 156, 255);
+}

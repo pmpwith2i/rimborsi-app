@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleghe = void 0;
+exports.notifiche = exports.storico = exports.richieste = exports.deleghe = void 0;
 exports.deleghe = [
     {
         id: 1,
@@ -28,6 +28,73 @@ exports.deleghe = [
         name: 'Federico Pomponii',
         dataInizio: new Date(),
         dataFine: new Date("2021-10-10")
+    }
+];
+exports.richieste = [
+    {
+        id: 1,
+        stato: 'Presentata',
+        volontario: 'Sergio Viola',
+        datoreLavoro: 'Mario Rossi SRL',
+        tipoDatore: 'Azienda Privatqa',
+        evento: 'COVID',
+        dataInizio: new Date(),
+        dataFine: new Date('2021-10-10'),
+        giorni: 5,
+        importo: 434.73,
+    }
+];
+exports.storico = [
+    { id: 1,
+        data: new Date(),
+        motivo: 'Richiesta integrazioni',
+        nota: 'Allegare documento' },
+    { id: 2,
+        data: new Date(),
+        motivo: 'Richiesta integrazioni',
+        nota: '' },
+    { id: 3,
+        data: new Date(),
+        motivo: 'Creata',
+        nota: '' },
+    { id: 4,
+        data: new Date(),
+        motivo: 'Presentata',
+        nota: '' }
+];
+exports.notifiche = [
+    {
+        id: 1,
+        notifica: 'Approvata',
+        volontario: 'Sergio Viola',
+        datoreLavoro: 'Mario Rossi SRL',
+        tipoDatore: 'Azienda Privata',
+        evento: 'COVID',
+        dataInizio: new Date(),
+        dataFine: new Date(),
+        giorni: 5
+    },
+    {
+        id: 2,
+        notifica: 'Richiesta Integrazioni',
+        volontario: 'Giuseppe Poggi',
+        datoreLavoro: 'Mario Rossi SRL',
+        tipoDatore: 'Azienda Privata',
+        evento: 'COVID',
+        dataInizio: new Date(),
+        dataFine: new Date(),
+        giorni: 5
+    },
+    {
+        id: 3,
+        notifica: 'Approvata',
+        volontario: 'Sergio Viola',
+        datoreLavoro: 'Mario Rossi SRL',
+        tipoDatore: 'Azienda Privata',
+        evento: 'COVID',
+        dataInizio: new Date(),
+        dataFine: new Date(),
+        giorni: 5
     }
 ];
 //# sourceMappingURL=model.js.map
