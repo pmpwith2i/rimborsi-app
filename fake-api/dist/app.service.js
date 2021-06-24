@@ -16,6 +16,15 @@ let AppService = class AppService {
     getDeleghe() {
         return model_1.deleghe;
     }
+    getRichieste() {
+        return model_1.richieste;
+    }
+    getStorico() {
+        return model_1.storico;
+    }
+    getNotifiche() {
+        return model_1.notifiche;
+    }
 };
 AppService = __decorate([
     common_1.Injectable()

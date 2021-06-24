@@ -1,0 +1,7 @@
+<ul class="giornate-disponibili-list">
+  <li *ngFor="let el of giornate; let i = index;" (click)="onClickGiornata(i)"
+      class="giornate-disponibili-item"
+      [class.selected]="el.selected">
+    <app-giornata-item [giornata]="el"></app-giornata-item>
+  </li>
+</ul>

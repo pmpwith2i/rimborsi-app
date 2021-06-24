@@ -51,7 +51,6 @@ export class DelegheComponent implements OnInit {
 
   filterEvent(searchNewval: string): void {
     this.datasourceSearch = searchNewval;
-    console.log(this.dataSourceFilters);
     this.getDeleghe(this.dataSourceFilters, this.datasourceSearch);
   }
 

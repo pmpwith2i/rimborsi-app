@@ -14,17 +14,25 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {CstCardDataTableComponent} from './cst-card-data-table/cst-card-data-table.component';
 import {CstFilterSectionComponent} from './cst-filter-section/cst-filter-section.component';
+import {HistoryListComponent} from './history-list/history-list.component';
+import {AllegatoItemComponent} from './allegato-item/allegato-item.component';
+import {DragAndDropUploadDirective} from './allegato-item/drag-and-drop-upload.directive';
+import {GiornateListComponent} from './giornate-list/giornate-list.component';
+import { GiornataItemComponent } from './giornata-item/giornata-item.component';
 
 
 @NgModule({
-  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent],
+  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent],
   exports: [
     IconComponent,
     CalendarComponent,
     CstTableComponent,
     CstButtonComponent,
     CstFilterSectionComponent,
-    CstCardDataTableComponent
+    CstCardDataTableComponent,
+    HistoryListComponent,
+    AllegatoItemComponent,
+    GiornateListComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +44,7 @@ import {CstFilterSectionComponent} from './cst-filter-section/cst-filter-section
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [MatDatepickerModule]
 })

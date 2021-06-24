@@ -1,0 +1,22 @@
+<div class="standard-panel">
+  <div class="d-flex d-flex-row align-items-center">
+    <h1 class="text-title-dark mr-auto">Notifiche</h1>
+    <div class="btn-container-new" routerLink="/rimborsi/richieste/new">
+      <app-cst-button btnClass="btn-success" text="Nuova richiesta" iconName="add"></app-cst-button>
+    </div>
+  </div>
+  <div class="standard-table-container standard-shadow">
+    <app-cst-filter-section [filters]="dataSourceFilters"
+                            [search]="datasourceSearch"
+                            (filterEvent)="filterEvent($event)"></app-cst-filter-section>
+    <div class="md-show cst-data-table-small-screen">
+      <app-cst-card-data-table class="md-show" [dataSource]="dataSource"
+                               [columns]="dataSourceColumns"></app-cst-card-data-table>
+    </div>
+    <app-cst-table
+      class="md-hide"
+      (showItemEvent)="showItem($event)"
+      [columns]="dataSourceColumns"
+      [dataSource]="dataSource"></app-cst-table>
+  </div>
+</div>

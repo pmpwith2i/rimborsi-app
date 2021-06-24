@@ -65,4 +65,16 @@ export class ApiEndpointsService {
   public getDelegheEndPoint(): string {
     return this.createUrl('deleghe');
   }
+
+  public getRichiesteEndPoint(): string {
+    return this.createUrl('richieste');
+  }
+
+  getStoricoEndpoint(richiestaId: number): string {
+    return this.createUrl('storico');
+  }
+
+  getNotificheEndPoint(): string {
+    return this.createUrl('notifiche');
+  }
 }

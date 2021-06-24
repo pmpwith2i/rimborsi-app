@@ -7,3 +7,32 @@ export declare const deleghe: {
     dataInizio: Date;
     dataFine: Date;
 }[];
+export declare const richieste: {
+    id: number;
+    stato: string;
+    volontario: string;
+    datoreLavoro: string;
+    tipoDatore: string;
+    evento: string;
+    dataInizio: Date;
+    dataFine: Date;
+    giorni: number;
+    importo: number;
+}[];
+export declare const storico: {
+    id: number;
+    data: Date;
+    motivo: string;
+    nota: string;
+}[];
+export declare const notifiche: {
+    id: number;
+    notifica: string;
+    volontario: string;
+    datoreLavoro: string;
+    tipoDatore: string;
+    evento: string;
+    dataInizio: Date;
+    dataFine: Date;
+    giorni: number;
+}[];

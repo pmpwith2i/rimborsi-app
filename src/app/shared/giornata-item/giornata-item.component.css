@@ -1,0 +1,13 @@
+
+.giornata-list-data {
+  font-size: 1rem;
+}
+
+.giornata-list-ore {
+  font-size: .9rem;
+}
+
+.giornata-list-codice {
+  font-size: .8rem;
+  color: rgb(0, 156, 255);
+}

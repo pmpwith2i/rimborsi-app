@@ -5,6 +5,8 @@ import {ApiEndpointsService} from './services/api-endpoints.service';
 import {DelegheService} from './services/deleghe.service';
 import {UserInfoService} from './services/user-info.service';
 import {HttpClientModule} from '@angular/common/http';
+import {RichiesteService} from './services/richieste.service';
+import {NotificheService} from './services/notifiche.service';
 
 
 @NgModule({
@@ -13,7 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
     CommonModule,
     HttpClientModule
   ],
-  providers: [UserInfoService, ApiEndpointsService, ApiHttpService, DelegheService]
+  providers: [UserInfoService, ApiEndpointsService, ApiHttpService, DelegheService, RichiesteService, NotificheService]
 })
 export class CoreModule {
 }

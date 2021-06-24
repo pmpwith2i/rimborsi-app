@@ -1,0 +1,49 @@
+<div class="standard-panel">
+  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+    <div class="mr-auto title-mobile-responsive">
+      <h1 class="number-title-dark">Riepilogo Richiesta - {{richiestaName}}</h1>
+      <h4 class="subtitle-dark">Mario Rossi - Evento Covid</h4>
+    </div>
+    <div class="btn-container-new">
+      <app-cst-button btnClass="btn-success" text="Presenta Domanda" iconName="send"></app-cst-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-5 col-12">
+      <div class="natural-shadow standard-card-panel">
+        <div class="standard-card-panel-title">
+          Carta d'identità
+        </div>
+        <div class="standard-card-panel-body">
+          <app-allegato-item></app-allegato-item>
+        </div>
+      </div>
+      <div class="natural-shadow standard-card-panel">
+        <div class="standard-card-panel-title">
+          Busta paga
+        </div>
+        <div class="standard-card-panel-body">
+          <app-allegato-item></app-allegato-item>
+        </div>
+      </div>
+      <div class="natural-shadow standard-card-panel">
+        <div class="standard-card-panel-title">
+          Storico
+        </div>
+        <div class="standard-card-panel-body">
+          <app-history-list [histories]="histories"></app-history-list>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-7 col-12">
+      <div class="natural-shadow standard-card-panel">
+        <div class="standard-card-panel-title">
+          Dati finanziari
+        </div>
+        <div class="standard-card-panel-body">
+          <app-dati-form></app-dati-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

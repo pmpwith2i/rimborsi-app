@@ -11,6 +11,8 @@ export class CstButtonComponent implements OnInit {
   @Input() text: string;
   @Input() iconName: string;
   @Input() btnClass: string;
+  @Input()
+  isSmall: boolean;
 
   constructor() {
   }

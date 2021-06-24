@@ -1,0 +1,14 @@
+.cst-allegato-item {
+  background: rgba(238, 238, 238, 0.4);
+  border-radius: 7px;
+  padding: .8rem;
+  cursor: pointer;
+}
+
+.cst-allegato-item:hover {
+  background: #e2eefd;
+}
+
+.cst-allegato-left {
+  margin-right: 1.5rem;
+}

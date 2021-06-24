@@ -24,6 +24,21 @@ export const routes: Routes = [
         },
         {
           path: 'deleghe/edit/:id', loadChildren: () => import('./delega-edit/delega-edit.module').then(m => m.DelegaEditModule)
+        },
+        {
+          path: 'richieste', loadChildren: () =>
+            import('./richieste/richieste.module').then(m => m.RichiesteModule)
+        },
+        {
+          path: 'richieste/new', loadChildren: () =>
+            import('./richiesta-new/richiesta-new.module').then(m => m.RichiestaNewModule)
+        },
+        {
+          path: 'richieste/:id', loadChildren: () => import('./richiesta-detail/richiesta-detail.module').then(m => m.RichiestaDetailModule)
+        },
+        {
+          path: 'notifiche', loadChildren: () =>
+            import('./notifiche/notifiche.module').then(m => m.NotificheModule)
         }]
     }
   ]
