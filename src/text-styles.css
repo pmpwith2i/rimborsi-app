@@ -4,24 +4,25 @@
 
 .text-title-dark {
   color: #283033;
-  padding:1rem;
+  border-left: 4px solid #283033;
+  padding: .3rem;
 }
 
 .text-title-light {
   color: #fff;
-  padding:1rem;
+  padding: .3rem;
 }
 
 .text-sm {
-  font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
 .text-m {
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 h1 {
-  font-size:2rem;
+  font-size: 2rem;
   margin-top: 0;
 }
 

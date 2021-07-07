@@ -1,8 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Inject, Input, LOCALE_ID, OnInit, Output} from '@angular/core';
 import {CstCol} from './classes/cst-col';
-import {CstFilter} from './classes/cst-filter';
-import {FormControl} from '@angular/forms';
-
+import {formatDate} from '@angular/common';
 
 @Component({
   selector: 'app-cst-table',
@@ -19,7 +17,7 @@ export class CstTableComponent implements OnInit {
   @Input() columns: CstCol[];
 
 
-  constructor() {
+  constructor(@Inject(LOCALE_ID) private locale: string) {
   }
 
   ngOnInit(): void {
@@ -33,4 +31,15 @@ export class CstTableComponent implements OnInit {
 
   }
 
+  colText(col: CstCol, item: any): string {
+    if (col.propType === 'date') {
+      return formatDate(item[col.propName], 'medium', this.locale);
+    }
+
+    if (col.propType === 'boolean') {
+      return item[col.propName] === true ? 'Si' : 'No';
+    }
+
+    return item[col.propName];
+  }
 }

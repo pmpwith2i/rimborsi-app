@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -8,7 +8,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {RimborsiModule} from './rimborsi/rimborsi.module';
 import {CoreModule} from './core/core.module';
 import {Constants} from './config/constants';
-
+import '@angular/common/locales/global/it';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,8 +20,10 @@ import {Constants} from './config/constants';
     RimborsiModule,
     SharedModule,
     CoreModule
+  ],
+  providers: [Constants,
+    {provide: LOCALE_ID, useValue: 'it-IT'}
     ],
-  providers: [Constants],
   bootstrap: [AppComponent]
 })
 export class AppModule {

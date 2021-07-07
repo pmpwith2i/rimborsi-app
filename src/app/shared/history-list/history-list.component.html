@@ -3,7 +3,7 @@
     <li *ngFor="let item of histories; let i = index" class="history-list-element">
       <div class="d-flex flex-column">
         <span class="history-list-data">
-          {{item.data | date}}
+          {{item.data | date: 'medium'}}
         </span>
         <span class="history-list-motivo">
           {{item.motivo}}

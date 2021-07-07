@@ -15,7 +15,7 @@ export class CstFilterSectionComponent implements OnInit {
 
   searchFormControl = new FormControl('');
 
-  expandFilters: boolean = true;
+  expandFilters = true;
 
   constructor() {
   }

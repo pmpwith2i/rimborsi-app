@@ -2,7 +2,7 @@ export class CstCol {
   readonly name: string;
   readonly propName: string;
   readonly isFilterEnabled: boolean;
-  readonly propType: string;
+  readonly propType: 'string' | 'number' | 'boolean' | 'date';
   readonly colType: 'standard' | 'chips';
   backgroundFunction: any;
 
@@ -12,8 +12,6 @@ export class CstCol {
     this.isFilterEnabled = anObj.isFilterEnabled;
     this.propType = anObj.propType;
     this.colType = anObj.colType || 'standard';
-    if (anObj.funcValueParams) {
-      this.backgroundFunction = anObj.backgroundFunction;
-    }
+    this.backgroundFunction = anObj.backgroundFunction || null;
   }
 }

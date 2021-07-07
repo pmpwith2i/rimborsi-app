@@ -11,16 +11,8 @@ export class Constants {
 }
 
 function delegaBackgroundFunctionFunzionario(anItem: Delega): string {
-  if (anItem.datore === 'FUNZIONARIO') {
-    return 'orange';
-  }
-
-  if (anItem.datore === 'AMMINISTRATORE') {
+  if (anItem.verificata) {
     return 'greenyellow';
-  }
-
-  if (anItem.datore === 'OPERATORE') {
-    return 'cyan';
   }
 
 
@@ -67,28 +59,27 @@ export function getDelegheFilters(): any {
 export function getDelegheColumns(): any {
   const dataSourceColumns: CstCol[] = [];
   dataSourceColumns.push({
+    colType: 'chips',
+    propName: 'verificata',
+    name: 'Verificata',
+    isFilterEnabled: true,
+    propType: 'boolean',
+    backgroundFunction: delegaBackgroundFunctionFunzionario
+  });
+  dataSourceColumns.push(new CstCol({
     colType: 'standard',
     propName: 'fiscalCode',
     name: 'CF/Partita IVA',
     isFilterEnabled: true,
-    propType: 'string',
-    backgroundFunction: null
-  });
-  dataSourceColumns.push({
-    colType: 'standard',
-    propName: 'richiedente',
-    name: 'Richiedente',
-    isFilterEnabled: false,
-    propType: 'string',
-    backgroundFunction: null
-  });
+    propType: 'string'
+  }));
   dataSourceColumns.push({
     colType: 'chips',
-    propName: 'datore',
+    propName: 'datoreLavoro',
     name: 'Datore',
     isFilterEnabled: false,
     propType: 'string',
-    backgroundFunction: delegaBackgroundFunctionFunzionario
+    backgroundFunction: null
   });
   dataSourceColumns.push({
     colType: 'standard',

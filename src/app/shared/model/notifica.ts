@@ -20,4 +20,19 @@ export class Notifica {
     this.dataFine = anObj.dataFine;
     this.giorni = anObj.giorni;
   }
+
+  search(searchStr: string = ''): boolean {
+    if (searchStr.length === 0) {
+      return true;
+    }
+
+    if (this.notifica.toLowerCase().includes(searchStr.toLowerCase())) {
+      return true;
+    }
+
+    if (this.volontario.toLowerCase().includes(searchStr.toLowerCase())) {
+      return true;
+    }
+    return false;
+  }
 }

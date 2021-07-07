@@ -12,6 +12,24 @@ export class DelegaEditComponent implements OnInit {
     infoTipologia: this.formBuilder.group({
       tipoDatore: [''],
       tipoDelega: ['']
+    }),
+    infoLegale: this.formBuilder.group({
+      nome: [''],
+      cognome: [''],
+      fiscalCode: [''],
+      email: ['']
+    }),
+    infoDelega: this.formBuilder.group({
+      nome: [''],
+      cognome: [''],
+      vat: [''],
+      fiscalCode: ['']
+    }),
+    address: this.formBuilder.group({
+      street: [''],
+      zipCode: [''],
+      city: [''],
+      state: ['']
     })
   });
 

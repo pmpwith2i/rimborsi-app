@@ -1,70 +1,65 @@
 <div class="standard-panel">
-  <div class="d-flex d-flex-row align-items-center">
-    <div class="mr-auto">
-      <h1 class="text-title-darko">Nuova richiesta da attestato</h1>
+  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+    <div class="mr-auto title-mobile-responsive">
+      <h1 class="text-title-dark">Nuova richiesta da attestato</h1>
       <h4>Aggiungi una nuova richiesta da un attestato presente</h4>
+    </div>
+
+    <div class="btn-container-new">
+      <app-cst-button btnClass="btn-success" text="Prosegui" iconName="check" (click)="sendRequest()"></app-cst-button>
     </div>
   </div>
 
   <div class="row standard-section-margin">
-    <div class="col-xl-4">
-      <div class="standard-card-panel natural-shadow">
-        <div class="standard-card-panel-title">
-          Dati Utente
+    <div class="col-4">
+      <app-cst-panel-card cardTitle="Dati Utente">
+        <div class="col-sm-12">
+          <label for="inputUtenteRichiesta" class="form-label">Richiesta per conto di</label>
+          <select id="inputUtenteRichiesta" class="form-select">
+            <option selected>Scegli un tipo utente...</option>
+            <option value="Mario Rossi">Mario Rossi</option>
+            <option value="Sergio Viola">Sergio Viola</option>
+          </select>
         </div>
-        <div class=" standard-card-panel-body">
-          <div class="col-sm-12">
-            <label for="inputUtenteRichiesta" class="form-label">Richiesta per conto di</label>
-            <select id="inputUtenteRichiesta" class="form-select">
-              <option selected>Scegli un tipo utente...</option>
-              <option value="Mario Rossi">Mario Rossi</option>
-              <option value="Sergio Viola">Sergio Viola</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="standard-card-panel natural-shadow">
-        <div class="standard-card-panel-title d-flex align-items-center">
-          <div class="mr-auto">
-            Codici Attestato
-          </div>
-          <div class="standard-card-panel-title-action">
-            <app-cst-button btnClass="btn-success" [isSmall]="true" text="Aggiungi codice" iconName="add"></app-cst-button>
-          </div>
-        </div>
+      </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Codici Attestato">
         <div class="standard-card-panel-body">
           <ul class="codici-attestato-list">
-            <li class="codice-attestato-item d-flex">
-              <span class="codice-attestato-text mr-auto">ANCJHLIU</span>
+            <li class="codice-attestato-item d-flex align-items-center">
+              <div class="mr-auto">
+                <div class="codice-attestato-text ">ANCJHLIU</div>
+                <div class="codice-attestato-name">Federico Pomponii</div>
+              </div>
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
-            <li class="codice-attestato-item d-flex">
-              <span class="codice-attestato-text mr-auto">ANCJHLIU</span>
+            <li class="codice-attestato-item d-flex align-items-center">
+              <div class="mr-auto">
+                <div class="codice-attestato-text ">ANCJHLSS</div>
+                <div class="codice-attestato-name">Federico Pomponii</div>
+              </div>
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
-            <li class="codice-attestato-item d-flex">
-              <span class="codice-attestato-text mr-auto">ANCJHLIU</span>
+            <li class="codice-attestato-item d-flex align-items-center">
+              <div class="mr-auto">
+                <div class="codice-attestato-text ">B89SJSJJ</div>
+                <div class="codice-attestato-name">Federico Pomponii</div>
+              </div>
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
           </ul>
         </div>
-      </div>
+      </app-cst-panel-card>
     </div>
-    <div class="col-xl-8">
-      <div class="standard-card-panel natural-shadow">
-        <div class="standard-card-panel-title">
-          Giornate Disponibili (Selezionate : <b>{{getCountSelectedDays()}}</b>)
-        </div>
-        <div class="standard-card-panel-body">
+    <div class="col-8">
+      <app-cst-panel-card
+        cardTitle="Giornate Di Assenza (Selezionate : {{getCountSelectedDays()}} / {{giornate.length}})">
+        <div class="giornate-list-container">
           <app-giornate-list [giornate]="giornate"></app-giornate-list>
         </div>
-      </div>
+      </app-cst-panel-card>
     </div>
   </div>
-    <div class="d-flex justify-content-center">
-      <app-cst-button btnClass="btn-success" text="Prosegui" iconName="check"></app-cst-button>
-    </div>
 </div>

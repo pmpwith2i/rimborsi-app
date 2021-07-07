@@ -2,29 +2,32 @@ export const deleghe = [
     {
         id:1,
         fiscalCode: 'PMPFRC97R06L103Y',
-        tipoDatore: 'FUNZIONARIO',
+        datoreLavoro: 'Mario Rossi SRL',        
         tipoDelega: 'TIPO 1',
         name: 'Federico Pomponii',
         dataInizio: new Date(),
-        dataFine: new Date("2021-10-10")
+        dataFine: new Date("2021-10-10"),
+        verificata: true
     },
     {
         id:2,
         fiscalCode: 'PMPFRC97R06L103Y',
-        tipoDatore: 'OPERATORE',
+        datoreLavoro: 'Mario Rossi SRL',        
         tipoDelega: 'TIPO 1',
-        name: 'Federico Pomponii',
+        name: 'Servio Viola',
         dataInizio: new Date(),
-        dataFine: new Date("2021-10-10")
+        dataFine: new Date("2021-10-10"),
+        verificata:false
     },
     {
         id:3,
         fiscalCode: 'PMPFRC97R06L103Y',
-        tipoDatore: 'AMMINISTRATORE',
+        datoreLavoro: 'Mario Rossi SRL',        
         tipoDelega: 'TIPO 1',
-        name: 'Federico Pomponii',
+        name: 'Mario Rossi',
         dataInizio: new Date(),
-        dataFine: new Date("2021-10-10")
+        dataFine: new Date("2021-10-10"),
+        verificata:false
     }
 ]
 

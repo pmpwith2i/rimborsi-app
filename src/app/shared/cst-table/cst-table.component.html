@@ -12,7 +12,7 @@
     <td *ngFor="let col of columns">
       <span [style.backgroundColor]="col.backgroundFunction ? col.backgroundFunction(item) : 'transparent'"
             [class.cst-data-chips]="col.colType=='chips'">
-        {{col.propType == 'date' ? (item[col.propName] | date) : item[col.propName] }}
+        {{colText(col,item)}}
       </span>
     </td>
     <td>

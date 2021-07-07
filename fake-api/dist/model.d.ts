@@ -1,11 +1,12 @@
 export declare const deleghe: {
     id: number;
     fiscalCode: string;
-    tipoDatore: string;
+    datoreLavoro: string;
     tipoDelega: string;
     name: string;
     dataInizio: Date;
     dataFine: Date;
+    verificata: boolean;
 }[];
 export declare const richieste: {
     id: number;

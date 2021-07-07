@@ -9,3 +9,16 @@
   padding:.5rem;
   border-bottom: 1px solid #efefef;
 }
+
+.giornate-list-container {
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+.codice-attestato-text {
+  font-size:.9rem;
+}
+
+.codice-attestato-name {
+  font-size: .7rem;
+}

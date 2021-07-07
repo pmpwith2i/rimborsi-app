@@ -19,10 +19,11 @@ import {AllegatoItemComponent} from './allegato-item/allegato-item.component';
 import {DragAndDropUploadDirective} from './allegato-item/drag-and-drop-upload.directive';
 import {GiornateListComponent} from './giornate-list/giornate-list.component';
 import { GiornataItemComponent } from './giornata-item/giornata-item.component';
+import { CstPanelCardComponent } from './cst-panel-card/cst-panel-card.component';
 
 
 @NgModule({
-  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent],
+  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent],
   exports: [
     IconComponent,
     CalendarComponent,
@@ -32,7 +33,9 @@ import { GiornataItemComponent } from './giornata-item/giornata-item.component';
     CstCardDataTableComponent,
     HistoryListComponent,
     AllegatoItemComponent,
-    GiornateListComponent
+    GiornateListComponent,
+    CstCardDataTableComponent,
+    CstPanelCardComponent
   ],
   imports: [
     CommonModule,

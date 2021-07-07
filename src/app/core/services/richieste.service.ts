@@ -28,17 +28,17 @@ export class RichiesteService {
 
   getGiornateDisponibili(codiciAttestato: string[]): Giornata[] {
     const obj = [{id: 1, giorno: new Date(), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 2, giorno: new Date('10/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8,selected:true},
-      {id: 3, giorno: new Date('11/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
-      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'AJHJKKLO', oreAssenza: 8}];
+      {id: 2, giorno: new Date('10/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8, selected: true},
+      {id: 3, giorno: new Date('11/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8, selected: true},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8},
+      {id: 4, giorno: new Date('12/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8}];
     const datasource: Giornata[] = [];
     obj.forEach(el => {
       datasource.push(new Giornata(el));

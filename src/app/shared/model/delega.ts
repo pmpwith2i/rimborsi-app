@@ -1,22 +1,23 @@
 export class Delega {
   id: number;
   fiscalCode: string;
-  datore: string;
-  richiedente: string;
+  datoreLavoro: string;
   tipoDelega: string;
   name: string;
   dataInizio: Date;
   dataFine: Date;
+  verificata: boolean;
 
   constructor(anObj: any) {
     this.id = anObj.id;
-    this.richiedente = anObj.richiedente;
+
     this.fiscalCode = anObj.fiscalCode;
-    this.datore = anObj.datore;
+    this.datoreLavoro = anObj.datoreLavoro;
     this.tipoDelega = anObj.tipoDelega;
     this.name = anObj.name;
     this.dataInizio = anObj.dataInizio;
     this.dataFine = anObj.dataFine;
+    this.verificata = anObj.verificata;
   }
 
   search(searchStr: string = ''): boolean {

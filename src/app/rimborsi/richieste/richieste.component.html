@@ -1,11 +1,13 @@
 <div class="standard-panel">
-  <div class="d-flex d-flex-row align-items-center">
-    <h1 class="text-title-dark mr-auto">Richieste</h1>
+  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+    <div class="mr-auto title-mobile-responsive">
+    <h1 class="text-title-dark">Richieste</h1>
+    </div>
     <div class="btn-container-new" routerLink="/rimborsi/richieste/new">
       <app-cst-button btnClass="btn-success" text="Nuova richiesta" iconName="add"></app-cst-button>
     </div>
   </div>
-  <div class="standard-table-container standard-shadow">
+  <div class="standard-panel-container standard-shadow standard-section-margin">
     <app-cst-filter-section [filters]="dataSourceFilters"
                             [search]="datasourceSearch"
                             (filterEvent)="filterEvent($event)"></app-cst-filter-section>

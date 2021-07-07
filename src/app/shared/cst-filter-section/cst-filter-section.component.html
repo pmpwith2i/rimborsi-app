@@ -8,10 +8,12 @@
       />
     </div>
     <app-cst-button
+      *ngIf="filters != null"
       text="Filtri"
       btnClass="btn-primary"
       [iconName]="expandFilters ? 'expand_less' : 'expand_more'" (click)="toggleFilter()"></app-cst-button>
-    <app-cst-button (click)="clearFilter()" text="Pulisci" btnClass="btn-primary"></app-cst-button>
+    <app-cst-button
+      *ngIf="filters != null" (click)="clearFilter()" text="Pulisci" btnClass="btn-primary"></app-cst-button>
   </div>
   <div class="cst-filter-list d-flex d-flex-row align-items-center" *ngIf="expandFilters">
     <ng-container *ngFor="let filter of filters">

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {History} from '../../shared/model/history';
 import {RichiesteService} from '../../core/services/richieste.service';
 import {FormBuilder} from '@angular/forms';
+import {Giornata} from '../../shared/model/giornata';
 
 @Component({
   selector: 'app-richiesta-detail',
@@ -11,6 +12,8 @@ import {FormBuilder} from '@angular/forms';
 export class RichiestaDetailComponent implements OnInit {
   richiestaName: string;
   histories: History[];
+  giornate: Giornata[];
+  viewGiornate = false;
 
 
   constructor(private richiesteService: RichiesteService, private formBuilder: FormBuilder) {
@@ -19,6 +22,11 @@ export class RichiestaDetailComponent implements OnInit {
   ngOnInit(): void {
     this.richiestaName = '394858';
     this.getStorico();
+    this.getGiornate();
+  }
+
+  getGiornate(): void {
+    this.giornate = this.richiesteService.getGiornateDisponibili([]);
   }
 
   getStorico(): void {
@@ -32,4 +40,7 @@ export class RichiestaDetailComponent implements OnInit {
     });
   }
 
+  toggleViewGiornate(): void{
+    this.viewGiornate = !this.viewGiornate;
+  }
 }

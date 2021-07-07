@@ -1,70 +1,65 @@
-<div class="user-info-panel row">
-  <div class="user-info-page-left col-lg-4 col-12 d-flex flex-column align-items-center">
-    <div class="user-info-circle-big standard-shadow p-2">
-      <span>FP</span>
+<div class="standard-panel">
+  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+    <div class="mr-auto title-mobile-responsive">
+      <h1 class="text-title-dark">I miei dati</h1>
     </div>
-    <h4 class="text-bold navbar-user-info-name">Federico Pomponii</h4>
-    <h5 class="user-info-role ">Utente amministratore</h5>
-    <h6 class="user-info-role ">federico.pomponii@regione.emilia-romagna.it</h6>
-
   </div>
-  <div class="user-info-page-right col-lg-8 col-12">
-    <form [formGroup]="profileForm" class="row g-3" (ngSubmit)="onSubmit()">
-
-      <div class="col-lg-6 col-12">
-        <label for="inputName" class="form-label">Nome</label>
-        <input type="text" formControlName="firstName" class="form-control" id="inputName">
-      </div>
-
-      <div class="col-lg-6 col-12">
-        <label for="inputSecondName" class="form-label">Cognome</label>
-        <input type="text" formControlName="secondName" class="form-control" id="inputSecondName">
-      </div>
-
-      <div formGroupName="address" class="row g-3">
-        <div class="col-12">
-          <label for="inputStreet" class="form-label">Indirizzo</label>
-          <input type="text" class="form-control" formControlName="street" id="inputStreet"
-                 placeholder="Via Centrale N. ...">
-        </div>
+  <div class="standard-panel-container standard-shadow standard-section-margin">
+    <div class="standard-card-panel-body">
+      <form [formGroup]="profileForm" class="row g-3" (ngSubmit)="onSubmit()">
         <div class="col-lg-6 col-12">
-          <label for="inputCity" class="form-label">Città</label>
-          <input type="text" class="form-control" formControlName="city" id="inputCity">
+          <label for="inputName" class="form-label">Nome</label>
+          <input type="text" formControlName="firstName" class="form-control" id="inputName">
         </div>
+
+        <div class="col-lg-6 col-12">
+          <label for="inputSecondName" class="form-label">Cognome</label>
+          <input type="text" formControlName="secondName" class="form-control" id="inputSecondName">
+        </div>
+
+        <div formGroupName="address" class="row g-3">
+          <div class="col-12">
+            <label for="inputStreet" class="form-label">Indirizzo</label>
+            <input type="text" class="form-control" formControlName="street" id="inputStreet"
+                   placeholder="Via Centrale N. ...">
+          </div>
+          <div class="col-lg-6 col-12">
+            <label for="inputCity" class="form-label">Città</label>
+            <input type="text" class="form-control" formControlName="city" id="inputCity">
+          </div>
+          <div class="col-lg-4 col-12">
+            <label for="inputState" class="form-label">Provincia</label>
+            <select id="inputState" formControlName="state" class="form-select">
+              <option selected>Scegli una provincia...</option>
+              <option *ngFor="let provincia of province" [value]="provincia">{{provincia}}</option>
+            </select>
+          </div>
+
+          <div class="col-lg-2 col-12">
+            <label for="inputZip" class="form-label">CAP</label>
+            <input type="number" formControlName="zipCode" class="form-control" id="inputZip">
+          </div>
+        </div>
+
         <div class="col-lg-4 col-12">
-          <label for="inputState" class="form-label">Provincia</label>
-          <select id="inputState" formControlName="state" class="form-select">
-            <option selected>Scegli una provincia...</option>
-            <option *ngFor="let provincia of province" [value]="provincia">{{provincia}}</option>
-          </select>
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control" id="inputEmail">
         </div>
 
-        <div class="col-lg-2 col-12">
-          <label for="inputZip" class="form-label">CAP</label>
-          <input type="number" formControlName="zipCode" class="form-control" id="inputZip">
+        <div class="col-lg-4 col-12">
+          <label for="inputPec" class="form-label">PEC</label>
+          <input type="email" formControlName="pec" class="form-control" id="inputPec">
         </div>
-      </div>
 
-      <div class="col-lg-4 col-12">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" formControlName="email" class="form-control" id="inputEmail">
-      </div>
+        <div class="col-lg-4 col-12">
+          <label for="inputCF" class="form-label">CF</label>
+          <input type="text" formControlName="fiscalCode" class="form-control" id="inputCF">
+        </div>
 
-      <div class="col-lg-4 col-12">
-        <label for="inputPec" class="form-label">PEC</label>
-        <input type="email" formControlName="pec" class="form-control" id="inputPec">
-      </div>
-
-      <div class="col-lg-4 col-12">
-        <label for="inputCF" class="form-label">CF</label>
-        <input type="text" formControlName="fiscalCode" class="form-control" id="inputCF">
-      </div>
-
-      <div class="col-12">
-        <button type="submit" [disabled]="!profileForm.valid" class="btn btn-primary mr-auto ml-auto d-block">Salva
-          modifiche
-        </button>
-      </div>
-    </form>
+        <div class="d-flex justify-content-center align-items-center">
+          <app-cst-button btnClass="btn-success" text="Salva le modifiche" iconName="save"></app-cst-button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

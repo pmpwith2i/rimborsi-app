@@ -15,7 +15,7 @@ import {getNotificheColumns, getNotificheFilters} from '../../config/constants';
 export class NotificheComponent implements OnInit {
 
   dataSourceColumns: CstCol[] = getNotificheColumns();
-  dataSourceFilters: CstFilter[] = getNotificheFilters();
+  dataSourceFilters: CstFilter[] = null;
   datasourceSearch: string;
   dataSource: Notifica[] = [];
 

@@ -2,10 +2,10 @@
   <div class="d-flex d-flex-row align-items-center">
     <h1 class="text-title-dark mr-auto">Deleghe</h1>
     <div class="btn-container-new">
-      <app-cst-button btnClass="btn-success" text="Nuova delega" iconName="add"></app-cst-button>
+      <app-cst-button btnClass="btn-success" (click)="showItem(1)" text="Nuova delega" iconName="add"></app-cst-button>
     </div>
   </div>
-  <div class="standard-table-container standard-shadow">
+  <div class="standard-panel-container standard-shadow standard-section-margin">
     <app-cst-filter-section [filters]="dataSourceFilters"
                             [search]="datasourceSearch"
                             (filterEvent)="filterEvent($event)"></app-cst-filter-section>
