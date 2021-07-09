@@ -10,8 +10,8 @@
     </div>
   </div>
   <div class="col-3">
-      <label for="inputGiornate" class="form-label d-none">Ore effettive</label>
-      <input type="number" class="form-control" [defaultValue]="0"
+      <label for="inputGiornate" class="d-none form-label">Ore effettive</label>
+      <input type="number" class="form-control" (click)="$event.stopPropagation()" [defaultValue]="0"
              id="inputGiornate">
     </div>
 </div>

@@ -1,0 +1,15 @@
+.richiesta-resume {
+  padding: 1rem;
+}
+
+.richiesta-resume-section {
+  padding: .5rem;
+}
+
+.resume-section-title {
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 600;
+  color: rgb(135, 135, 135);
+  padding-bottom: .5rem;
+}

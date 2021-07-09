@@ -11,7 +11,7 @@ export class CstTableComponent implements OnInit {
 
   @Output() showItemEvent = new EventEmitter<number>();
   @Output() deleteItemEvent = new EventEmitter<number>();
-
+  @Output() editItemEvent = new EventEmitter<number>();
 
   @Input() dataSource: any[];
   @Input() columns: CstCol[];
@@ -41,5 +41,9 @@ export class CstTableComponent implements OnInit {
     }
 
     return item[col.propName];
+  }
+
+  clickEdit(anId): void {
+    this.editItemEvent.emit(anId);
   }
 }

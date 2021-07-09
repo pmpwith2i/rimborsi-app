@@ -10,20 +10,20 @@ export class DelegaEditComponent implements OnInit {
 
   delegaFormControl = this.formBuilder.group({
     infoTipologia: this.formBuilder.group({
-      tipoDatore: [''],
-      tipoDelega: ['']
+      tipoDatore: ['Azienda Privata'],
+      tipoDelega: ['Incaricato']
     }),
     infoLegale: this.formBuilder.group({
-      nome: [''],
-      cognome: [''],
-      fiscalCode: [''],
-      email: ['']
+      nome: ['Mario'],
+      cognome: ['Rossi'],
+      fiscalCode: ['MRORSSSJSJDISOD'],
+      email: ['mario.rossi@miamail.com']
     }),
-    infoDelega: this.formBuilder.group({
-      nome: [''],
-      cognome: [''],
+    infoAzienda: this.formBuilder.group({
+      name: [''],
+      fiscalCode: [''],
       vat: [''],
-      fiscalCode: ['']
+      iban: ['']
     }),
     address: this.formBuilder.group({
       street: [''],

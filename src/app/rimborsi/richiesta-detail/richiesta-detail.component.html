@@ -1,7 +1,7 @@
 <div class="standard-panel">
   <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
-      <h1 class="number-title-dark">Riepilogo Richiesta - {{richiestaName}}</h1>
+      <h1 class="number-title-dark">Modifica Richiesta - {{richiestaName}}</h1>
       <h4 class="subtitle-dark">Mario Rossi - Evento Covid</h4>
     </div>
     <div class="btn-container-new">
@@ -12,19 +12,22 @@
       <app-cst-button btnClass="btn-danger" text="Annulla Domanda" iconName="delete"></app-cst-button>
     </div>
     <div class="btn-container-new">
-      <app-cst-button btnClass="btn-success" text="Presenta Domanda" iconName="send"></app-cst-button>
+      <app-cst-button btnClass="btn-success" text="Presenta Domanda" (click)="toggleViewResume()"
+                      iconName="send"></app-cst-button>
     </div>
   </div>
   <div class="row">
     <div class="col-xl-4 col-12">
-      <app-cst-panel-card cardTitle="Dati Finanziari">
+      <app-cst-panel-card cardTitle="Retribuzione">
         <app-dati-form></app-dati-form>
       </app-cst-panel-card>
     </div>
     <div class="col-xl-4 col-12">
-      <app-cst-panel-card cardTitle="Storico">
-
-        <app-history-list [histories]="histories"></app-history-list>
+      <app-cst-panel-card cardTitle="Contributi">
+        <app-contributi-form></app-contributi-form>
+      </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Totale">
+        <app-totale-form></app-totale-form>
       </app-cst-panel-card>
     </div>
     <div class="col-xl-4 col-12">
@@ -34,11 +37,17 @@
       <app-cst-panel-card cardTitle="Busta paga">
         <app-allegato-item></app-allegato-item>
       </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Storico">
+        <app-history-list [histories]="histories"></app-history-list>
+      </app-cst-panel-card>
     </div>
   </div>
 </div>
 
-<div class="overlay" *ngIf="viewGiornate" (click)="toggleViewGiornate()"></div>
-<div class="panel-right standard-shadow" *ngIf="viewGiornate">
+<div class="overlay" *ngIf="overlayShow" (click)="toggleOverlay()"></div>
+<app-panel-right *ngIf="viewGiornate" panelTitle="Giornate di assenza">
   <app-giornate-list [giornate]="giornate"></app-giornate-list>
-</div>
+</app-panel-right>
+<app-panel-right *ngIf="viewResume" panelTitle="Riepilogo richiesta">
+  <app-richiesta-resume></app-richiesta-resume>
+</app-panel-right>

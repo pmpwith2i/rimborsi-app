@@ -14,6 +14,8 @@ export class RichiestaDetailComponent implements OnInit {
   histories: History[];
   giornate: Giornata[];
   viewGiornate = false;
+  overlayShow = false;
+  viewResume = false;
 
 
   constructor(private richiesteService: RichiesteService, private formBuilder: FormBuilder) {
@@ -40,7 +42,25 @@ export class RichiestaDetailComponent implements OnInit {
     });
   }
 
-  toggleViewGiornate(): void{
+  toggleViewGiornate(): void {
     this.viewGiornate = !this.viewGiornate;
+    if (this.viewGiornate) {
+      this.overlayShow = true;
+    }
+  }
+
+  toggleViewResume(): void {
+    this.viewResume = !this.viewResume;
+    if (this.viewResume) {
+      this.overlayShow = true;
+    }
+  }
+
+  toggleOverlay(): void {
+    this.overlayShow = !this.overlayShow;
+    if (!this.overlayShow) {
+      this.viewGiornate = false;
+      this.viewResume = false;
+    }
   }
 }

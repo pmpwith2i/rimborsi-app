@@ -9,9 +9,10 @@ import {RimborsiModule} from './rimborsi/rimborsi.module';
 import {CoreModule} from './core/core.module';
 import {Constants} from './config/constants';
 import '@angular/common/locales/global/it';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -23,7 +24,7 @@ import '@angular/common/locales/global/it';
   ],
   providers: [Constants,
     {provide: LOCALE_ID, useValue: 'it-IT'}
-    ],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

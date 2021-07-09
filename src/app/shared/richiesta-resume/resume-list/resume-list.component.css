@@ -1,0 +1,11 @@
+.resume-list-item {
+  margin: .5rem 0 .5rem 0;
+  padding: .5rem 0 .5rem 0;
+}
+
+.richiesta-resume-list {
+  padding: 0;
+  margin: 1rem 0 0 0;
+  list-style: none;
+}
+

@@ -1,5 +1,5 @@
 <form class="g-3" [formGroup]="richiestaFormControl">
-  <div formGroupName="datiFinanziari">
+  <div formGroupName="retribuzione">
     <div class="row align-items-end row-dati-finanziari">
       <div class="col-md-8 col-9">
         <label for="inputGiornate" class="form-label">Numero giornate</label>
@@ -90,19 +90,6 @@
         <label for="inputrateoExFestivita2Euro" class="form-label">Euro</label>
         <input type="number" formControlName="rateoExFestivita2Euro" class="form-control"
                id="inputrateoExFestivita2Euro">
-      </div>
-    </div>
-    <div class="row align-items-end row-dati-finanziari">
-      <div class="col-12">
-        <label for="inputIban" class="form-label">IBAN</label>
-        <input type="text" formControlName="iban" class="form-control"
-               id="inputIban">
-      </div>
-      <div class="col-12">
-        <label for="inputModalitaRimborso" class="form-label">Modalità Rimborso</label>
-        <select id="inputModalitaRimborso" formControlName="modalitaRimborso" class="form-select">
-          <option selected>Scegli una modalità...</option>
-        </select>
       </div>
     </div>
   </div>

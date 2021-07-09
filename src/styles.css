@@ -27,6 +27,13 @@ app-icon {
   display: flex;
 }
 
+.str-bor-bottom {
+  border-bottom: 1px solid rgb(213, 213, 213);
+}
+
+.light-bor-bottom {
+  border-bottom: 1px solid #efefef;
+}
 
 .form-control {
   border: 1px solid #dee7ea !important;

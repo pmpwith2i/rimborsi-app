@@ -11,7 +11,7 @@
   </div>
 
   <div class="row standard-section-margin">
-    <div class="col-4">
+    <div class="col-5">
       <app-cst-panel-card cardTitle="Dati Utente">
         <div class="col-sm-12">
           <label for="inputUtenteRichiesta" class="form-label">Richiesta per conto di</label>
@@ -22,10 +22,19 @@
           </select>
         </div>
       </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Dati Evento">
+        <div class="col-sm-12">
+          <label for="inputUtenteEvento" class="form-label">Evento</label>
+          <select id="inputUtenteEvento" class="form-select">
+            <option selected>Scegli un evento...</option>
+            <option value="Mario Rossi">Covid-19</option>
+          </select>
+        </div>
+      </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Codici Attestato">
         <div class="standard-card-panel-body">
           <ul class="codici-attestato-list">
-            <li class="codice-attestato-item d-flex align-items-center">
+            <li class="codice-attestato-item light-bor-bottom d-flex align-items-center">
               <div class="mr-auto">
                 <div class="codice-attestato-text ">ANCJHLIU</div>
                 <div class="codice-attestato-name">Federico Pomponii</div>
@@ -33,7 +42,7 @@
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
-            <li class="codice-attestato-item d-flex align-items-center">
+            <li class="codice-attestato-item light-bor-bottom d-flex align-items-center">
               <div class="mr-auto">
                 <div class="codice-attestato-text ">ANCJHLSS</div>
                 <div class="codice-attestato-name">Federico Pomponii</div>
@@ -41,7 +50,7 @@
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
-            <li class="codice-attestato-item d-flex align-items-center">
+            <li class="codice-attestato-item d-flex light-bor-bottom align-items-center">
               <div class="mr-auto">
                 <div class="codice-attestato-text ">B89SJSJJ</div>
                 <div class="codice-attestato-name">Federico Pomponii</div>
@@ -53,7 +62,7 @@
         </div>
       </app-cst-panel-card>
     </div>
-    <div class="col-8">
+    <div class="col-7">
       <app-cst-panel-card
         cardTitle="Giornate Di Assenza (Selezionate : {{getCountSelectedDays()}} / {{giornate.length}})">
         <div class="giornate-list-container">

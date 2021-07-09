@@ -1,15 +1,19 @@
 <div class="standard-panel">
-  <div class="d-flex d-flex-row align-items-center">
-    <h1 class="text-title-dark mr-auto">Delega</h1>
+  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+    <div class="mr-auto title-mobile-responsive">
+      <h1 class="text-title-dark">Inserisci Delega</h1>
+      <h4>Inserisci una nuova delega</h4>
+    </div>
     <div class="btn-container-new">
-      <app-cst-button btnClass="btn-success" text="Salva delega" iconName="save"></app-cst-button>
+      <app-cst-button btnClass="btn-success" text="Salva"
+                      iconName="send"></app-cst-button>
     </div>
   </div>
   <form class="g-3" [formGroup]="delegaFormControl">
-    <div class="delega-detail-panel row">
-      <div class="d-flex flex-column col-xl-4">
-        <div class="standard-card-panel">
-          <div formGroupName="infoTipologia" class="delega-detail-1-left natural-shadow standard-card-panel-body">
+    <div class="row">
+      <div class="col-4">
+        <app-cst-panel-card cardTitle="Info Delega">
+          <div formGroupName="infoTipologia">
             <div class="col-sm-12">
               <label for="inputTipoDatore" class="form-label">Tipo Datore</label>
               <select id="inputTipoDatore" formControlName="tipoDatore" class="form-select">
@@ -23,9 +27,9 @@
               </select>
             </div>
           </div>
-        </div>
-        <div class="standard-card-panel">
-          <div formGroupName="infoLegale" class="delega-detail-1-left natural-shadow standard-card-panel-body">
+        </app-cst-panel-card>
+        <app-cst-panel-card cardTitle="Info Legale">
+          <div formGroupName="infoLegale">
             <div class="col-sm-12">
               <label for="inputNomeLegale" class="form-label">Nome</label>
               <input type="text" formControlName="nome" class="form-control" id="inputNomeLegale">
@@ -43,14 +47,14 @@
               <input type="email" formControlName="email" class="form-control" id="inputMailLegale">
             </div>
           </div>
-        </div>
+        </app-cst-panel-card>
       </div>
-      <div class="delega-detail-right col-xl-8">
-        <div class="standard-card-panel standard-shadow standard-card-panel-body">
-          <div formGroupName="infoDelega" class="row g-3">
+      <div class="col-4">
+        <app-cst-panel-card cardTitle="Prova">
+          <div formGroupName="infoAzienda" class="row g-3">
             <div class="col-sm-12">
-              <label for="inputNomeDelega" class="form-label">Nome o ragione sociale</label>
-              <input type="text" formControlName="nome" class="form-control" id="inputNomeDelega">
+              <label for="inputName" class="form-label">Nome o ragione sociale</label>
+              <input type="text" formControlName="name" class="form-control" id="inputName">
             </div>
             <div class="col-sm-6">
               <label for="inputFiscalCodeDelega" class="form-label">Codice Fiscale</label>
@@ -87,7 +91,15 @@
               </select>
             </div>
           </div>
-        </div>
+        </app-cst-panel-card>
+      </div>
+      <div class="col-4">
+        <app-cst-panel-card cardTitle="Carta d'identità Legale Rappresentante">
+          <app-allegato-item></app-allegato-item>
+        </app-cst-panel-card>
+        <app-cst-panel-card cardTitle="Delega firmata legale rappresentante">
+          <app-allegato-item></app-allegato-item>
+        </app-cst-panel-card>
       </div>
     </div>
   </form>

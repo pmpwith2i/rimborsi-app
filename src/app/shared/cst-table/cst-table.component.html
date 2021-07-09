@@ -18,7 +18,9 @@
     <td>
       <div class="cst-data-table-actions d-flex d-flex-row">
         <app-icon iconName="delete" [isCliccable]="true" [isOutlined]="true"></app-icon>
-        <app-icon iconName="open_in_new" (click)="clickShow(item.id)" [isCliccable]="true" [isOutlined]="true"></app-icon>
+        <app-icon iconName="visibility" [isCliccable]="true" [isOutlined]="true" (click)="clickShow(item.id)"></app-icon>
+        <app-icon iconName="edit" (click)="clickEdit(item.id)" [isCliccable]="true" [isOutlined]="true"></app-icon>
+
       </div>
     </td>
   </tr>

@@ -16,8 +16,16 @@
     </div>
     <app-cst-table
       class="md-hide"
+      (editItemEvent)="editItem($event)"
       (showItemEvent)="showItem($event)"
       [columns]="dataSourceColumns"
       [dataSource]="dataSource"></app-cst-table>
   </div>
 </div>
+
+
+<div class="overlay" *ngIf="overlayShow" (click)="toggleViewResume()"></div>
+<app-panel-right *ngIf="viewResume" panelTitle="Riepilogo richiesta">
+  <app-richiesta-resume></app-richiesta-resume>
+</app-panel-right>
+

@@ -1,4 +1,8 @@
 <ul class="giornate-disponibili-list">
+  <li class="giornate-list-header str-bor-bottom d-flex">
+    <span class="mr-auto">Giorno</span>
+    <span>Ore effettive di assenza</span>
+  </li>
   <li *ngFor="let el of giornate; let i = index;" (click)="onClickGiornata(i)"
       class="giornate-disponibili-item"
       [class.selected]="el.selected">

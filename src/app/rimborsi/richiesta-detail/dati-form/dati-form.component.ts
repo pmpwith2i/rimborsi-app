@@ -9,7 +9,7 @@ import {FormBuilder} from '@angular/forms';
 export class DatiFormComponent implements OnInit {
 
   richiestaFormControl = this.formBuilder.group({
-    datiFinanziari: this.formBuilder.group({
+    retribuzione: this.formBuilder.group({
       giornate: [0],
       giorniStipendio: [0],
       lordoStipendio: [0],
@@ -26,10 +26,7 @@ export class DatiFormComponent implements OnInit {
       rateoExFestivitaOre: [1],
       rateoExFestivitaEuro: [{value: 0, disabled: true}],
       rateoExFestivita2Ore: [1],
-      rateoExFestivita2Euro: [{value: 0, disabled: true}],
-      totale: [0],
-      modalitaRimborso: [null],
-      iban: ['...'],
+      rateoExFestivita2Euro: [{value: 0, disabled: true}]
     })
   });
 

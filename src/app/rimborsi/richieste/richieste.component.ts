@@ -17,6 +17,8 @@ export class RichiesteComponent implements OnInit {
   dataSourceFilters: CstFilter[] = getRichiesteFilters();
   datasourceSearch: string;
   dataSource: Richiesta[] = [];
+  overlayShow = false;
+  viewResume = false;
 
   constructor(private router: Router, private richiesteService: RichiesteService) {
   }
@@ -55,6 +57,19 @@ export class RichiesteComponent implements OnInit {
   }
 
   showItem(anId: number): void {
+    this.toggleViewResume();
+  }
+
+  editItem(anId: number): void {
     this.router.navigate(['rimborsi/richieste/', anId]);
+  }
+
+  toggleViewResume(): void {
+    this.viewResume = !this.viewResume;
+    if (this.viewResume) {
+      this.overlayShow = true;
+    } else {
+      this.overlayShow = false;
+    }
   }
 }

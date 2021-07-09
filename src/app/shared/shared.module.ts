@@ -18,12 +18,16 @@ import {HistoryListComponent} from './history-list/history-list.component';
 import {AllegatoItemComponent} from './allegato-item/allegato-item.component';
 import {DragAndDropUploadDirective} from './allegato-item/drag-and-drop-upload.directive';
 import {GiornateListComponent} from './giornate-list/giornate-list.component';
-import { GiornataItemComponent } from './giornata-item/giornata-item.component';
-import { CstPanelCardComponent } from './cst-panel-card/cst-panel-card.component';
+import {GiornataItemComponent} from './giornata-item/giornata-item.component';
+import {CstPanelCardComponent} from './cst-panel-card/cst-panel-card.component';
+import {RichiestaResumeComponent} from './richiesta-resume/richiesta-resume.component';
+import {PanelRightComponent} from './panel-right/panel-right.component';
+import { ResumeListItemComponent } from './richiesta-resume/resume-list-item/resume-list-item.component';
+import { ResumeListComponent } from './richiesta-resume/resume-list/resume-list.component';
 
 
 @NgModule({
-  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent],
+  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent],
   exports: [
     IconComponent,
     CalendarComponent,
@@ -35,7 +39,10 @@ import { CstPanelCardComponent } from './cst-panel-card/cst-panel-card.component
     AllegatoItemComponent,
     GiornateListComponent,
     CstCardDataTableComponent,
-    CstPanelCardComponent
+    CstPanelCardComponent,
+    RichiestaResumeComponent,
+    PanelRightComponent,
+    RichiestaResumeComponent,
   ],
   imports: [
     CommonModule,

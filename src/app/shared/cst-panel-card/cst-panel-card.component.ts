@@ -6,6 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./cst-panel-card.component.css']
 })
 export class CstPanelCardComponent implements OnInit {
+
   @Input()
   cardTitle: string;
 
