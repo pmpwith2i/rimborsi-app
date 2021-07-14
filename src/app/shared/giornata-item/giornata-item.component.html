@@ -1,17 +1,21 @@
-<div class="row align-items-end">
-  <div class="col-9">
+<div class="row align-items-center">
+  <div class="col-9 d-flex align-items-center">
     <div class="d-flex flex-column">
         <span class="giornata-list-data">
-          {{giornata.giorno |  date: 'medium'}}
+          {{giornata.giorno |  date: 'fullDate'}}
         </span>
+      <span class="giornata-list-evento">
+        Evento: <b>Covid-19</b>
+      </span>
       <span class="giornata-list-codice">
           {{giornata.codiceEvento}}
         </span>
     </div>
+    <app-icon *ngIf="isAlert()" iconName="warning" inClass="icon-warning-giornata"></app-icon>
   </div>
-  <div class="col-3">
-      <label for="inputGiornate" class="d-none form-label">Ore effettive</label>
-      <input type="number" class="form-control" (click)="$event.stopPropagation()" [defaultValue]="0"
-             id="inputGiornate">
-    </div>
+  <div class="offset-1 col-2" *ngIf="isSelected">
+    <label for="inputGiornate" class="d-none form-label">Ore effettive</label>
+    <input type="number" class="form-control" (click)="$event.stopPropagation()" [defaultValue]="0"
+           id="inputGiornate">
+  </div>
 </div>

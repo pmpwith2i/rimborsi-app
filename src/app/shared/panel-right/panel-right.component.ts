@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-panel-right',
@@ -9,9 +9,16 @@ export class PanelRightComponent implements OnInit {
   @Input()
   panelTitle: string;
 
-  constructor() { }
+  @Output()
+  closeEvent = new EventEmitter<any>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  onClose(): void {
+    this.closeEvent.emit();
+  }
 }

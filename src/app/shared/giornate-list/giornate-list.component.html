@@ -6,6 +6,6 @@
   <li *ngFor="let el of giornate; let i = index;" (click)="onClickGiornata(i)"
       class="giornate-disponibili-item"
       [class.selected]="el.selected">
-    <app-giornata-item [giornata]="el"></app-giornata-item>
+    <app-giornata-item [giornata]="el" [isSelected]="el.selected"></app-giornata-item>
   </li>
 </ul>

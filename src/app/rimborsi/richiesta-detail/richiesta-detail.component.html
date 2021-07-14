@@ -1,7 +1,7 @@
 <div class="standard-panel">
   <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
-      <h1 class="number-title-dark">Modifica Richiesta - {{richiestaName}}</h1>
+      <h1 class="text-title-dark">Modifica Richiesta - {{richiestaName}}</h1>
       <h4 class="subtitle-dark">Mario Rossi - Evento Covid</h4>
     </div>
     <div class="btn-container-new">
@@ -26,15 +26,17 @@
       <app-cst-panel-card cardTitle="Contributi">
         <app-contributi-form></app-contributi-form>
       </app-cst-panel-card>
+      <app-iban-panel panelName="IBAN">
+      </app-iban-panel>
       <app-cst-panel-card cardTitle="Totale">
         <app-totale-form></app-totale-form>
       </app-cst-panel-card>
     </div>
     <div class="col-xl-4 col-12">
-      <app-cst-panel-card cardTitle="Carta d'identità">
+      <app-cst-panel-card cardTitle="Busta paga">
         <app-allegato-item></app-allegato-item>
       </app-cst-panel-card>
-      <app-cst-panel-card cardTitle="Busta paga">
+      <app-cst-panel-card cardTitle="Foglio presenze">
         <app-allegato-item></app-allegato-item>
       </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Storico">
@@ -45,9 +47,9 @@
 </div>
 
 <div class="overlay" *ngIf="overlayShow" (click)="toggleOverlay()"></div>
-<app-panel-right *ngIf="viewGiornate" panelTitle="Giornate di assenza">
+<app-panel-right *ngIf="viewGiornate" (closeEvent)="toggleOverlay()" panelTitle="Giornate di assenza">
   <app-giornate-list [giornate]="giornate"></app-giornate-list>
 </app-panel-right>
-<app-panel-right *ngIf="viewResume" panelTitle="Riepilogo richiesta">
+<app-panel-right *ngIf="viewResume" (closeEvent)="toggleOverlay()" panelTitle="Riepilogo richiesta">
   <app-richiesta-resume></app-richiesta-resume>
 </app-panel-right>

@@ -6,6 +6,7 @@ import {filterItem} from '../../shared/cst-table/classes/filter-item';
 import {getRichiesteColumns, getRichiesteFilters} from '../../config/constants';
 import {RichiesteService} from '../../core/services/richieste.service';
 import {Richiesta} from '../../shared/model/richiesta';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-richieste',
@@ -20,12 +21,16 @@ export class RichiesteComponent implements OnInit {
   overlayShow = false;
   viewResume = false;
 
-  constructor(private router: Router, private richiesteService: RichiesteService) {
+  constructor(private matDialog: MatDialog, private router: Router, private richiesteService: RichiesteService) {
   }
 
   ngOnInit(): void {
     this.createSidebarLink();
     this.getRichieste(null, null);
+  }
+
+  openDialogInsertCode(): void {
+    this.matDialog.open(DialogInsertCodeComponent);
   }
 
   createSidebarLink(): void {
@@ -35,21 +40,6 @@ export class RichiesteComponent implements OnInit {
   openRichiestaDetail(): void {
     this.router.navigate(['richieste', {id: 1}]);
   }
-
-  private getRichieste(filterList: CstFilter[], searchStr: string): void {
-    this.richiesteService.getAllRichieste().subscribe(data => {
-      this.dataSource = [];
-      data.forEach(el => {
-        const item = new Richiesta(el);
-        const find = filterItem(filterList, searchStr, item);
-        if (find) {
-          this.dataSource.push(item);
-        }
-      });
-      this.richiesteService.setRichiesteCache(data);
-    });
-  }
-
 
   filterEvent(searchNewval: string): void {
     this.datasourceSearch = searchNewval;
@@ -71,5 +61,39 @@ export class RichiesteComponent implements OnInit {
     } else {
       this.overlayShow = false;
     }
+  }
+
+  private getRichieste(filterList: CstFilter[], searchStr: string): void {
+    this.richiesteService.getAllRichieste().subscribe(data => {
+      this.dataSource = [];
+      data.forEach(el => {
+        const item = new Richiesta(el);
+        const find = filterItem(filterList, searchStr, item);
+        if (find) {
+          this.dataSource.push(item);
+        }
+      });
+      this.richiesteService.setRichiesteCache(data);
+    });
+  }
+}
+
+
+@Component({
+  selector: 'app-dialog-insert-code',
+  templateUrl: 'dialog-insert-code.html',
+})
+export class DialogInsertCodeComponent {
+  code = 'ANCJHLIU';
+  constructor(
+    public dialogRef: MatDialogRef<DialogInsertCodeComponent>,) {
+  }
+
+  onClose(): void {
+    this.dialogRef.close();
+  }
+
+  onConfirm(): void {
+    this.dialogRef.close();
   }
 }

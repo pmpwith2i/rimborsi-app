@@ -26,7 +26,8 @@ export class DatiFormComponent implements OnInit {
       rateoExFestivitaOre: [1],
       rateoExFestivitaEuro: [{value: 0, disabled: true}],
       rateoExFestivita2Ore: [1],
-      rateoExFestivita2Euro: [{value: 0, disabled: true}]
+      rateoExFestivita2Euro: [{value: 0, disabled: true}],
+      subtotale: [100]
     })
   });
 

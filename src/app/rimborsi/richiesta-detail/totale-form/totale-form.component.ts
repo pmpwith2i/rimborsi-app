@@ -9,9 +9,8 @@ import {FormBuilder} from '@angular/forms';
 export class TotaleFormComponent implements OnInit {
 
   totaleForm = this.formBuilder.group({
-    totale: [0],
-    modalitaRimborso: [null],
-    iban: ['...'],
+    totale: [200],
+    modalitaRimborso: [null]
   });
 
   constructor(private formBuilder: FormBuilder) {

@@ -11,10 +11,16 @@ export class GiornataItemComponent implements OnInit {
   @Input()
   giornata: Giornata;
 
+  @Input()
+  isSelected: boolean;
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
+  isAlert(): boolean {
+    return this.isSelected && (this.giornata.giorno.getDay() == 0 || this.giornata.giorno.getDay() == 6);
+  }
 }

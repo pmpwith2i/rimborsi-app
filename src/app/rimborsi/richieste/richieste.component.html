@@ -1,10 +1,15 @@
+<div class="overlay" *ngIf="overlayShow" (click)="toggleViewResume()"></div>
+<app-panel-right *ngIf="viewResume" panelTitle="Riepilogo richiesta">
+  <app-richiesta-resume></app-richiesta-resume>
+</app-panel-right>
+
 <div class="standard-panel">
   <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
-    <h1 class="text-title-dark">Richieste</h1>
+      <h1 class="text-title-dark">Richieste</h1>
     </div>
-    <div class="btn-container-new" routerLink="/rimborsi/richieste/new">
-      <app-cst-button btnClass="btn-success" text="Nuova richiesta" iconName="add"></app-cst-button>
+    <div class="btn-container-new" (click)="openDialogInsertCode()">
+      <app-cst-button btnClass="btn-success" text="Nuova richiesta da attestato" iconName="add"></app-cst-button>
     </div>
   </div>
   <div class="standard-panel-container standard-shadow standard-section-margin">
@@ -12,7 +17,8 @@
                             [search]="datasourceSearch"
                             (filterEvent)="filterEvent($event)"></app-cst-filter-section>
     <div class="md-show cst-data-table-small-screen">
-      <app-cst-card-data-table class="md-show" [dataSource]="dataSource" [columns]="dataSourceColumns"></app-cst-card-data-table>
+      <app-cst-card-data-table class="md-show" [dataSource]="dataSource"
+                               [columns]="dataSourceColumns"></app-cst-card-data-table>
     </div>
     <app-cst-table
       class="md-hide"
@@ -25,7 +31,8 @@
 
 
 <div class="overlay" *ngIf="overlayShow" (click)="toggleViewResume()"></div>
-<app-panel-right *ngIf="viewResume" panelTitle="Riepilogo richiesta">
+<app-panel-right *ngIf="viewResume" (closeEvent)="toggleViewResume()" panelTitle="Riepilogo richiesta">
   <app-richiesta-resume></app-richiesta-resume>
 </app-panel-right>
+
 

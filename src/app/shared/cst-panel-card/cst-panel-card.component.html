@@ -1,7 +1,9 @@
-
 <div class="standard-card-panel natural-shadow">
-  <div class="standard-card-panel-title">
-    {{cardTitle}}
+  <div class="standard-card-panel-title d-flex align-items-center">
+    <div class="mr-auto">
+      <span class="card-title-text">{{cardTitle}}</span>
+    </div>
+    <ng-content select="[rightTop]"></ng-content>
   </div>
   <div class=" standard-card-panel-body">
     <ng-content></ng-content>

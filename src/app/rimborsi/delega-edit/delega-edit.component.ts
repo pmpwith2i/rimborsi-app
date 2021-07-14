@@ -23,7 +23,8 @@ export class DelegaEditComponent implements OnInit {
       name: [''],
       fiscalCode: [''],
       vat: [''],
-      iban: ['']
+      emailAzienda: ['mario.rossi@miaazienda.com'],
+      telAzienda: [33333333333]
     }),
     address: this.formBuilder.group({
       street: [''],

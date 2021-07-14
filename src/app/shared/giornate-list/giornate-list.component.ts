@@ -17,8 +17,7 @@ export class GiornateListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickGiornata(anIndex: number) {
+  onClickGiornata(anIndex: number): void {
     this.giornate[anIndex].selected = !this.giornate[anIndex].selected;
-
   }
 }

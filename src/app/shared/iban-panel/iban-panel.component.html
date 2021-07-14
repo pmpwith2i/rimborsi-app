@@ -1,0 +1,26 @@
+
+<app-cst-panel-card [cardTitle]="panelName">
+  <ng-container rightTop>
+    <app-cst-button btnClass="btn-success btn-sm" text="Aggiungi IBAN" iconName="add"></app-cst-button>
+  </ng-container>
+  <div class="standard-card-panel-body">
+    <ul class="standard-list">
+      <li class="standard-list-item light-bor-bottom d-flex align-items-center">
+        <div class="mr-auto">
+          <div class="iban ">IT 99 C 12345 67890 123456789012</div>
+          <div class="tipologia">C/C Postale</div>
+        </div>
+        <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
+                  [isCliccable]="true"></app-icon>
+      </li>
+      <li class="standard-list-item light-bor-bottom d-flex align-items-center">
+        <div class="mr-auto">
+          <div class="iban ">DE91100000000123456789</div>
+          <div class="tipologia">C/C Bancario</div>
+        </div>
+        <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
+                  [isCliccable]="true"></app-icon>
+      </li>
+    </ul>
+  </div>
+</app-cst-panel-card>

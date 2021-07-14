@@ -172,3 +172,14 @@ app-icon {
   background: white;
   overflow-y: auto;
 }
+
+.standard-list {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+.standard-list-item {
+  margin:.5rem 0 .5rem 0;
+  padding:.5rem;
+}

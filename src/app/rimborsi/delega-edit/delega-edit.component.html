@@ -1,8 +1,8 @@
 <div class="standard-panel">
   <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
-      <h1 class="text-title-dark">Inserisci Delega</h1>
-      <h4>Inserisci una nuova delega</h4>
+      <h1 class="text-title-dark">Inserisci Procura</h1>
+      <h4>Inserisci una nuova procura</h4>
     </div>
     <div class="btn-container-new">
       <app-cst-button btnClass="btn-success" text="Salva"
@@ -28,7 +28,7 @@
             </div>
           </div>
         </app-cst-panel-card>
-        <app-cst-panel-card cardTitle="Info Legale">
+        <app-cst-panel-card cardTitle="Info Legale Rappresentante">
           <div formGroupName="infoLegale">
             <div class="col-sm-12">
               <label for="inputNomeLegale" class="form-label">Nome</label>
@@ -43,18 +43,27 @@
               <input type="text" formControlName="fiscalCode" class="form-control" id="inputFiscalCodeLegale">
             </div>
             <div class="col-sm-12">
-              <label for="inputMailLegale" class="form-label">Mail/Pec</label>
+              <label for="inputMailLegale" class="form-label">Mail</label>
               <input type="email" formControlName="email" class="form-control" id="inputMailLegale">
             </div>
           </div>
         </app-cst-panel-card>
       </div>
       <div class="col-4">
-        <app-cst-panel-card cardTitle="Prova">
+        <app-cst-panel-card cardTitle="Dati dell'azienda">
           <div formGroupName="infoAzienda" class="row g-3">
             <div class="col-sm-12">
               <label for="inputName" class="form-label">Nome o ragione sociale</label>
               <input type="text" formControlName="name" class="form-control" id="inputName">
+            </div>
+            <div class="col-sm-6">
+              <label for="inputMailAzienda" class="form-label">PEC</label>
+              <input type="email" formControlName="emailAzienda" class="form-control" id="inputMailAzienda">
+            </div>
+            <div class="col-sm-6">
+              <label for="inputTelAzienda" class="form-label">Tel.</label>
+              <input type="text" placeholder="+39" formControlName="telAzienda" class="form-control"
+                     id="inputTelAzienda">
             </div>
             <div class="col-sm-6">
               <label for="inputFiscalCodeDelega" class="form-label">Codice Fiscale</label>
@@ -64,11 +73,12 @@
               <label for="inputVatDelega" class="form-label">Partita IVA</label>
               <input type="text" formControlName="vat" class="form-control" id="inputVatDelega">
             </div>
-            <div class="col-sm-12">
-              <label for="inputIbanDelega" class="form-label">IBAN</label>
-              <input type="text" formControlName="vat" class="form-control" id="inputIbanDelega">
-            </div>
           </div>
+        </app-cst-panel-card>
+        <app-iban-panel panelName="IBAN Azienda"></app-iban-panel>
+      </div>
+      <div class="col-4">
+        <app-cst-panel-card cardTitle="Indirizzo azienda">
           <div formGroupName="address" class="row g-3">
             <div class="col-sm-10">
               <label for="inputStreet" class="form-label">Indirizzo</label>
@@ -92,12 +102,10 @@
             </div>
           </div>
         </app-cst-panel-card>
-      </div>
-      <div class="col-4">
-        <app-cst-panel-card cardTitle="Carta d'identità Legale Rappresentante">
+        <app-cst-panel-card cardTitle="Carta d'identità del Legale Rappresentante">
           <app-allegato-item></app-allegato-item>
         </app-cst-panel-card>
-        <app-cst-panel-card cardTitle="Delega firmata legale rappresentante">
+        <app-cst-panel-card cardTitle="Procura firmata dal legale rappresentante">
           <app-allegato-item></app-allegato-item>
         </app-cst-panel-card>
       </div>

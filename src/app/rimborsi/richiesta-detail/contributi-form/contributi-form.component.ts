@@ -9,9 +9,10 @@ import {FormBuilder} from '@angular/forms';
 export class ContributiFormComponent implements OnInit {
 
   contributi = this.formBuilder.group({
-    inps: 1,
-    inail: 2,
-    altri: 3
+    inps: [1],
+    inail: [2],
+    altri: [3],
+    subtotale: [100]
   });
 
   constructor(private formBuilder: FormBuilder) {

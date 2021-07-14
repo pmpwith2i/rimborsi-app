@@ -11,6 +11,7 @@ export class NavigationComponent implements OnInit {
 
   @Input()
   isNavbarOpen: boolean;
+  title = 'Rimborsi Volontariato';
 
   constructor() {
   }

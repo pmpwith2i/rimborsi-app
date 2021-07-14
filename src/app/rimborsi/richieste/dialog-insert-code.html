@@ -1,0 +1,11 @@
+<div class="mat-dialog-title" mat-dialog-title>Inserisci un codice attestato</div>
+<div class="mat-dialog-content align-items-center" mat-dialog-content>
+  <label for="inputCodiceAttestato" class="form-label">CODICE</label>
+  <input type="text" formControlName="inputCodiceAttestato" class="form-control" [value]="code"
+         id="inputCodiceAttestato">
+</div>
+<div class="mat-dialog-actions" mat-dialog-actions>
+  <app-cst-button (click)="onClose()" btnClass="btn-danger" text="Annulla" iconName="delete"></app-cst-button>
+  <app-cst-button routerLink="/rimborsi/richieste/new" (click)="onConfirm()" btnClass="btn-success" text="Prosegui"
+                  iconName="check"></app-cst-button>
+</div>

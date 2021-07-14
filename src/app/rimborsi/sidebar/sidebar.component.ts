@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit {
     this.sidebarRoutes.push(new SidebarRoute({itemLink: 'dashboard', linkName: 'Dashboard', iconName: 'home'}));
     this.sidebarRoutes.push(new SidebarRoute({itemLink: 'user-info', linkName: 'I miei dati', iconName: 'person'}));
     this.sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste', iconName: 'info'}));
-    this.sidebarRoutes.push(new SidebarRoute({itemLink: 'deleghe', linkName: 'Deleghe', iconName: 'description'}));
+    this.sidebarRoutes.push(new SidebarRoute({itemLink: 'deleghe', linkName: 'Procure', iconName: 'description'}));
     this.sidebarRoutes.push(new SidebarRoute({itemLink: 'notifiche', linkName: 'Notifiche', iconName: 'notifications'}));
   }
 

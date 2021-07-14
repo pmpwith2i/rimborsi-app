@@ -24,38 +24,42 @@ import {RichiestaResumeComponent} from './richiesta-resume/richiesta-resume.comp
 import {PanelRightComponent} from './panel-right/panel-right.component';
 import { ResumeListItemComponent } from './richiesta-resume/resume-list-item/resume-list-item.component';
 import { ResumeListComponent } from './richiesta-resume/resume-list/resume-list.component';
+import { IbanPanelComponent } from './iban-panel/iban-panel.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
-  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent],
-  exports: [
-    IconComponent,
-    CalendarComponent,
-    CstTableComponent,
-    CstButtonComponent,
-    CstFilterSectionComponent,
-    CstCardDataTableComponent,
-    HistoryListComponent,
-    AllegatoItemComponent,
-    GiornateListComponent,
-    CstCardDataTableComponent,
-    CstPanelCardComponent,
-    RichiestaResumeComponent,
-    PanelRightComponent,
-    RichiestaResumeComponent,
-  ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatInputModule,
-  ],
+  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent],
+    exports: [
+        IconComponent,
+        CalendarComponent,
+        CstTableComponent,
+        CstButtonComponent,
+        CstFilterSectionComponent,
+        CstCardDataTableComponent,
+        HistoryListComponent,
+        AllegatoItemComponent,
+        GiornateListComponent,
+        CstCardDataTableComponent,
+        CstPanelCardComponent,
+        RichiestaResumeComponent,
+        PanelRightComponent,
+        RichiestaResumeComponent,
+        IbanPanelComponent,
+    ],
+    imports: [
+        CommonModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatInputModule,
+        MatCheckboxModule,
+    ],
   providers: [MatDatepickerModule]
 })
 export class SharedModule {

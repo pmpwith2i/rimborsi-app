@@ -12,29 +12,23 @@
 
   <div class="row standard-section-margin">
     <div class="col-5">
+
       <app-cst-panel-card cardTitle="Dati Utente">
-        <div class="col-sm-12">
-          <label for="inputUtenteRichiesta" class="form-label">Richiesta per conto di</label>
-          <select id="inputUtenteRichiesta" class="form-select">
-            <option selected>Scegli un tipo utente...</option>
-            <option value="Mario Rossi">Mario Rossi</option>
-            <option value="Sergio Viola">Sergio Viola</option>
-          </select>
-        </div>
-      </app-cst-panel-card>
-      <app-cst-panel-card cardTitle="Dati Evento">
-        <div class="col-sm-12">
-          <label for="inputUtenteEvento" class="form-label">Evento</label>
-          <select id="inputUtenteEvento" class="form-select">
-            <option selected>Scegli un evento...</option>
-            <option value="Mario Rossi">Covid-19</option>
-          </select>
+        <div class="dati-utente">
+          <div class="dati-utente-info light-bor-bottom">Evento: <span class="dati-utente-info-b">COVID-19</span></div>
+          <div class="dati-utente-info light-bor-bottom"> Utente: <span
+            class="dati-utente-info-b">Federico Pomponii</span></div>
+          <div class="dati-utente-info light-bor-bottom">Codice Fiscale: <span class="dati-utente-info-b">PMPFRC97R06L103Y</span>
+          </div>
         </div>
       </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Codici Attestato">
+        <ng-container rightTop>
+          <app-cst-button btnClass="btn-success btn-sm" text="Aggiungi codice" iconName="add"></app-cst-button>
+        </ng-container>
         <div class="standard-card-panel-body">
-          <ul class="codici-attestato-list">
-            <li class="codice-attestato-item light-bor-bottom d-flex align-items-center">
+          <ul class="standard-list">
+            <li class="standard-list-item light-bor-bottom d-flex align-items-center">
               <div class="mr-auto">
                 <div class="codice-attestato-text ">ANCJHLIU</div>
                 <div class="codice-attestato-name">Federico Pomponii</div>
@@ -42,7 +36,7 @@
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
-            <li class="codice-attestato-item light-bor-bottom d-flex align-items-center">
+            <li class="standard-list-item light-bor-bottom d-flex align-items-center">
               <div class="mr-auto">
                 <div class="codice-attestato-text ">ANCJHLSS</div>
                 <div class="codice-attestato-name">Federico Pomponii</div>
@@ -50,12 +44,12 @@
               <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
-            <li class="codice-attestato-item d-flex light-bor-bottom align-items-center">
+            <li class="standard-list-item d-flex light-bor-bottom align-items-center">
               <div class="mr-auto">
                 <div class="codice-attestato-text ">B89SJSJJ</div>
                 <div class="codice-attestato-name">Federico Pomponii</div>
               </div>
-              <app-icon inClass="codice-attestato-icon" iconName="delete" [isOutlined]="true"
+              <app-icon iconName="delete" [isOutlined]="true"
                         [isCliccable]="true"></app-icon>
             </li>
           </ul>
@@ -64,7 +58,11 @@
     </div>
     <div class="col-7">
       <app-cst-panel-card
-        cardTitle="Giornate Di Assenza (Selezionate : {{getCountSelectedDays()}} / {{giornate.length}})">
+        cardTitle="Giornate Di Assenza (Confermate : {{getCountSelectedDays()}} / {{giornate.length}})">
+
+        <section class="example-section">
+          <mat-checkbox class="example-margin">Nelle giornate inserite sono presenti dei sabato e delle domeniche</mat-checkbox>
+        </section>
         <div class="giornate-list-container">
           <app-giornate-list [giornate]="giornate"></app-giornate-list>
         </div>
