@@ -26,13 +26,24 @@
       <app-cst-panel-card cardTitle="Contributi">
         <app-contributi-form></app-contributi-form>
       </app-cst-panel-card>
-      <app-iban-panel panelName="IBAN">
-      </app-iban-panel>
       <app-cst-panel-card cardTitle="Totale">
         <app-totale-form></app-totale-form>
       </app-cst-panel-card>
     </div>
     <div class="col-xl-4 col-12">
+      <app-cst-panel-card cardTitle="Pagamento">
+        <div class="col-12">
+          <label for="inputIban" class="form-label">IBAN</label>
+          <input type="number" class="form-control"
+                 id="inputIban">
+        </div>
+        <div class="col-12">
+          <label for="inputModalitaRimborso" class="form-label">Modalità Rimborso</label>
+          <select id="inputModalitaRimborso" class="form-select">
+            <option selected>Scegli una modalità...</option>
+          </select>
+        </div>
+      </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Busta paga">
         <app-allegato-item></app-allegato-item>
       </app-cst-panel-card>

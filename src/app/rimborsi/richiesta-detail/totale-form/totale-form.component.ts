@@ -10,7 +10,8 @@ export class TotaleFormComponent implements OnInit {
 
   totaleForm = this.formBuilder.group({
     totale: [200],
-    modalitaRimborso: [null]
+    subtotaleRetribuzioni: [0],
+    subtotaleContributi: [0]
   });
 
   constructor(private formBuilder: FormBuilder) {

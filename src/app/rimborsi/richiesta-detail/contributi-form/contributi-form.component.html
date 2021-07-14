@@ -1,18 +1,37 @@
 <form class="g-3" [formGroup]="contributi">
-  <div class="col-12">
-    <label for="inputInps" class="form-label">INPS</label>
-    <input type="number" formControlName="inps" class="form-control" id="inputInps">
+  <div class="row">
+    <div class="col-8">
+      <label for="inputInps" class="form-label">INPS</label>
+      <input type="number" formControlName="inps" placeholder="€..." class="form-control" id="inputInps">
+    </div>
+    <div class="col-4">
+      <label for="inputInpsPerc" class="form-label">%</label>
+      <input type="number" formControlName="inpsPercentuale" class="form-control" id="inputInpsPerc">
+    </div>
   </div>
-  <div class="col-12">
-    <label for="inputInail" class="form-label">INAIL</label>
-    <input type="number" formControlName="inail" class="form-control" id="inputInail">
+  <div class="row">
+    <div class="col-8">
+      <label for="inputInail" class="form-label">INAIL</label>
+      <input type="number" formControlName="inail" placeholder="€..." class="form-control" id="inputInail">
+    </div>
+    <div class="col-4">
+      <label for="inputInailperc" class="form-label">%</label>
+      <input type="number" formControlName="inailPercentuale" class="form-control" id="inputInailperc">
+    </div>
   </div>
-  <div class="col-12">
-    <label for="inputAltri" class="form-label">Altri contributi</label>
-    <input type="number" formControlName="altri" class="form-control" id="inputAltri">
-  </div>
-  <div class="col-12">
-    <label for="inputSubtotale" class="form-label">Totale costo contributi</label>
-    <input type="number" formControlName="subtotale" class="form-control" id="inputSubtotale">
+  <div class="row">
+    <div class="col-6">
+      <label for="inputAltriNome" class="form-label">Altro contributo</label>
+      <input type="text" formControlName="altriNome" placeholder="Nome contributo..." class="form-control"
+             id="inputAltriNome">
+    </div>
+    <div class="col-4">
+      <label for="inputAltri" class="form-label">Valore</label>
+      <input type="number" formControlName="altri" placeholder="€..." class="form-control" id="inputAltri">
+    </div>
+    <div class="col-2">
+      <label for="inputAltriPerc" class="form-label">%</label>
+      <input type="number" formControlName="altriPercentuale" class="form-control" id="inputAltriPerc">
+    </div>
   </div>
 </form>

@@ -125,10 +125,10 @@ app-icon {
 .standard-card-panel-title {
   padding-top: 1rem;
   padding-bottom: .5rem;
-  text-transform: uppercase;
-  font-size: .8rem;
-  color: #666;
+  font-size: 1rem;
+  color: #4a4a4a;
   margin: 0 1rem 0 1rem;
+  font-weight: 600;
 }
 
 .standard-card-panel-body {
@@ -175,11 +175,21 @@ app-icon {
 
 .standard-list {
   list-style: none;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .standard-list-item {
-  margin:.5rem 0 .5rem 0;
-  padding:.5rem;
+  margin: .5rem 0 .5rem 0;
+  padding: .5rem;
+}
+
+
+.item-list-2 {
+  font-size: .8rem;
+}
+
+.item-list-3 {
+  font-size: .8rem;
+  color: rgb(0, 156, 255);
 }
