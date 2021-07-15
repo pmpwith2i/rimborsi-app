@@ -1,5 +1,18 @@
 <form class="g-3" [formGroup]="richiestaFormControl">
   <div formGroupName="retribuzione">
+
+    <div class="section-standard-panel light-bor-bottom">
+      <p>Si dichiara che la retribuzione del dipendente viene calcolata:</p>
+      <mat-checkbox class="example-margin">Su base mensile (30/30)
+      </mat-checkbox><br />
+      <mat-checkbox class="example-margin" formControlName="isAltreModalita">Altre modalità
+      </mat-checkbox>
+      <div class="col-12" *ngIf="isCheckedAltreModalita()">
+        <label for="altreModalitaRetribuzione" class="form-label">Specificare altre modalità</label>
+        <input type="text" formControlName="altreModalitaRetribuzione" class="form-control"
+               id="altreModalitaRetribuzione">
+      </div>
+    </div>
     <div class="row align-items-end row-dati-finanziari">
       <div class="col-md-8 col-9">
         <label for="inputGiornate" class="form-label">Numero giornate</label>

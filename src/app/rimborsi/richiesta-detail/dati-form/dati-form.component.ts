@@ -27,7 +27,9 @@ export class DatiFormComponent implements OnInit {
       rateoExFestivitaEuro: [{value: 0, disabled: true}],
       rateoExFestivita2Ore: [1],
       rateoExFestivita2Euro: [{value: 0, disabled: true}],
-      subtotale: [100]
+      subtotale: [100],
+      altreModalitaRetribuzione: ['Nessuna'],
+      isAltreModalita: [true]
     })
   });
 
@@ -35,6 +37,10 @@ export class DatiFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.richiestaFormControl.controls);
   }
 
+  isCheckedAltreModalita() {
+    return this.richiestaFormControl.controls['retribuzione'].value.isAltreModalita;
+  }
 }

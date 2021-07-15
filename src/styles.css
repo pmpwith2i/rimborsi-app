@@ -193,3 +193,9 @@ app-icon {
   font-size: .8rem;
   color: rgb(0, 156, 255);
 }
+
+.section-standard-panel {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
