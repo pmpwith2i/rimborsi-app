@@ -26,6 +26,7 @@ import { ResumeListItemComponent } from './richiesta-resume/resume-list-item/res
 import { ResumeListComponent } from './richiesta-resume/resume-list/resume-list.component';
 import { IbanPanelComponent } from './iban-panel/iban-panel.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -47,19 +48,20 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         RichiestaResumeComponent,
         IbanPanelComponent,
     ],
-    imports: [
-        CommonModule,
-        MatIconModule,
-        ReactiveFormsModule,
-        MatIconModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        FormsModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatInputModule,
-        MatCheckboxModule,
-    ],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatTooltipModule,
+  ],
   providers: [MatDatepickerModule]
 })
 export class SharedModule {

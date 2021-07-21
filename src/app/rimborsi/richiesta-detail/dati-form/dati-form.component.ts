@@ -37,10 +37,9 @@ export class DatiFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.richiestaFormControl.controls);
   }
 
-  isCheckedAltreModalita() {
+  isCheckedAltreModalita(): boolean {
     return this.richiestaFormControl.controls['retribuzione'].value.isAltreModalita;
   }
 }

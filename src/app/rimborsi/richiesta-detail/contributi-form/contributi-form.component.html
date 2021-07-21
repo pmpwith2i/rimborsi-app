@@ -21,15 +21,20 @@
   </div>
   <div class="row">
     <div class="col-6">
-      <label for="inputAltriNome" class="form-label">Altro contributo</label>
+      <label for="inputAltriNome" class="d-flex align-items-center form-label">Altro contributo
+        <app-icon
+          inClass="icon-warning-small"
+          tooltipMsg="Prova messaggio tooltip"
+          iconName="warning"></app-icon>
+      </label>
       <input type="text" formControlName="altriNome" placeholder="Nome contributo..." class="form-control"
              id="inputAltriNome">
     </div>
-    <div class="col-4">
+    <div class="col-3">
       <label for="inputAltri" class="form-label">Valore</label>
       <input type="number" formControlName="altri" placeholder="€..." class="form-control" id="inputAltri">
     </div>
-    <div class="col-2">
+    <div class="col-3">
       <label for="inputAltriPerc" class="form-label">%</label>
       <input type="number" formControlName="altriPercentuale" class="form-control" id="inputAltriPerc">
     </div>

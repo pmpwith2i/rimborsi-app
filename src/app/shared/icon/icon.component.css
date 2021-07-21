@@ -28,7 +28,8 @@
   color: #535252;
 }
 
-.icon-warning-giornata {
-  margin-left: 2rem;
+.icon-warning-small {
+  font-size:1.2rem;
+  margin-left:.5rem;
   color: #ff8135;
 }

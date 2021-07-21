@@ -11,6 +11,9 @@ export class IconComponent implements OnInit {
   @Input() iconName: string;
   @Input() isCliccable: boolean;
   @Input() isOutlined: boolean;
+  @Input()
+  tooltipMsg: string;
+
   constructor() {
   }
 

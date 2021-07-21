@@ -11,7 +11,7 @@
           {{giornata.codiceEvento}}
         </span>
     </div>
-    <app-icon *ngIf="isAlert()" iconName="warning" inClass="icon-warning-giornata"></app-icon>
+    <app-icon *ngIf="isAlert()" tooltipMsg="Hai selezionato un giorno festivo, sei sicuro?" iconName="warning" inClass="icon-warning-small"></app-icon>
   </div>
   <div class="offset-1 col-2" *ngIf="isSelected">
     <label for="inputGiornate" class="d-none form-label">Ore effettive</label>
