@@ -1,0 +1,10 @@
+<ul class="standard-list">
+  <li *ngFor="let el of contributiItems" class="standard-list-item light-bor-bottom d-flex align-items-end">
+    <div class="mr-auto">
+      {{el.name}}
+    </div>
+    <div>
+      <span class="tot">{{el.tot}} </span> - <span class="amount">{{el.amount}} €</span>
+    </div>
+  </li>
+</ul>

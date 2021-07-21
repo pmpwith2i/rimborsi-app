@@ -11,7 +11,8 @@ export class NavigationComponent implements OnInit {
 
   @Input()
   isNavbarOpen: boolean;
-  title = 'Rimborsi Volontariato';
+  @Input()
+  title: string;
 
   constructor() {
   }
@@ -19,7 +20,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleNavbar(): void{
+  toggleNavbar(): void {
     this.eventMenuClicked.emit(true);
   }
 }

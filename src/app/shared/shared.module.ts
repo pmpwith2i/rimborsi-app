@@ -22,32 +22,45 @@ import {GiornataItemComponent} from './giornata-item/giornata-item.component';
 import {CstPanelCardComponent} from './cst-panel-card/cst-panel-card.component';
 import {RichiestaResumeComponent} from './richiesta-resume/richiesta-resume.component';
 import {PanelRightComponent} from './panel-right/panel-right.component';
-import { ResumeListItemComponent } from './richiesta-resume/resume-list-item/resume-list-item.component';
-import { ResumeListComponent } from './richiesta-resume/resume-list/resume-list.component';
-import { IbanPanelComponent } from './iban-panel/iban-panel.component';
+import {ResumeListItemComponent} from './richiesta-resume/resume-list-item/resume-list-item.component';
+import {ResumeListComponent} from './richiesta-resume/resume-list/resume-list.component';
+import {IbanPanelComponent} from './iban-panel/iban-panel.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {SidebarComponent} from './sidebar/sidebar.component';
+import {SidebarItemComponent} from './sidebar/sidebar-item/sidebar-item.component';
+import {RouterModule} from '@angular/router';
+import {DashContainerComponent} from './dash-container/dash-container.component';
+import {NavigationComponent} from './navigation/navigation.component';
+import {RetribuzioneListComponent} from './retribuzione-list/retribuzione-list.component';
+import { ContributiListComponent } from './contributi-list/contributi-list.component';
+import { TotaleListComponent } from './totale-list/totale-list.component';
 
 
 @NgModule({
-  declarations: [CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent],
-    exports: [
-        IconComponent,
-        CalendarComponent,
-        CstTableComponent,
-        CstButtonComponent,
-        CstFilterSectionComponent,
-        CstCardDataTableComponent,
-        HistoryListComponent,
-        AllegatoItemComponent,
-        GiornateListComponent,
-        CstCardDataTableComponent,
-        CstPanelCardComponent,
-        RichiestaResumeComponent,
-        PanelRightComponent,
-        RichiestaResumeComponent,
-        IbanPanelComponent,
-    ],
+  declarations: [RetribuzioneListComponent, DashContainerComponent, NavigationComponent, SidebarComponent, SidebarItemComponent, CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent, SidebarComponent, SidebarItemComponent, DashContainerComponent, NavigationComponent, RetribuzioneListComponent, ContributiListComponent, TotaleListComponent],
+  exports: [
+    IconComponent,
+    CalendarComponent,
+    CstTableComponent,
+    CstButtonComponent,
+    CstFilterSectionComponent,
+    CstCardDataTableComponent,
+    HistoryListComponent,
+    AllegatoItemComponent,
+    GiornateListComponent,
+    CstCardDataTableComponent,
+    CstPanelCardComponent,
+    RichiestaResumeComponent,
+    PanelRightComponent,
+    RichiestaResumeComponent,
+    IbanPanelComponent,
+    SidebarComponent,
+    DashContainerComponent,
+    RetribuzioneListComponent,
+    ContributiListComponent,
+    TotaleListComponent,
+  ],
   imports: [
     CommonModule,
     MatIconModule,
@@ -61,6 +74,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatInputModule,
     MatCheckboxModule,
     MatTooltipModule,
+    RouterModule,
   ],
   providers: [MatDatepickerModule]
 })

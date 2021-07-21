@@ -9,6 +9,7 @@ import {RimborsiModule} from './rimborsi/rimborsi.module';
 import {CoreModule} from './core/core.module';
 import {Constants} from './config/constants';
 import '@angular/common/locales/global/it';
+import {IstruttoreModule} from './istruttore/istruttore.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import '@angular/common/locales/global/it';
     BrowserModule,
     BrowserAnimationsModule,
     RimborsiModule,
+    IstruttoreModule,
     SharedModule,
     CoreModule
   ],

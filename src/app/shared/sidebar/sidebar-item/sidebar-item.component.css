@@ -5,13 +5,13 @@
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-top:10px;
-  padding-left:10px;
-  padding-bottom:10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .side-nav-item.selected {
-  border-left:1px solid white;
+  border-left: 1px solid white;
 }
 
 .side-nav-item:hover {

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {BreakpointObserver} from '@angular/cdk/layout';
+import {getVolontarioRoutesSidebar} from '../config/constants';
+import {SidebarRoute} from '../shared/model/route';
 
 @Component({
   selector: 'app-rimborsi',
@@ -7,36 +8,14 @@ import {BreakpointObserver} from '@angular/cdk/layout';
   styleUrls: ['./rimborsi.component.css']
 })
 export class RimborsiComponent implements OnInit {
-  navbarOpen = false;
 
-  myInnerHeight = window.innerHeight;
+  sidebarRoutes: SidebarRoute[] = [];
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe([
-      '(max-width: 1600px)'
-    ]).subscribe(result => {
-      console.log(result);
-      if (result.matches) {
-        this.navbarOpen = false;
-      } else {
-        this.navbarOpen = true;
-      }
-    });
+  constructor() {
   }
 
   ngOnInit(): void {
-    const isSmallScreen = this.breakpointObserver.isMatched('(max-width: 1600px)');
-    if (!isSmallScreen) {
-      this.navbarOpen = true;
-    }
-  }
-
-  toggleNavBar(): void {
-    const isSmallScreen = this.breakpointObserver.isMatched('(max-width: 1600px)');
-    if (!isSmallScreen) {
-      return;
-    }
-    this.navbarOpen = !this.navbarOpen;
+    this.sidebarRoutes = getVolontarioRoutesSidebar();
   }
 
 }

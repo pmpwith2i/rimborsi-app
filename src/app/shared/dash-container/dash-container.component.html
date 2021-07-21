@@ -1,4 +1,4 @@
-<!--<div class="app-container">
+<div class="app-container">
   <div class="row app-row">
     <div class="col-12 col-xxxl-2 side-nav standard-shadow" [style.height.px]="myInnerHeight"
          *ngIf="navbarOpen">
@@ -6,16 +6,8 @@
     </div>
     <div class="overlay xxxl-hide" *ngIf="navbarOpen" (click)="toggleNavBar()"></div>
     <div class="col-12 col-xxxl-10 right-rimborsi">
-      <app-navigation (eventMenuClicked)="toggleNavBar()"></app-navigation>
-      <div class="rimborsi-container">
-        <router-outlet></router-outlet>
-      </div>
+      <app-navigation [title]="title" (eventMenuClicked)="toggleNavBar()"></app-navigation>
+      <ng-content></ng-content>
     </div>
   </div>
-</div>-->
-
-<app-dash-container [sidebarRoutes]="sidebarRoutes">
-  <div class="rimborsi-container">
-    <router-outlet></router-outlet>
-  </div>
-</app-dash-container>
+</div>

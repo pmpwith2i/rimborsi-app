@@ -1,0 +1,55 @@
+<div class="standard-panel">
+  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+    <div class="mr-auto title-mobile-responsive">
+      <h1 class="text-title-dark">Riepilogo Istruttoria Richiesta - <b>{{richiestaName}}</b></h1>
+      <h4 class="subtitle-dark">Mario Rossi - Evento Covid</h4>
+    </div>
+    <div class="btn-container-new">
+      <app-cst-button btnClass="btn-primary" text="Visualizza giornate" (click)="toggleViewGiornate()"
+                      iconName="visibility"></app-cst-button>
+    </div>
+    <div class="btn-container-new">
+      <app-cst-button btnClass="btn-danger" text="Elimina richiesta" iconName="delete"></app-cst-button>
+    </div>
+    <div class="btn-container-new">
+      <app-cst-button btnClass="btn-success" text="Presenta Domanda" (click)="toggleViewResume()"
+                      iconName="send"></app-cst-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-4 col-12">
+      <app-cst-panel-card cardTitle="Retribuzione">
+        <app-retribuzione-list [retribuzioneItems]="retribuzioneItems"></app-retribuzione-list>
+      </app-cst-panel-card>
+    </div>
+    <div class="col-xl-4 col-12">
+      <app-cst-panel-card cardTitle="Contributi">
+        <app-contributi-list [contributiItems]="contributiItems"></app-contributi-list>
+      </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Totale">
+        <app-totale-list [totaleItems]="totaleItems"></app-totale-list>
+      </app-cst-panel-card>
+    </div>
+    <div class="col-xl-4 col-12">
+      <app-cst-panel-card cardTitle="Pagamento">
+        <div class="col-12">
+          <div class="form-label">IBAN</div>
+          <b>IT 99 C 12345 67890 123456789012.</b>
+        </div>
+        <div class="col-12">
+          <div class="form-label">Modalità Rimborso</div>
+          <b>Accredito sul c/c bancario</b>
+        </div>
+      </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Busta paga">
+        <app-allegato-item></app-allegato-item>
+      </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Foglio presenze">
+        <app-allegato-item></app-allegato-item>
+      </app-cst-panel-card>
+      <app-cst-panel-card cardTitle="Storico">
+        <app-history-list [histories]="histories"></app-history-list>
+      </app-cst-panel-card>
+    </div>
+  </div>
+</div>

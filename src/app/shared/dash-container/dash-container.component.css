@@ -1,0 +1,15 @@
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  height: 100vh !important;
+  background-color: #283033;
+  color: white;
+  padding: 0;
+  z-index: 4;
+}
+
+.right-rimborsi {
+  margin: 0;
+  padding: 0;
+}

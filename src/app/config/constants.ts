@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core';
 import {CstCol} from '../shared/cst-table/classes/cst-col';
 import {Delega} from '../shared/model/delega';
 import {CstFilter} from '../shared/cst-table/classes/cst-filter';
+import {SidebarRoute} from '../shared/model/route';
 
 @Injectable()
 export class Constants {
@@ -17,6 +18,28 @@ function delegaBackgroundFunctionFunzionario(anItem: Delega): string {
 
 
   return '#efefef';
+}
+
+export function getIstruttoreSidebar(): SidebarRoute[] {
+  const sidebarRoutes: SidebarRoute[] = [];
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'dashboard', linkName: 'Dashboard', iconName: 'home'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste in corso', iconName: 'info'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste passate', iconName: 'info'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'deleghe', linkName: 'Verifica Procure', iconName: 'description'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'notifiche', linkName: 'Notifiche', iconName: 'notifications'}));
+
+  return sidebarRoutes;
+}
+
+export function getVolontarioRoutesSidebar(): SidebarRoute[] {
+  const sidebarRoutes: SidebarRoute[] = [];
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'dashboard', linkName: 'Dashboard', iconName: 'home'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'user-info', linkName: 'I miei dati', iconName: 'person'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste', iconName: 'info'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'deleghe', linkName: 'Procure', iconName: 'description'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'notifiche', linkName: 'Notifiche', iconName: 'notifications'}));
+
+  return sidebarRoutes;
 }
 
 export function getDelegheFilters(): any {
