@@ -4,6 +4,7 @@ export declare class AppController {
     constructor(appService: AppService);
     getDeleghe(): any;
     getRichieste(): any;
+    getRichiesta(params: any): any;
     getStorico(): any;
     getNotifiche(): any;
 }

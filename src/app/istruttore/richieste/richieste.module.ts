@@ -7,7 +7,7 @@ import {RichiesteRoutingModule} from './richieste-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    RichiesteRoutingModule
+    RichiesteRoutingModule,
   ]
 })
 export class RichiesteModule {

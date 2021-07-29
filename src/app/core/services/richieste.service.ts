@@ -22,6 +22,10 @@ export class RichiesteService {
       .get(this.apiEndpointsService.getRichiesteEndPoint());
   }
 
+  getRichiesta(anId: number): any {
+    return this.apiHttpService.get(this.apiEndpointsService.getRichiestaEndPoint(anId));
+  }
+
   getStoricoRichiesta(richiestaId: number): any {
     return this.apiHttpService.get(this.apiEndpointsService.getStoricoEndpoint(richiestaId));
   }

@@ -1,8 +1,8 @@
 // Angular Modules
 import {Injectable} from '@angular/core';
 // Application Classes
-import {UrlBuilder} from '../../shared/classes/url-builder';
-import {QueryStringParameters} from '../../shared/classes/query-string-parameters';
+import {UrlBuilder} from '../../shared/elements/classes/url-builder';
+import {QueryStringParameters} from '../../shared/elements/classes/query-string-parameters';
 // Application Constants
 import {Constants} from 'src/app/config/constants';
 
@@ -68,6 +68,10 @@ export class ApiEndpointsService {
 
   public getRichiesteEndPoint(): string {
     return this.createUrl('richieste');
+  }
+
+  public getRichiestaEndPoint(anId: number): string {
+    return this.createUrl('richieste/' + anId);
   }
 
   getStoricoEndpoint(richiestaId: number): string {

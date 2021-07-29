@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {CstCol} from '../../shared/cst-table/classes/cst-col';
-import {CstFilter} from '../../shared/cst-table/classes/cst-filter';
+import {CstCol} from '../../shared/elements/cst-table/classes/cst-col';
+import {CstFilter} from '../../shared/elements/cst-table/classes/cst-filter';
 import {Router} from '@angular/router';
-import {filterItem} from '../../shared/cst-table/classes/filter-item';
-import {getRichiesteColumns, getRichiesteFilters} from '../../config/constants';
+import {filterItem} from '../../shared/elements/cst-table/classes/filter-item';
+import {getRichiesteColumns, getRichiesteFilters} from '../../config/richiestaConstants';
 import {RichiesteService} from '../../core/services/richieste.service';
 import {Richiesta} from '../../shared/model/richiesta';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
@@ -85,6 +85,7 @@ export class RichiesteComponent implements OnInit {
 })
 export class DialogInsertCodeComponent {
   code = 'ANCJHLIU';
+
   constructor(
     public dialogRef: MatDialogRef<DialogInsertCodeComponent>,) {
   }

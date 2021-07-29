@@ -1,11 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {History} from '../../../shared/model/history';
 import {Giornata} from '../../../shared/model/giornata';
 import {RichiesteService} from '../../../core/services/richieste.service';
-import {FormBuilder} from '@angular/forms';
 import {RetribuzioneItem} from '../../../shared/model/retribuzione-item';
 import {ContributoItem} from '../../../shared/model/contributo-item';
 import {TotaleItem} from '../../../shared/model/totale-item';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {ActivatedRoute} from '@angular/router';
+import {Richiesta} from '../../../shared/model/richiesta';
 
 @Component({
   selector: 'app-richiesta-detail',
@@ -13,7 +15,6 @@ import {TotaleItem} from '../../../shared/model/totale-item';
   styleUrls: ['./richiesta-detail.component.css']
 })
 export class RichiestaDetailComponent implements OnInit {
-  richiestaName: string;
   histories: History[];
   giornate: Giornata[];
   viewGiornate = false;
@@ -22,13 +23,30 @@ export class RichiestaDetailComponent implements OnInit {
   retribuzioneItems: RetribuzioneItem[] = [];
   contributiItems: ContributoItem[] = [];
   totaleItems: TotaleItem[] = [];
+  richiesta: Richiesta = new Richiesta({});
+  iban: string;
+  tipologiaPagamento: string;
 
 
-  constructor(private richiesteService: RichiesteService, private formBuilder: FormBuilder) {
+  constructor(private route: ActivatedRoute,
+              private matDialog: MatDialog,
+              private richiesteService: RichiesteService) {
   }
 
   ngOnInit(): void {
-    this.richiestaName = '394858';
+    this.route.params.subscribe(params => {
+      const id = params.id;
+      if (null == id) {
+        // TODO: Funzione not found
+      } else {
+        this.richiesteService.getRichiesta(id).subscribe(data => {
+          this.richiesta = new Richiesta(data.richiesta);
+          this.iban = data.infoPagamento.iban;
+          this.tipologiaPagamento = data.infoPagamento.tipologiaPagamento;
+        });
+      }
+    });
+
     this.getStorico();
     this.getGiornate();
     this.getRetribuzioneItems();
@@ -97,5 +115,30 @@ export class RichiestaDetailComponent implements OnInit {
     this.totaleItems = [];
     this.totaleItems.push({name: 'Totale contributi', amount: 41.40});
     this.totaleItems.push({name: 'Totale costo complessivo', amount: 153.53});
+  }
+
+  requestIntegration(): void {
+    this.matDialog.open(DialogIntegrazioniComponent);
+  }
+}
+
+@Component({
+  selector: 'app-dialog-integrazioni',
+  templateUrl: 'dialog-integrazioni.html',
+})
+export class DialogIntegrazioniComponent {
+  @Input()
+  richiestaText = 'Lorem Ipsum Dolor Sit Amet';
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogIntegrazioniComponent>) {
+  }
+
+  onClose(): void {
+    this.dialogRef.close();
+  }
+
+  onConfirm(): void {
+    this.dialogRef.close();
   }
 }

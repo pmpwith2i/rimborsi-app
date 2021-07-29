@@ -1,6 +1,7 @@
 export class Richiesta {
   id: number;
-  stato: string;
+  stato: number;
+  codice: number;
   volontario: string;
   datoreLavoro: string;
   tipoDatore: string;
@@ -13,6 +14,7 @@ export class Richiesta {
   constructor(anObj: any) {
     this.id = anObj.id;
     this.dataInizio = anObj.dataInizio;
+    this.codice = anObj.codice;
     this.dataFine = anObj.dataFine;
     this.stato = anObj.stato;
     this.evento = anObj.evento;

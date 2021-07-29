@@ -1,0 +1,11 @@
+<div class="mat-dialog-title" mat-dialog-title>Richiedi integrazioni per la richiesta</div>
+<div class="mat-dialog-content align-items-center" mat-dialog-content>
+  <label for="inputRichiesta" class="form-label">Nota richiesta</label>
+  <textarea class="form-control" [value]="richiestaText" id="inputRichiesta" rows="5"></textarea>
+
+</div>
+<div class="mat-dialog-actions" mat-dialog-actions>
+  <app-cst-button (click)="onClose()" btnClass="btn-danger" text="Annulla" iconName="delete"></app-cst-button>
+  <app-cst-button (click)="onConfirm()" btnClass="btn-success" text="Invia richiesta integrazioni"
+                  iconName="send"></app-cst-button>
+</div>

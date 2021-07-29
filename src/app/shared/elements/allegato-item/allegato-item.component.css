@@ -1,0 +1,29 @@
+.cst-allegato-item {
+  background: rgba(238, 238, 238, 0.4);
+  border-radius: 7px;
+  padding: .5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.cst-allegato-item:hover {
+  background: #e2eefd;
+}
+
+.cst-allegato-left {
+  margin-right: 1.5rem;
+}
+
+.cst-allegato-date {
+  font-size: .8rem;
+}
+
+.cst-allegato-no-link {
+  font-size: .9rem;
+}
+
+.cst-allegato-name {
+  font-weight: 600;
+  font-size: .8rem;
+  text-decoration: underline;
+}

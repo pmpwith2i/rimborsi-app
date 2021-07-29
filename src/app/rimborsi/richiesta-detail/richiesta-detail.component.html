@@ -1,8 +1,14 @@
 <div class="standard-panel">
   <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
-      <h1 class="text-title-dark">Modifica Richiesta - {{richiestaName}}</h1>
-      <h4 class="subtitle-dark">Mario Rossi - Evento Covid</h4>
+      <h1 class="text-title-dark">Riepilogo Richiesta - <b>{{richiesta.codice}}</b></h1>
+      <div class="d-flex align-items-center">
+        <div class="subtitle-dark">{{richiesta.volontario}} - {{richiesta.evento}}</div>
+        <div *ngIf="richiesta.stato" appBackgroundStato [statoRichiesta]='richiesta.stato'
+             class="cst-chips standard-shadow">
+          {{richiesta.stato | dinamycDataPipe:'statoRichiesta'}}
+        </div>
+      </div>
     </div>
     <div class="btn-container-new">
       <app-cst-button btnClass="btn-primary" text="Visualizza giornate" (click)="toggleViewGiornate()"
@@ -16,18 +22,21 @@
                       iconName="send"></app-cst-button>
     </div>
   </div>
+  <app-notification-panel>
+
+  </app-notification-panel>
   <div class="row">
     <div class="col-xl-4 col-12">
       <app-cst-panel-card cardTitle="Retribuzione">
-        <app-dati-form></app-dati-form>
+        <app-dati-form [isFormDisabled]="isFormDisabled" [datiFinanziari]="datiFinanziari"></app-dati-form>
       </app-cst-panel-card>
     </div>
     <div class="col-xl-4 col-12">
       <app-cst-panel-card cardTitle="Contributi">
-        <app-contributi-form></app-contributi-form>
+        <app-contributi-form [isFormDisabled]="isFormDisabled" [contributi]="contributi"></app-contributi-form>
       </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Totale">
-        <app-totale-form></app-totale-form>
+        <app-totale-form [isFormDisabled]="true"></app-totale-form>
       </app-cst-panel-card>
     </div>
     <div class="col-xl-4 col-12">
@@ -44,11 +53,9 @@
           </select>
         </div>
       </app-cst-panel-card>
-      <app-cst-panel-card cardTitle="Busta paga">
-        <app-allegato-item></app-allegato-item>
-      </app-cst-panel-card>
-      <app-cst-panel-card cardTitle="Foglio presenze">
-        <app-allegato-item></app-allegato-item>
+      <app-cst-panel-card cardTitle="Allegati">
+        <app-allegato-item allegatoType="Busta paga"></app-allegato-item>
+        <app-allegato-item allegatoType="Foglio presenze"></app-allegato-item>
       </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Storico">
         <app-history-list [histories]="histories"></app-history-list>

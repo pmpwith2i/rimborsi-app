@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {CstCol} from '../../shared/cst-table/classes/cst-col';
+import {CstCol} from '../../shared/elements/cst-table/classes/cst-col';
 import {Delega} from '../../shared/model/delega';
 import {DelegheService} from '../../core/services/deleghe.service';
-import {CstFilter} from '../../shared/cst-table/classes/cst-filter';
-import {filterItem} from '../../shared/cst-table/classes/filter-item';
+import {CstFilter} from '../../shared/elements/cst-table/classes/cst-filter';
+import {filterItem} from '../../shared/elements/cst-table/classes/filter-item';
 import {getDelegheColumns, getDelegheFilters} from '../../config/constants';
 
 @Component({

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {CstCol} from '../../shared/cst-table/classes/cst-col';
-import {CstFilter} from '../../shared/cst-table/classes/cst-filter';
+import {CstCol} from '../../shared/elements/cst-table/classes/cst-col';
+import {CstFilter} from '../../shared/elements/cst-table/classes/cst-filter';
 import {Router} from '@angular/router';
-import {filterItem} from '../../shared/cst-table/classes/filter-item';
+import {filterItem} from '../../shared/elements/cst-table/classes/filter-item';
 import {Notifica} from '../../shared/model/notifica';
 import {NotificheService} from '../../core/services/notifiche.service';
 import {getNotificheColumns, getNotificheFilters} from '../../config/constants';

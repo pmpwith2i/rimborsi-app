@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {CstCol} from '../../shared/cst-table/classes/cst-col';
-import {getRichiesteColumns, getRichiesteFilters} from '../../config/constants';
-import {CstFilter} from '../../shared/cst-table/classes/cst-filter';
+import {CstCol} from '../../shared/elements/cst-table/classes/cst-col';
+import {CstFilter} from '../../shared/elements/cst-table/classes/cst-filter';
 import {Richiesta} from '../../shared/model/richiesta';
 import {MatDialog} from '@angular/material/dialog';
 import {Router} from '@angular/router';
 import {RichiesteService} from '../../core/services/richieste.service';
-import {filterItem} from '../../shared/cst-table/classes/filter-item';
+import {filterItem} from '../../shared/elements/cst-table/classes/filter-item';
+import {getRichiesteColumns, getRichiesteFilters} from '../../config/richiestaConstants';
 
 @Component({
   selector: 'app-richieste',
@@ -29,9 +29,6 @@ export class RichiesteComponent implements OnInit {
     this.getRichieste(null, null);
   }
 
-  openDialogInsertCode(): void {
-  }
-
   createSidebarLink(): void {
 
   }
@@ -50,16 +47,12 @@ export class RichiesteComponent implements OnInit {
   }
 
   editItem(anId: number): void {
-    this.router.navigate(['rimborsi/richieste/', anId]);
+    this.router.navigate(['istruttore/richieste/', anId]);
   }
 
   toggleViewResume(): void {
     this.viewResume = !this.viewResume;
-    if (this.viewResume) {
-      this.overlayShow = true;
-    } else {
-      this.overlayShow = false;
-    }
+    this.overlayShow = this.viewResume;
   }
 
   private getRichieste(filterList: CstFilter[], searchStr: string): void {
@@ -76,3 +69,5 @@ export class RichiesteComponent implements OnInit {
     });
   }
 }
+
+

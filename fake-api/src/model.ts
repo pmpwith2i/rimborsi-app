@@ -34,17 +34,82 @@ export const deleghe = [
 export const richieste = [
     {
         id:1,
-        stato: 'Presentata',
+        stato: 1,
+        codice:3893939,
         volontario: 'Sergio Viola',
         datoreLavoro: 'Mario Rossi SRL',
-        tipoDatore: 'Azienda Privatqa',
+        tipoDatore: 'Azienda Privata',
         evento: 'COVID',
-        dataInizio: new Date(),
+        dataInizio: new Date('2021-7-1'),
         dataFine: new Date('2021-10-10'),
         giorni: 5,
         importo: 434.73,
+    },
+    {
+        id:2,
+        stato: 2,
+        codice: 4590303,
+        volontario: 'Giorgio Bruni',
+        datoreLavoro: 'Mario Rossi SRL',
+        tipoDatore: 'Azienda Privata',
+        evento: 'COVID',
+        dataInizio: new Date('2021-6-3'),
+        dataFine: new Date('2021-8-10'),
+        giorni: 8,
+        importo: 689.73,
     }
+
 ]
+
+export const datiFinanziari = {
+    id:1,
+    idRichiesta:1,
+    numeroGiornate:5,
+    stipendioLordoGiorni:1,
+    stipendioLordoEuro: 88.78,
+    rateo13Ore: 0.67,
+    rateo13Euro: 7.4,
+    rateo14Ore: 0.67,
+    rateo14Euro: 7.4,
+    rateoAltreOre: 0,
+    rateoAltreEuro: 0,
+    rateoPermessiOre: 0,
+    rateoPermessiEuro: 0,
+    rateoFerieOre: 0.55,
+    rateoFerieEuro: 6.1,
+    rateoFestivitaOre: 0.1,
+    rateoFestivitaEuro: 1.11,
+    rateoFestivita2Ore: 0,
+    rateoFestivita2Euro: 0
+}
+
+export const contributi = {
+    id:1,
+    idRichiesta:1,
+    inpsPerc: 30.68,
+    inpsEuro: 34.3,
+    inailPerc: 6.33,
+    inailEuro: 7.1,
+    altriPerc: 0,
+    altriNome: 'Nuovo contributo',
+    altriEuro: 0,
+    tfrPerc: 0,
+    tfrEuro: 0
+}
+
+export const infoPagamento = {
+    id:1,
+    idRichiesta:1,
+    iban: 'IT 99 C 12345 67890 123456789012',
+    tipologiaPagamento: 'ACCR'
+}
+
+export const richiestaIntegrazioni = {
+    id:1,
+    idRichiesta:1,
+    nota: 'Una richiesta di integrazioni creata dall\'istruttore',
+    allegato: {name: 'Allegato_richiesta.pdf', link:'no-link', date: new Date()}
+}
 
 export const storico = [
     {id:1,

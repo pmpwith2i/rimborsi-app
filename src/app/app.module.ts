@@ -27,6 +27,7 @@ import {IstruttoreModule} from './istruttore/istruttore.module';
   providers: [Constants,
     {provide: LOCALE_ID, useValue: 'it-IT'}
   ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

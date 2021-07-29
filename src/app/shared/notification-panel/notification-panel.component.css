@@ -1,0 +1,29 @@
+.notification-panel {
+  background: #fff;
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 1rem;
+  color: white;
+  max-width: 50vw;
+}
+
+.notification-panel-left {
+}
+
+.notification-panel-line {
+  width: 3px;
+  background: orange;
+  height: 100%;
+  border-radius: 5rem;
+}
+
+.notification-panel-title {
+  color: #4e4e4e;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.notification-panel-text {
+  color: #676767;
+  font-size: .8rem;
+}

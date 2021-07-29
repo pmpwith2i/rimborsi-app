@@ -184,6 +184,13 @@ app-icon {
   padding: .5rem;
 }
 
+.cst-chips {
+  background: orange;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  color: white;
+  padding: .2rem 1rem .2rem 1rem;
+}
 
 .item-list-2 {
   font-size: .8rem;
