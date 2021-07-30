@@ -28,6 +28,9 @@ let AppController = class AppController {
     getRichiesta(params) {
         return this.appService.getRichiesta(params.id);
     }
+    getScheda(params) {
+        return this.appService.getScheda(params.id);
+    }
     getStorico() {
         return this.appService.getStorico();
     }
@@ -54,6 +57,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Object)
 ], AppController.prototype, "getRichiesta", null);
+__decorate([
+    common_1.Get('schede/:id'),
+    __param(0, common_1.Param()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getScheda", null);
 __decorate([
     common_1.Get('storico'),
     __metadata("design:type", Function),

@@ -21,9 +21,13 @@ export declare const richieste: {
     giorni: number;
     importo: number;
 }[];
+export declare const schede: {
+    id: number;
+    text: string;
+}[];
 export declare const datiFinanziari: {
     id: number;
-    idRichiesta: number;
+    idScheda: number;
     numeroGiornate: number;
     stipendioLordoGiorni: number;
     stipendioLordoEuro: number;
@@ -41,10 +45,10 @@ export declare const datiFinanziari: {
     rateoFestivitaEuro: number;
     rateoFestivita2Ore: number;
     rateoFestivita2Euro: number;
-};
+}[];
 export declare const contributi: {
     id: number;
-    idRichiesta: number;
+    idScheda: number;
     inpsPerc: number;
     inpsEuro: number;
     inailPerc: number;
@@ -54,7 +58,7 @@ export declare const contributi: {
     altriEuro: number;
     tfrPerc: number;
     tfrEuro: number;
-};
+}[];
 export declare const infoPagamento: {
     id: number;
     idRichiesta: number;

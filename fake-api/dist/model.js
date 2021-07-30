@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.notifiche = exports.storico = exports.richiestaIntegrazioni = exports.infoPagamento = exports.contributi = exports.datiFinanziari = exports.richieste = exports.deleghe = void 0;
+exports.notifiche = exports.storico = exports.richiestaIntegrazioni = exports.infoPagamento = exports.contributi = exports.datiFinanziari = exports.schede = exports.richieste = exports.deleghe = void 0;
 exports.deleghe = [
     {
         id: 1,
@@ -61,40 +61,79 @@ exports.richieste = [
         importo: 689.73,
     }
 ];
-exports.datiFinanziari = {
-    id: 1,
-    idRichiesta: 1,
-    numeroGiornate: 5,
-    stipendioLordoGiorni: 1,
-    stipendioLordoEuro: 88.78,
-    rateo13Ore: 0.67,
-    rateo13Euro: 7.4,
-    rateo14Ore: 0.67,
-    rateo14Euro: 7.4,
-    rateoAltreOre: 0,
-    rateoAltreEuro: 0,
-    rateoPermessiOre: 0,
-    rateoPermessiEuro: 0,
-    rateoFerieOre: 0.55,
-    rateoFerieEuro: 6.1,
-    rateoFestivitaOre: 0.1,
-    rateoFestivitaEuro: 1.11,
-    rateoFestivita2Ore: 0,
-    rateoFestivita2Euro: 0
-};
-exports.contributi = {
-    id: 1,
-    idRichiesta: 1,
-    inpsPerc: 30.68,
-    inpsEuro: 34.3,
-    inailPerc: 6.33,
-    inailEuro: 7.1,
-    altriPerc: 0,
-    altriNome: 'Nuovo contributo',
-    altriEuro: 0,
-    tfrPerc: 0,
-    tfrEuro: 0
-};
+exports.schede = [{
+        id: 1,
+        text: 'Scheda 1',
+    }, {
+        id: 2,
+        text: 'Scheda 2'
+    }];
+exports.datiFinanziari = [{
+        id: 1,
+        idScheda: 1,
+        numeroGiornate: 5,
+        stipendioLordoGiorni: 1,
+        stipendioLordoEuro: 88.78,
+        rateo13Ore: 0.67,
+        rateo13Euro: 7.4,
+        rateo14Ore: 0.67,
+        rateo14Euro: 7.4,
+        rateoAltreOre: 0,
+        rateoAltreEuro: 0,
+        rateoPermessiOre: 0,
+        rateoPermessiEuro: 0,
+        rateoFerieOre: 0.55,
+        rateoFerieEuro: 6.1,
+        rateoFestivitaOre: 0.1,
+        rateoFestivitaEuro: 1.11,
+        rateoFestivita2Ore: 0,
+        rateoFestivita2Euro: 0
+    }, {
+        id: 2,
+        idScheda: 2,
+        numeroGiornate: 8,
+        stipendioLordoGiorni: 1,
+        stipendioLordoEuro: 88.78,
+        rateo13Ore: 0.67,
+        rateo13Euro: 7.4,
+        rateo14Ore: 0.67,
+        rateo14Euro: 7.4,
+        rateoAltreOre: 0,
+        rateoAltreEuro: 0,
+        rateoPermessiOre: 0,
+        rateoPermessiEuro: 0,
+        rateoFerieOre: 0.55,
+        rateoFerieEuro: 6.1,
+        rateoFestivitaOre: 0.1,
+        rateoFestivitaEuro: 1.11,
+        rateoFestivita2Ore: 0,
+        rateoFestivita2Euro: 0
+    }];
+exports.contributi = [{
+        id: 1,
+        idScheda: 1,
+        inpsPerc: 30.68,
+        inpsEuro: 34.3,
+        inailPerc: 6.33,
+        inailEuro: 7.1,
+        altriPerc: 0,
+        altriNome: 'Nuovo contributo',
+        altriEuro: 0,
+        tfrPerc: 0,
+        tfrEuro: 0
+    }, {
+        id: 2,
+        idScheda: 2,
+        inpsPerc: 31.68,
+        inpsEuro: 34.3,
+        inailPerc: 6.33,
+        inailEuro: 7.1,
+        altriPerc: 0,
+        altriNome: 'Nuovo contributo',
+        altriEuro: 0,
+        tfrPerc: 0,
+        tfrEuro: 0
+    }];
 exports.infoPagamento = {
     id: 1,
     idRichiesta: 1,
@@ -108,22 +147,30 @@ exports.richiestaIntegrazioni = {
     allegato: { name: 'Allegato_richiesta.pdf', link: 'no-link', date: new Date() }
 };
 exports.storico = [
-    { id: 1,
+    {
+        id: 1,
         data: new Date(),
         motivo: 'Richiesta integrazioni',
-        nota: 'Allegare documento' },
-    { id: 2,
+        nota: 'Allegare documento'
+    },
+    {
+        id: 2,
         data: new Date(),
         motivo: 'Richiesta integrazioni',
-        nota: '' },
-    { id: 3,
+        nota: ''
+    },
+    {
+        id: 3,
         data: new Date(),
         motivo: 'Creata',
-        nota: '' },
-    { id: 4,
+        nota: ''
+    },
+    {
+        id: 4,
         data: new Date(),
         motivo: 'Presentata',
-        nota: '' }
+        nota: ''
+    }
 ];
 exports.notifiche = [
     {

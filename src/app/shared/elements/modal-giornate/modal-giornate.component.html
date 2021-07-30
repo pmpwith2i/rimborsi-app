@@ -1,0 +1,11 @@
+<div class="mat-dialog-title" mat-dialog-title>Seleziona giornate</div>
+<div class="mat-dialog-content align-items-center" mat-dialog-content>
+  <div class="giornate-list-container">
+    <app-giornate-list [giornate]="giornate"></app-giornate-list>
+  </div>
+</div>
+<div class="mat-dialog-actions" mat-dialog-actions>
+  <app-cst-button (click)="onClose()" btnClass="btn-danger" text="Annulla" iconName="delete"></app-cst-button>
+  <app-cst-button routerLink="/rimborsi/richieste/new" (click)="onConfirm()" btnClass="btn-success" text="Prosegui"
+                  iconName="check"></app-cst-button>
+</div>

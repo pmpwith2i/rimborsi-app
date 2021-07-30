@@ -1,19 +1,31 @@
 import { Injectable } from '@nestjs/common';
-import { contributi, datiFinanziari, deleghe, infoPagamento, notifiche, richieste, richiestaIntegrazioni, storico } from './model';
+import { contributi, datiFinanziari, deleghe, infoPagamento, notifiche, richieste, richiestaIntegrazioni, storico, schede } from './model';
 
 @Injectable()
 export class AppService {
 
   getRichiesta(id: number): any {
     let richiesta = richieste.find(el => el.id == id);
-    let resObj = {richiesta: {}, datiFinanziari: {}, contributi: {}, infoPagamento: {}, richiestaIntegrazioni: {}};
+    let resObj = { richiesta: {}, schede: [], datiFinanziari: {}, contributi: {}, infoPagamento: {}, richiestaIntegrazioni: {} };
     resObj.richiesta = richiesta;
-    resObj.datiFinanziari = datiFinanziari;
-    resObj.contributi = contributi;
+    resObj.schede = schede;
+    let schedaId = schede[0].id;
+    resObj.datiFinanziari = datiFinanziari.find(el => el.idScheda == schedaId);
+    resObj.contributi = contributi.find(el => el.idScheda == schedaId);
     resObj.infoPagamento = infoPagamento;
     resObj.richiestaIntegrazioni = richiestaIntegrazioni
     return resObj;
   }
+
+  getScheda(schedaId: number): any {
+    let resObj = { datiFinanziari: {}, contributi: {}, infoPagamento: {}, richiestaIntegrazioni: {} };
+    resObj.datiFinanziari = datiFinanziari.find(el => el.idScheda == schedaId);
+    resObj.contributi = contributi.find(el => el.idScheda == schedaId);
+    resObj.infoPagamento = infoPagamento;
+    resObj.richiestaIntegrazioni = richiestaIntegrazioni
+    return resObj;
+  }
+
   getHello(): string {
     return 'Hello World!';
   }

@@ -39,10 +39,11 @@ import {BackgroundStatoDirective} from './directives/background-stato.directive'
 import {TipoPagamentoPipe} from './pipes/tipo-pagamento-pipe';
 import {DinamycDataPipe} from './pipes/dinamyc-data-pipe';
 import {NotificationPanelComponent} from './notification-panel/notification-panel.component';
+import { ModalGiornateComponent } from './elements/modal-giornate/modal-giornate.component';
 
 
 @NgModule({
-  declarations: [TipoPagamentoPipe, DinamycDataPipe, BackgroundStatoDirective, RetribuzioneListComponent, DashContainerComponent, NavigationComponent, SidebarComponent, SidebarItemComponent, CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent, SidebarComponent, SidebarItemComponent, DashContainerComponent, NavigationComponent, RetribuzioneListComponent, ContributiListComponent, TotaleListComponent, NotificationPanelComponent],
+  declarations: [TipoPagamentoPipe, DinamycDataPipe, BackgroundStatoDirective, RetribuzioneListComponent, DashContainerComponent, NavigationComponent, SidebarComponent, SidebarItemComponent, CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent, SidebarComponent, SidebarItemComponent, DashContainerComponent, NavigationComponent, RetribuzioneListComponent, ContributiListComponent, TotaleListComponent, NotificationPanelComponent, ModalGiornateComponent],
   exports: [
     NotificationPanelComponent,
     IconComponent,

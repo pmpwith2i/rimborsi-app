@@ -81,4 +81,8 @@ export class ApiEndpointsService {
   getNotificheEndPoint(): string {
     return this.createUrl('notifiche');
   }
+
+  getSchedaEndPoint(anId: number): string {
+    return this.createUrl('schede/' + anId);
+  }
 }

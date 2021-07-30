@@ -5,6 +5,7 @@ export declare class AppController {
     getDeleghe(): any;
     getRichieste(): any;
     getRichiesta(params: any): any;
+    getScheda(params: any): any;
     getStorico(): any;
     getNotifiche(): any;
 }

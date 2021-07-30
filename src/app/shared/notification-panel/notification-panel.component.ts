@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-notification-panel',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationPanelComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  title: string;
+
+  @Input()
+  text: string;
+
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+}
+
+export enum NotificationTypes {
+  SUCCESS,
+  ERROR,
+  WARNING,
+  INFO
 }

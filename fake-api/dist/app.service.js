@@ -12,10 +12,20 @@ const model_1 = require("./model");
 let AppService = class AppService {
     getRichiesta(id) {
         let richiesta = model_1.richieste.find(el => el.id == id);
-        let resObj = { richiesta: {}, datiFinanziari: {}, contributi: {}, infoPagamento: {}, richiestaIntegrazioni: {} };
+        let resObj = { richiesta: {}, schede: [], datiFinanziari: {}, contributi: {}, infoPagamento: {}, richiestaIntegrazioni: {} };
         resObj.richiesta = richiesta;
-        resObj.datiFinanziari = model_1.datiFinanziari;
-        resObj.contributi = model_1.contributi;
+        resObj.schede = model_1.schede;
+        let schedaId = model_1.schede[0].id;
+        resObj.datiFinanziari = model_1.datiFinanziari.find(el => el.idScheda == schedaId);
+        resObj.contributi = model_1.contributi.find(el => el.idScheda == schedaId);
+        resObj.infoPagamento = model_1.infoPagamento;
+        resObj.richiestaIntegrazioni = model_1.richiestaIntegrazioni;
+        return resObj;
+    }
+    getScheda(schedaId) {
+        let resObj = { datiFinanziari: {}, contributi: {}, infoPagamento: {}, richiestaIntegrazioni: {} };
+        resObj.datiFinanziari = model_1.datiFinanziari.find(el => el.idScheda == schedaId);
+        resObj.contributi = model_1.contributi.find(el => el.idScheda == schedaId);
         resObj.infoPagamento = model_1.infoPagamento;
         resObj.richiestaIntegrazioni = model_1.richiestaIntegrazioni;
         return resObj;

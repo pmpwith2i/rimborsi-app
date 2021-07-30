@@ -3,8 +3,7 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
+  constructor(private readonly appService: AppService) { }
   @Get('deleghe')
   getDeleghe(): any {
     return this.appService.getDeleghe();
@@ -18,6 +17,10 @@ export class AppController {
   @Get('richieste/:id')
   getRichiesta(@Param() params): any {
     return this.appService.getRichiesta(params.id)
+  }
+  @Get('schede/:id')
+  getScheda(@Param() params): any {
+    return this.appService.getScheda(params.id)
   }
 
   @Get('storico')

@@ -8,10 +8,11 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class TotaleFormComponent implements OnInit, OnChanges {
 
-  totaleForm: FormGroup;
 
   @Input()
   isFormDisabled = false;
+
+  totaleForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
   }
@@ -25,7 +26,7 @@ export class TotaleFormComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.isFormDisabled) {
+    if (this.totaleForm != null && this.isFormDisabled) {
       this.totaleForm.disable();
     }
   }

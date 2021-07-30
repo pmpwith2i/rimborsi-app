@@ -8,6 +8,8 @@ import {TotaleItem} from '../../../shared/model/totale-item';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {ActivatedRoute} from '@angular/router';
 import {Richiesta} from '../../../shared/model/richiesta';
+import {IschedeFinanziarie} from '../../../shared/model/scheda-finanziaria';
+import {ModalGiornateComponent} from '../../../shared/elements/modal-giornate/modal-giornate.component';
 
 @Component({
   selector: 'app-richiesta-detail',
@@ -26,6 +28,7 @@ export class RichiestaDetailComponent implements OnInit {
   richiesta: Richiesta = new Richiesta({});
   iban: string;
   tipologiaPagamento: string;
+  schedeFinanziarie: Array<IschedeFinanziarie> = [];
 
 
   constructor(private route: ActivatedRoute,
@@ -43,10 +46,12 @@ export class RichiestaDetailComponent implements OnInit {
           this.richiesta = new Richiesta(data.richiesta);
           this.iban = data.infoPagamento.iban;
           this.tipologiaPagamento = data.infoPagamento.tipologiaPagamento;
+          this.schedeFinanziarie = data.schede as IschedeFinanziarie[];
         });
       }
     });
 
+    // TODO: TUTTA QUESTA PARTE E' MOCKATA
     this.getStorico();
     this.getGiornate();
     this.getRetribuzioneItems();
@@ -119,6 +124,21 @@ export class RichiestaDetailComponent implements OnInit {
 
   requestIntegration(): void {
     this.matDialog.open(DialogIntegrazioniComponent);
+  }
+
+  toggleViewNewScheda(): void {
+    this.matDialog.open(ModalGiornateComponent, {
+      data: {
+        giornate: this.richiesteService.getGiornateDisponibili([])
+      }
+    });
+  }
+
+
+  onChangeScheda(anId: number): void {
+    this.richiesteService.getScheda(anId).subscribe(data => {
+      //TODO: FUNZIONE SCHEDA FINANZIARIA ISTRUTTORE
+    });
   }
 }
 

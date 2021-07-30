@@ -1,5 +1,5 @@
 <div class="standard-panel">
-  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+  <div class="d-flex d-flex-row light-bor-bottom align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
       <h1 class="text-title-dark">Riepilogo Richiesta - <b>{{richiesta.codice}}</b></h1>
       <div class="d-flex align-items-center">
@@ -22,9 +22,25 @@
                       iconName="send"></app-cst-button>
     </div>
   </div>
-  <app-notification-panel>
+
+  <app-notification-panel title="Richiesta integrazioni (Paolo Rossi)"
+                          text="Lorem ipsum dolor sit amet">
 
   </app-notification-panel>
+  <div class="row">
+    <div class="col-12 col-sm-5">
+      <app-cst-panel-card cardTitle="Scheda Finanziaria">
+        <ng-container rightTop>
+          <app-cst-button btnClass="btn-success" text="Nuova scheda" (click)="toggleViewNewScheda()"
+                          iconName="add"></app-cst-button>
+        </ng-container>
+        <label for="selectSchedaFinanziaria" class="form-label">Seleziona scheda</label>
+        <select id="selectSchedaFinanziaria" class="form-select" (change)="onChangeScheda($event.target.value)">
+          <option *ngFor="let el of schedeFinanziarie" [value]="el.id">{{el.text}}</option>
+        </select>
+      </app-cst-panel-card>
+    </div>
+  </div>
   <div class="row">
     <div class="col-xl-4 col-12">
       <app-cst-panel-card cardTitle="Retribuzione">

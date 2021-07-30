@@ -4,16 +4,18 @@ import {DialogIntegrazioniComponent, RichiestaDetailComponent} from './richiesta
 import {RichiestaDetailRoutingModule} from './richiesta-detail-routing.module';
 import {SharedModule} from '../../../shared/shared.module';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
   declarations: [RichiestaDetailComponent, DialogIntegrazioniComponent],
-  imports: [
-    CommonModule,
-    RichiestaDetailRoutingModule,
-    SharedModule,
-    MatChipsModule,
-  ]
+    imports: [
+        CommonModule,
+        RichiestaDetailRoutingModule,
+        SharedModule,
+        MatChipsModule,
+        MatCheckboxModule,
+    ]
 })
 export class RichiestaDetailModule {
 }

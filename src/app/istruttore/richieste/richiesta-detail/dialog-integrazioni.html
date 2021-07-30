@@ -1,8 +1,16 @@
 <div class="mat-dialog-title" mat-dialog-title>Richiedi integrazioni per la richiesta</div>
 <div class="mat-dialog-content align-items-center" mat-dialog-content>
-  <label for="inputRichiesta" class="form-label">Nota richiesta</label>
-  <textarea class="form-control" [value]="richiestaText" id="inputRichiesta" rows="5"></textarea>
-
+  <div class="light-bor-bottom">
+    <label for="inputRichiesta" class="form-label">Nota richiesta</label>
+    <textarea class="form-control" [value]="richiestaText" id="inputRichiesta" rows="5"></textarea></div>
+  <div>
+    <mat-checkbox class="example-margin" [checked]="false">Sblocca allegati
+    </mat-checkbox><br />
+    <mat-checkbox class="example-margin" [checked]="false">Sblocca dati finanziari
+    </mat-checkbox><br />
+    <mat-checkbox class="example-margin" [checked]="false">Sblocca Informazioni di pagamento
+    </mat-checkbox>
+  </div>
 </div>
 <div class="mat-dialog-actions" mat-dialog-actions>
   <app-cst-button (click)="onClose()" btnClass="btn-danger" text="Annulla" iconName="delete"></app-cst-button>

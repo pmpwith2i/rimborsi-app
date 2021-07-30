@@ -1,5 +1,5 @@
 <div class="standard-panel">
-  <div class="d-flex d-flex-row align-items-center mobile-title-flex-responsive">
+  <div class="d-flex d-flex-row light-bor-bottom align-items-center mobile-title-flex-responsive">
     <div class="mr-auto title-mobile-responsive">
       <h1 class="text-title-dark">Riepilogo Istruttoria Richiesta - <b>{{richiesta.codice}}</b></h1>
       <div class="d-flex align-items-center">
@@ -17,6 +17,20 @@
     <div class="btn-container-new">
       <app-cst-button btnClass="btn-success" text="Completa istruttoria" (click)="toggleViewResume()"
                       iconName="verified"></app-cst-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-5">
+      <app-cst-panel-card cardTitle="Scheda Finanziaria">
+        <ng-container rightTop>
+          <app-cst-button btnClass="btn-success" text="Nuova scheda" (click)="toggleViewNewScheda()"
+                          iconName="add"></app-cst-button>
+        </ng-container>
+        <label for="selectSchedaFinanziaria" class="form-label">Seleziona scheda</label>
+        <select id="selectSchedaFinanziaria" class="form-select" (change)="onChangeScheda($event.target.value)">
+          <option *ngFor="let el of schedeFinanziarie" [value]="el.id">{{el.text}}</option>
+        </select>
+      </app-cst-panel-card>
     </div>
   </div>
   <div class="row">

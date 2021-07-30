@@ -30,6 +30,10 @@ export class RichiesteService {
     return this.apiHttpService.get(this.apiEndpointsService.getStoricoEndpoint(richiestaId));
   }
 
+  getScheda(anId: number): any {
+    return this.apiHttpService.get(this.apiEndpointsService.getSchedaEndPoint(anId));
+  }
+
   getGiornateDisponibili(codiciAttestato: string[]): Giornata[] {
     const obj = [{id: 1, giorno: new Date(), codiceEvento: 'AJHJKKLO', oreAssenza: 8},
       {id: 2, giorno: new Date('10/10/2021'), codiceEvento: 'ANCJHLIU', oreAssenza: 8, selected: true},
@@ -49,4 +53,5 @@ export class RichiesteService {
     });
     return datasource;
   }
+
 }

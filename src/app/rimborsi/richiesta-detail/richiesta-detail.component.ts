@@ -9,6 +9,10 @@ import {DatiFinanziariPayload} from '../../shared/model/dati-finanziari-payload'
 import {ContributiPayload} from '../../shared/model/contributi-payload';
 import {IntegrazioniPayload} from '../../shared/model/integrazioni-payload';
 import {getIsDisabledFormByStato} from '../../config/richiestaConstants';
+import {MatDialog} from '@angular/material/dialog';
+import {ModalGiornateComponent} from '../../shared/elements/modal-giornate/modal-giornate.component';
+import {IschedeFinanziarie} from '../../shared/model/scheda-finanziaria';
+
 
 @Component({
   selector: 'app-richiesta-detail',
@@ -26,9 +30,10 @@ export class RichiestaDetailComponent implements OnInit, OnChanges {
   viewResume = false;
   richiesta: Richiesta = new Richiesta({});
   isFormDisabled = false;
+  schedeFinanziarie: Array<IschedeFinanziarie> = [];
 
 
-  constructor(private route: ActivatedRoute, private richiesteService: RichiesteService, private formBuilder: FormBuilder) {
+  constructor(private matDialog: MatDialog, private route: ActivatedRoute, private richiesteService: RichiesteService, private formBuilder: FormBuilder) {
   }
 
 
@@ -43,6 +48,7 @@ export class RichiestaDetailComponent implements OnInit, OnChanges {
           this.datiFinanziari = new DatiFinanziariPayload(data.datiFinanziari);
           this.contributi = new ContributiPayload(data.contributi);
           this.richiestaIntegrazioni = new IntegrazioniPayload(data.richiestaIntegrazioni);
+          this.schedeFinanziarie = data.schede as IschedeFinanziarie[];
           if (data.richiestaIntegrazioni.allegato) {
             this.richiestaIntegrazioni.setAllegato(data.richiestaIntegrazioni.allegato);
           }
@@ -101,4 +107,18 @@ export class RichiestaDetailComponent implements OnInit, OnChanges {
     }
   }
 
+  toggleViewNewScheda(): void {
+    this.matDialog.open(ModalGiornateComponent, {
+      data: {
+        giornate: this.richiesteService.getGiornateDisponibili([])
+      }
+    });
+  }
+
+  onChangeScheda(anId: number): void {
+    this.richiesteService.getScheda(anId).subscribe(data => {
+      this.datiFinanziari = new DatiFinanziariPayload(data.datiFinanziari);
+      this.contributi = new ContributiPayload(data.contributi);
+    });
+  }
 }
