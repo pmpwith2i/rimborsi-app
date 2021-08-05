@@ -30,6 +30,10 @@ let AppService = class AppService {
         resObj.richiestaIntegrazioni = model_1.richiestaIntegrazioni;
         return resObj;
     }
+    setStatoRichiesta(id, state) {
+        model_1.richieste.find(el => el.id == id).stato = +state;
+        return true;
+    }
     getHello() {
         return 'Hello World!';
     }

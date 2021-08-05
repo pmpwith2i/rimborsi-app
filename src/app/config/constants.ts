@@ -24,6 +24,7 @@ export function getIstruttoreSidebar(): SidebarRoute[] {
   sidebarRoutes.push(new SidebarRoute({itemLink: 'dashboard', linkName: 'Dashboard', iconName: 'home'}));
   sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste in corso', iconName: 'info'}));
   sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste passate', iconName: 'info'}));
+  sidebarRoutes.push(new SidebarRoute({itemLink: 'richieste', linkName: 'Richieste in liquidazione', iconName: 'info'}));
   sidebarRoutes.push(new SidebarRoute({itemLink: 'deleghe', linkName: 'Verifica Procure', iconName: 'description'}));
   sidebarRoutes.push(new SidebarRoute({itemLink: 'notifiche', linkName: 'Notifiche', iconName: 'notifications'}));
 

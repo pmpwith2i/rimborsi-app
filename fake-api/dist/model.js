@@ -36,7 +36,7 @@ exports.deleghe = [
 exports.richieste = [
     {
         id: 1,
-        stato: 1,
+        stato: 0,
         codice: 3893939,
         volontario: 'Sergio Viola',
         datoreLavoro: 'Mario Rossi SRL',

@@ -1,0 +1,12 @@
+<div class="mat-dialog-title" mat-dialog-title>Upload Allegato Generico</div>
+<div class="mat-dialog-content align-items-center" mat-dialog-content>
+  <div class="light-bor-bottom">
+    <label for="inputRichiesta" class="form-label">Tipo Allegato custom</label>
+    <input class="form-control" [value]="tipoAllegato" id="inputRichiesta" rows="5"/></div>
+  <app-allegato-item></app-allegato-item>
+</div>
+<div class="mat-dialog-actions" mat-dialog-actions>
+  <app-cst-button (click)="onClose()" btnClass="btn-danger" text="Annulla" iconName="delete"></app-cst-button>
+  <app-cst-button (click)="onConfirm()" btnClass="btn-success" text="Carica allegato"
+                  iconName="send"></app-cst-button>
+</div>

@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {CstCardDataTableComponent} from './elements/cst-card-data-table/cst-card-data-table.component';
 import {CstFilterSectionComponent} from './elements/cst-filter-section/cst-filter-section.component';
 import {HistoryListComponent} from './elements/history-list/history-list.component';
-import {AllegatoItemComponent} from './elements/allegato-item/allegato-item.component';
+import {AllegatoItemComponent, DialogAllegatoGenericoComponent} from './elements/allegato-item/allegato-item.component';
 import {DragAndDropUploadDirective} from './elements/allegato-item/drag-and-drop-upload.directive';
 import {GiornateListComponent} from './elements/giornate-list/giornate-list.component';
 import {GiornataItemComponent} from './elements/giornata-item/giornata-item.component';
@@ -39,11 +39,12 @@ import {BackgroundStatoDirective} from './directives/background-stato.directive'
 import {TipoPagamentoPipe} from './pipes/tipo-pagamento-pipe';
 import {DinamycDataPipe} from './pipes/dinamyc-data-pipe';
 import {NotificationPanelComponent} from './notification-panel/notification-panel.component';
-import { ModalGiornateComponent } from './elements/modal-giornate/modal-giornate.component';
+import {ModalGiornateComponent} from './elements/modal-giornate/modal-giornate.component';
+import {DialogTextAreaComponent} from './elements/dialog-text-area/dialog-text-area.component';
 
 
 @NgModule({
-  declarations: [TipoPagamentoPipe, DinamycDataPipe, BackgroundStatoDirective, RetribuzioneListComponent, DashContainerComponent, NavigationComponent, SidebarComponent, SidebarItemComponent, CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent, SidebarComponent, SidebarItemComponent, DashContainerComponent, NavigationComponent, RetribuzioneListComponent, ContributiListComponent, TotaleListComponent, NotificationPanelComponent, ModalGiornateComponent],
+  declarations: [DialogTextAreaComponent, DialogAllegatoGenericoComponent, TipoPagamentoPipe, DinamycDataPipe, BackgroundStatoDirective, RetribuzioneListComponent, DashContainerComponent, NavigationComponent, SidebarComponent, SidebarItemComponent, CstCardDataTableComponent, IconComponent, CalendarComponent, CstTableComponent, CstButtonComponent, CstFilterComponent, CstCardDataTableComponent, CstFilterSectionComponent, HistoryListComponent, AllegatoItemComponent, DragAndDropUploadDirective, GiornateListComponent, GiornataItemComponent, CstPanelCardComponent, RichiestaResumeComponent, PanelRightComponent, ResumeListItemComponent, ResumeListComponent, IbanPanelComponent, SidebarComponent, SidebarItemComponent, DashContainerComponent, NavigationComponent, RetribuzioneListComponent, ContributiListComponent, TotaleListComponent, NotificationPanelComponent, ModalGiornateComponent, DialogTextAreaComponent],
   exports: [
     NotificationPanelComponent,
     IconComponent,

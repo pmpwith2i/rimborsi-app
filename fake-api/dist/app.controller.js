@@ -19,6 +19,9 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
+    patchRichiestaStato(id, state) {
+        return this.appService.setStatoRichiesta(id, +state);
+    }
     getDeleghe() {
         return this.appService.getDeleghe();
     }
@@ -38,6 +41,13 @@ let AppController = class AppController {
         return this.appService.getNotifiche();
     }
 };
+__decorate([
+    common_1.Patch('richieste/:id/:state'),
+    __param(0, common_1.Param('id')), __param(1, common_1.Param('state')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "patchRichiestaStato", null);
 __decorate([
     common_1.Get('deleghe'),
     __metadata("design:type", Function),

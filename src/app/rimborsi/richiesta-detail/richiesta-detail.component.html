@@ -14,11 +14,13 @@
       <app-cst-button btnClass="btn-primary" text="Visualizza giornate" (click)="toggleViewGiornate()"
                       iconName="visibility"></app-cst-button>
     </div>
-    <div class="btn-container-new">
+    <div class="btn-container-new d-flex" *ngIf="isInviata()">
       <app-cst-button btnClass="btn-danger" text="Elimina richiesta" iconName="delete"></app-cst-button>
+      <app-cst-button btnClass="btn-success" text="Presenta domanda" (click)="inviaIntegrazioni()"
+                      iconName="send"></app-cst-button>
     </div>
-    <div class="btn-container-new">
-      <app-cst-button btnClass="btn-success" text="Presenta Domanda" (click)="toggleViewResume()"
+    <div class="btn-container-new d-flex" *ngIf="isSospesa()">
+      <app-cst-button btnClass="btn-success" text="Invia integrazioni" (click)="inviaIntegrazioni()"
                       iconName="send"></app-cst-button>
     </div>
   </div>
@@ -51,7 +53,7 @@
       <app-cst-panel-card cardTitle="Contributi">
         <app-contributi-form [isFormDisabled]="isFormDisabled" [contributi]="contributi"></app-contributi-form>
       </app-cst-panel-card>
-      <app-cst-panel-card cardTitle="Totale">
+      <app-cst-panel-card cardTitle="Totale riepilogo costi">
         <app-totale-form [isFormDisabled]="true"></app-totale-form>
       </app-cst-panel-card>
     </div>
@@ -70,6 +72,10 @@
         </div>
       </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Allegati">
+        <ng-container rightTop>
+          <app-cst-button btnClass="btn-success btn-sm" text="Aggiungi allegato generico"
+                          iconName="add"></app-cst-button>
+        </ng-container>
         <app-allegato-item allegatoType="Busta paga"></app-allegato-item>
         <app-allegato-item allegatoType="Foglio presenze"></app-allegato-item>
       </app-cst-panel-card>

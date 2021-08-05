@@ -10,6 +10,9 @@ import {ActivatedRoute} from '@angular/router';
 import {Richiesta} from '../../../shared/model/richiesta';
 import {IschedeFinanziarie} from '../../../shared/model/scheda-finanziaria';
 import {ModalGiornateComponent} from '../../../shared/elements/modal-giornate/modal-giornate.component';
+import {Stato} from '../../../config/richiestaConstants';
+import {DialogAllegatoGenericoComponent} from '../../../shared/elements/allegato-item/allegato-item.component';
+import {DialogTextAreaComponent} from '../../../shared/elements/dialog-text-area/dialog-text-area.component';
 
 @Component({
   selector: 'app-richiesta-detail',
@@ -123,7 +126,11 @@ export class RichiestaDetailComponent implements OnInit {
   }
 
   requestIntegration(): void {
-    this.matDialog.open(DialogIntegrazioniComponent);
+    this.matDialog.open(DialogIntegrazioniComponent).afterClosed().subscribe(res => {
+      if (res) {
+        this.sospendiRichiesta();
+      }
+    });
   }
 
   toggleViewNewScheda(): void {
@@ -140,6 +147,75 @@ export class RichiestaDetailComponent implements OnInit {
       //TODO: FUNZIONE SCHEDA FINANZIARIA ISTRUTTORE
     });
   }
+
+  isPresentata(): boolean {
+    return null != this.richiesta && this.richiesta.stato == Stato.PRESENTATA;
+  }
+
+  isInAttesaDiParere(): boolean {
+    return null != this.richiesta && this.richiesta.stato == Stato.IN_ATTESA_DI_PARERE;
+  }
+
+  isInLavorazione(): boolean {
+    return null != this.richiesta && this.richiesta.stato == Stato.IN_LAVORAZIONE;
+  }
+
+  procedi(): void {
+    this.richiesteService.setStatoRichiesta(this.richiesta.id, Stato.IN_LAVORAZIONE).subscribe(data => {
+      if (data) {
+        this.richiesta.stato = Stato.IN_LAVORAZIONE;
+      }
+    });
+  }
+
+  sospendiRichiesta(): void {
+    this.richiesteService.setStatoRichiesta(this.richiesta.id, Stato.SOSPESA).subscribe(data => {
+      if (data) {
+        this.richiesta.stato = Stato.SOSPESA;
+      }
+    });
+  }
+
+  inLavorazione(): void {
+    this.richiesteService.setStatoRichiesta(this.richiesta.id, Stato.IN_LAVORAZIONE).subscribe(data => {
+      if (data) {
+        this.richiesta.stato = Stato.IN_LAVORAZIONE;
+      }
+    });
+  }
+
+  inLiquidazione(): void {
+    this.richiesteService.setStatoRichiesta(this.richiesta.id, Stato.IN_LIQUIDAZIONE).subscribe(data => {
+      if (data) {
+        this.richiesta.stato = Stato.IN_LIQUIDAZIONE;
+      }
+    });
+  }
+
+  respingi(): void {
+    this.matDialog.open(DialogTextAreaComponent);
+    this.richiesteService.setStatoRichiesta(this.richiesta.id, Stato.RESPINTA).subscribe(data => {
+      if (data) {
+        this.richiesta.stato = Stato.RESPINTA;
+      }
+    });
+  }
+
+  openAllegatoGenericoDialog(): void {
+    this.matDialog.open(DialogAllegatoGenericoComponent);
+  }
+
+  approvaDomanda(): void {
+    this.matDialog.open(DialogTextAreaComponent).afterClosed().subscribe(res => {
+      if (res) {
+        this.inLiquidazione();
+      }
+    });
+  }
+
+  viewAnagrafica(): void {
+    this.matDialog.open(DialogAnagraficaComponent);
+  }
 }
 
 @Component({
@@ -152,6 +228,27 @@ export class DialogIntegrazioniComponent {
 
   constructor(
     public dialogRef: MatDialogRef<DialogIntegrazioniComponent>) {
+  }
+
+  onClose(): void {
+    this.dialogRef.close(false);
+  }
+
+  onConfirm(): void {
+    this.dialogRef.close(true);
+  }
+}
+
+@Component({
+  selector: 'app-dialog-anagrafica',
+  templateUrl: 'dialog-anagrafica.html',
+})
+export class DialogAnagraficaComponent {
+  @Input()
+  richiestaText = '';
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogAnagraficaComponent>) {
   }
 
   onClose(): void {

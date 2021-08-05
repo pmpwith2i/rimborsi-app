@@ -85,4 +85,8 @@ export class ApiEndpointsService {
   getSchedaEndPoint(anId: number): string {
     return this.createUrl('schede/' + anId);
   }
+
+  getSetStatoEndPoint(anId: number, aState: number): string {
+    return this.createUrl('richieste/' + anId + '/' + aState);
+  }
 }

@@ -8,7 +8,7 @@ import {ActivatedRoute} from '@angular/router';
 import {DatiFinanziariPayload} from '../../shared/model/dati-finanziari-payload';
 import {ContributiPayload} from '../../shared/model/contributi-payload';
 import {IntegrazioniPayload} from '../../shared/model/integrazioni-payload';
-import {getIsDisabledFormByStato} from '../../config/richiestaConstants';
+import {getIsDisabledFormByStato, Stato} from '../../config/richiestaConstants';
 import {MatDialog} from '@angular/material/dialog';
 import {ModalGiornateComponent} from '../../shared/elements/modal-giornate/modal-giornate.component';
 import {IschedeFinanziarie} from '../../shared/model/scheda-finanziaria';
@@ -119,6 +119,22 @@ export class RichiestaDetailComponent implements OnInit, OnChanges {
     this.richiesteService.getScheda(anId).subscribe(data => {
       this.datiFinanziari = new DatiFinanziariPayload(data.datiFinanziari);
       this.contributi = new ContributiPayload(data.contributi);
+    });
+  }
+
+  isInviata(): boolean {
+    return this.richiesta.stato == Stato.INVIATA;
+  }
+
+  isSospesa(): boolean {
+    return this.richiesta.stato == Stato.SOSPESA;
+  }
+
+  inviaIntegrazioni(): void {
+    this.richiesteService.setStatoRichiesta(this.richiesta.id, Stato.PRESENTATA).subscribe(data => {
+      if (data) {
+        this.richiesta.stato = Stato.PRESENTATA;
+      }
     });
   }
 }

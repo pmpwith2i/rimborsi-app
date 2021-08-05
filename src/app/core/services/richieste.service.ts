@@ -54,4 +54,8 @@ export class RichiesteService {
     return datasource;
   }
 
+  setStatoRichiesta(anId: number, aState: number): any {
+    return this.apiHttpService.patch(this.apiEndpointsService.getSetStatoEndPoint(anId, aState), {});
+  }
+
 }

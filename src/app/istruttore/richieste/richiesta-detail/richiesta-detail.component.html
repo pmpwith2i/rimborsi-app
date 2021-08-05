@@ -11,21 +11,27 @@
       </div>
     </div>
     <div class="btn-container-new">
-      <app-cst-button btnClass="btn-warning" (click)="requestIntegration()" text="Richiedi Integrazioni"
+      <app-cst-button btnClass="btn-primary" text="Visualizza anagrafica" (click)="viewAnagrafica()"
+                      iconName="visibility"></app-cst-button>
+    </div>
+    <div *ngIf="isPresentata()" class="btn-container-new d-flex">
+      <app-cst-button btnClass="btn-success" text="Avvio Procedimento" (click)="procedi()"
+                      iconName="verified"></app-cst-button>
+      <app-cst-button btnClass="btn-warning" (click)="requestIntegration()" text="Integrazioni Procedibilità"
                       iconName="thumb_down"></app-cst-button>
     </div>
-    <div class="btn-container-new">
-      <app-cst-button btnClass="btn-success" text="Completa istruttoria" (click)="toggleViewResume()"
+    <div *ngIf="isInLavorazione()" class="btn-container-new d-flex">
+      <app-cst-button btnClass="btn-warning" (click)="requestIntegration()" text="Richiedi integrazioni"
+                      iconName="thumb_down"></app-cst-button>
+      <app-cst-button btnClass="btn-success" text="Approva" (click)="approvaDomanda()"
                       iconName="verified"></app-cst-button>
+      <app-cst-button btnClass="btn-danger" text="Respingi" (click)="respingi()"
+                      iconName="clear"></app-cst-button>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-sm-5">
       <app-cst-panel-card cardTitle="Scheda Finanziaria">
-        <ng-container rightTop>
-          <app-cst-button btnClass="btn-success" text="Nuova scheda" (click)="toggleViewNewScheda()"
-                          iconName="add"></app-cst-button>
-        </ng-container>
         <label for="selectSchedaFinanziaria" class="form-label">Seleziona scheda</label>
         <select id="selectSchedaFinanziaria" class="form-select" (change)="onChangeScheda($event.target.value)">
           <option *ngFor="let el of schedeFinanziarie" [value]="el.id">{{el.text}}</option>
@@ -43,7 +49,7 @@
       <app-cst-panel-card cardTitle="Contributi">
         <app-contributi-list [contributiItems]="contributiItems"></app-contributi-list>
       </app-cst-panel-card>
-      <app-cst-panel-card cardTitle="Totale">
+      <app-cst-panel-card cardTitle="Totale riepilogo costi">
         <app-totale-list [totaleItems]="totaleItems"></app-totale-list>
       </app-cst-panel-card>
     </div>
@@ -69,6 +75,13 @@
         </ul>
       </app-cst-panel-card>
       <app-cst-panel-card cardTitle="Allegati">
+        <ng-container rightTop>
+          <app-cst-button
+            (click)="openAllegatoGenericoDialog()"
+            btnClass="btn-success btn-sm"
+            text="Aggiungi allegato generico"
+            iconName="add"></app-cst-button>
+        </ng-container>
         <app-allegato-item allegatoLink="busta_paga.pdf"
                            allegatoType="Busta paga"
                            allegatoName="Busta paga.pdf"></app-allegato-item>

@@ -20,6 +20,10 @@ export class ApiHttpService {
     return this.http.put(url, data, options);
   }
 
+  public patch(url: string, data: any, options?: any): any {
+    return this.http.patch(url, data, options);
+  }
+
   public delete(url: string, options?: any): any {
     return this.http.delete(url, options);
   }

@@ -26,6 +26,11 @@ export class AppService {
     return resObj;
   }
 
+  setStatoRichiesta(id:number, state:number): any {
+    richieste.find(el => el.id==id).stato = +state;
+    return true;
+  }
+
   getHello(): string {
     return 'Hello World!';
   }
