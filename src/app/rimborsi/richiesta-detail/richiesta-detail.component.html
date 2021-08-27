@@ -14,12 +14,14 @@
       <app-cst-button btnClass="btn-primary" text="Visualizza giornate" (click)="toggleViewGiornate()"
                       iconName="visibility"></app-cst-button>
     </div>
-    <div class="btn-container-new d-flex" *ngIf="isInviata()">
+    <div class="btn-container-new" *ngIf="isInviata()">
       <app-cst-button btnClass="btn-danger" text="Elimina richiesta" iconName="delete"></app-cst-button>
+    </div>
+    <div class="btn-container-new" *ngIf="isInviata()">
       <app-cst-button btnClass="btn-success" text="Presenta domanda" (click)="inviaIntegrazioni()"
                       iconName="send"></app-cst-button>
     </div>
-    <div class="btn-container-new d-flex" *ngIf="isSospesa()">
+    <div class="btn-container-new" *ngIf="isSospesa()">
       <app-cst-button btnClass="btn-success" text="Invia integrazioni" (click)="inviaIntegrazioni()"
                       iconName="send"></app-cst-button>
     </div>
@@ -30,7 +32,7 @@
 
   </app-notification-panel>
   <div class="row">
-    <div class="col-12 col-sm-5">
+    <div class="col-12 col-xl-5">
       <app-cst-panel-card cardTitle="Scheda Finanziaria">
         <ng-container rightTop>
           <app-cst-button btnClass="btn-success" text="Nuova scheda" (click)="toggleViewNewScheda()"
